@@ -136,6 +136,7 @@ namespace GeocachingTool
                     formulaLetters = connection.Table<FormulaLetter>().ToList();
 
                     lettersListView.ItemsSource = formulaLetters;
+                    noFormulaLettersLabel.IsVisible = true;
                 }
             }
         }

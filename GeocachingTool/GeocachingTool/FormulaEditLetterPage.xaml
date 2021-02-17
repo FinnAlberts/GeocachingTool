@@ -4,8 +4,8 @@
              x:Class="GeocachingTool.FormulaEditLetterPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="letterLabel"/>
-            <Entry x:Name="ValueEntry" Placeholder="Waarde..."/>
+            <Label x:Name="letterLabel" Style="{StaticResource h1}"/>
+            <Entry x:Name="ValueEntry" Placeholder="Waarde..." Keyboard="Numeric"/>
             <Button x:Name="saveButton" Text="Opslaan" Clicked="saveButton_Clicked"/>
             <Button x:Name="deleteButton" Text="Verwijder letter" Clicked="deleteButton_Clicked"/>
         </StackLayout>

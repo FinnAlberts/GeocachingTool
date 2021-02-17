@@ -36,10 +36,25 @@ namespace GeocachingTool
 
             // Add individual integers together to get a single digit answer
             int oneDigitWordValue = 0;
+            int oneDigitWordValueTemp = wordValue;
+            bool done = false;
 
-            foreach (char c in wordValue.ToString())
+            while (!done)
             {
-                oneDigitWordValue += Int32.Parse(c.ToString());
+                foreach (char c in oneDigitWordValueTemp.ToString())
+                {
+                    oneDigitWordValue += Int32.Parse(c.ToString());
+                }
+
+                if (oneDigitWordValue.ToString().Length == 1)
+                {
+                    done = true;
+                } 
+                else
+                {
+                    oneDigitWordValueTemp = oneDigitWordValue;
+                    oneDigitWordValue = 0;
+                }
             }
 
             // Return answers

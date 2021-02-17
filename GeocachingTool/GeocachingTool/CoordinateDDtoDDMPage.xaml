@@ -6,8 +6,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Grid>
-                <Entry x:Name="northEntry" Grid.Column="0" Placeholder="Noord..."/>
-                <Entry x:Name="eastEntry" Grid.Column="1" Placeholder="Oost..."/>
+                <Entry x:Name="northEntry" Grid.Column="0" Placeholder="Noord..." Keyboard="Numeric"/>
+                <Entry x:Name="eastEntry" Grid.Column="1" Placeholder="Oost..." Keyboard="Numeric"/>
             </Grid>
             <Button x:Name="convertButton" Text="Omzetten" Clicked="convertButton_Clicked"/>
             <Label x:Name="answerLabel"  Style="{StaticResource answer}"/>

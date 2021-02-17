@@ -7,13 +7,13 @@
         <StackLayout>
             <StackLayout>
                 <Grid>
-                    <Entry x:Name="northCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="0" Placeholder="Noord..."/>
+                    <Entry x:Name="northCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="0" Placeholder="Noord..." Keyboard="Numeric"/>
                     <Label Grid.Column="12" Grid.ColumnSpan="5" Grid.Row="0" Text="°" FontSize="30"/>
-                    <Entry x:Name="northMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="0" Placeholder="Noord..."/>
+                    <Entry x:Name="northMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="0" Placeholder="Noord..." Keyboard="Numeric"/>
 
-                    <Entry x:Name="eastCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="1" Placeholder="Oost..."/>
+                    <Entry x:Name="eastCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="1" Placeholder="Oost..." Keyboard="Numeric"/>
                     <Label Grid.Column="12" Grid.ColumnSpan="5" Grid.Row="1" Text="°" FontSize="30"/>
-                    <Entry x:Name="eastMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="1" Placeholder="Oost..."/>
+                    <Entry x:Name="eastMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="1" Placeholder="Oost..." Keyboard="Numeric"/>
                 </Grid>
                 <Button x:Name="convertButton" Text="Omzetten" Clicked="convertButton_Clicked"/>
                 <Label x:Name="answerLabel"  Style="{StaticResource answer}"/>
