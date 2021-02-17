@@ -6,11 +6,22 @@ namespace GeocachingTool
 {
     public partial class App : Application
     {
+        public static string DatabaseLocation = string.Empty;
+
         public App()
         {
             InitializeComponent();
 
             MainPage = new AppShell();
+        }
+
+        public App(string dbLocation)
+        {
+            InitializeComponent();
+
+            MainPage = new AppShell();
+
+            DatabaseLocation = dbLocation;
         }
 
         protected override void OnStart()

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeocachingTool.FormulaNewLetterPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="letterEntry" Placeholder="Letter..."/>
+            <Entry x:Name="valueEntry" Placeholder="Waarde..."/>
+            <Button x:Name="saveButton" Text="Opslaan" Clicked="saveButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -2,14 +2,64 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GeocachingTool.AppShell"
-             xmlns:local="clr-namespace:GeocachingTool">
+             xmlns:local="clr-namespace:GeocachingTool"
+             xmlns:markupExtensions="clr-namespace:GeocachingTool.MarkupExtensions">
 
-    <FlyoutItem Title="Home">
+    <Shell.FlyoutHeader>
+        <local:ShellHeaderView/>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Home" Icon="home.png">
         <ShellContent>
             <local:MainPage/>
         </ShellContent>
     </FlyoutItem>
-    <FlyoutItem Title="Over">
+    <MenuItem x:Name="openWebsiteMenuItem" Text="Geocaching.com" Clicked="openWebsiteMenuItem_Clicked" IconImageSource="internet.png"/>
+    <FlyoutItem Title="Notities" Icon="note.png">
+        <ShellContent>
+            <local:NotesPage/>
+        </ShellContent>
+    </FlyoutItem>
+    
+    <MenuItem> <!-- Vertical line -->
+        <Shell.MenuItemTemplate>
+            <DataTemplate>
+                <Label HeightRequest="1" BackgroundColor="LightGray"></Label>
+            </DataTemplate>
+        </Shell.MenuItemTemplate>
+    </MenuItem>
+
+    <FlyoutItem Title="Formule berekenen" Icon="calculator.png">
+        <ShellContent>
+            <local:FormulaPage/>
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Coördinaten omzetten" Icon="gps.png">
+        <Tab>
+            <ShellContent Title="DD naar DDM">
+                <local:CoordinateDDtoDDMPage/>
+            </ShellContent>
+            <ShellContent Title="DDM naar DD">
+                <local:CoordinateDDMtoDDPage/>
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Woordwaarde" Icon="letter.png">
+        <ShellContent>
+            <local:WordValuePage/>
+        </ShellContent>
+    </FlyoutItem>
+
+    <MenuItem>
+        <!-- Vertical line -->
+        <Shell.MenuItemTemplate>
+            <DataTemplate>
+                <Label HeightRequest="1" BackgroundColor="LightGray"></Label>
+            </DataTemplate>
+        </Shell.MenuItemTemplate>
+    </MenuItem>
+
+    <FlyoutItem Title="Over" Icon="about.png">
         <ShellContent>
             <local:AboutPage/>
         </ShellContent>

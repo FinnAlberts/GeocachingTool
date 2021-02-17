@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeocachingTool.Android", "G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeocachingTool.iOS", "GeocachingTool\GeocachingTool.iOS\GeocachingTool.iOS.csproj", "{AA64CB79-FB9C-46E5-8588-4CFA955F20DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeocachingTool", "GeocachingTool\GeocachingTool\GeocachingTool.csproj", "{450DBC3A-DE5C-4F0B-804E-67FD089109FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeocachingTool", "GeocachingTool\GeocachingTool\GeocachingTool.csproj", "{450DBC3A-DE5C-4F0B-804E-67FD089109FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

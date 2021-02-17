@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeocachingTool.NotesEditPage">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="nameEntry" Placeholder="Cachenaam..."/>
+            <Editor x:Name="detailsEditor" Placeholder="Jouw notitie..." HeightRequest="500"/>
+            <Button x:Name="saveButton" Text="Opslaan" Clicked="saveButton_Clicked"/>
+            <Button x:Name="deleteButton" Text="Verwijderen" Clicked="deleteButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

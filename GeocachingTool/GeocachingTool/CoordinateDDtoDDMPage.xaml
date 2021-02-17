@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeocachingTool.CoordinateDDtoDDMPage">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Entry x:Name="northEntry" Grid.Column="0" Placeholder="Noord..."/>
+                <Entry x:Name="eastEntry" Grid.Column="1" Placeholder="Oost..."/>
+            </Grid>
+            <Button x:Name="convertButton" Text="Omzetten" Clicked="convertButton_Clicked"/>
+            <Label x:Name="answerLabel"  Style="{StaticResource answer}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

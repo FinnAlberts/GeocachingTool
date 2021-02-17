@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeocachingTool.ShellHeaderView"
+             xmlns:marpupExtensions="clr-namespace:GeocachingTool.MarkupExtensions">
+    
+  <ContentView.Content>
+        <Grid>
+            <Image Source="{marpupExtensions:EmbeddedImage ResourceId=GeocachingTool.Assets.Images.banner.png}" Aspect="AspectFill"/>
+            <Label Text="Geocaching Backpack" TextColor="{StaticResource SecondaryTextColor}" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="30"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

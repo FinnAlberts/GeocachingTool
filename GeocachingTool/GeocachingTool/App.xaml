@@ -2,7 +2,51 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GeocachingTool.App">
+    
     <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#02874d</Color>
+            <Color x:Key="SecondaryColor">#CCE7DB</Color>
+            <Color x:Key="PrimaryTextColor">#4a4a4a</Color>
+            <Color x:Key="SecondaryTextColor">#ffffff</Color>
 
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+                <Setter Property="Padding" Value="15, 5"/>
+            </Style>
+            <Style TargetType="Shell" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+            <Style TargetType="Label" x:Key="h1">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style TargetType="Label" x:Key="h2">
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+            <Style TargetType="Label" x:Key="answer">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+            
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+            <Style TargetType="Editor">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
+                <Setter Property="CornerRadius" Value="4"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

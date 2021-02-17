@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeocachingTool.FormulaEditLetterPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="letterLabel"/>
+            <Entry x:Name="ValueEntry" Placeholder="Waarde..."/>
+            <Button x:Name="saveButton" Text="Opslaan" Clicked="saveButton_Clicked"/>
+            <Button x:Name="deleteButton" Text="Verwijder letter" Clicked="deleteButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

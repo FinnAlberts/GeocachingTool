@@ -1,12 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GeocachingTool.AboutPage">
+             x:Class="GeocachingTool.AboutPage"
+             xmlns:markupExtensions="clr-namespace:GeocachingTool.MarkupExtensions"
+             >
+    
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="About"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image Source="{markupExtensions:EmbeddedImage ResourceId=GeocachingTool.Assets.Images.logo.png}" Aspect="AspectFill" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+            <Label Text="Over Geocaching Backpack" Style="{StaticResource h1}"/>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Versie: " FontAttributes="Bold"  FontSize="16"/>
+                        <Span Text="1.0"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="Geocaching backpack is ontwikkeld en wordt onderhouden door Finn Alberts. Problemen kunnen worden gemeld via www.finnalberts.nl/contact."/>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Lees meer op "/>
+                        <Span Text="www.finnalberts.nl" FontAttributes="Bold" FontSize="16"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="Gebruikte icoontjes zijn eigendom van Font Awesome en worden gebruikt onder de CCA 4.0 licentie. Meer informatie op www.fontawesome.com/license."/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

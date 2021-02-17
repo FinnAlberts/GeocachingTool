@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeocachingTool.FormulaPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="newLetterToolbarItem" Text="Nieuw" Clicked="newLetterToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="deleteAllToolbarItem" Text="Verwijder alle letters" Order="Secondary" Clicked="deleteAllToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="helpToolbarItem" Text="Help" Order="Secondary" Clicked="helpToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Formule berekenen" Style="{StaticResource h1}"/>
+            <Entry x:Name="formulaEntry" Placeholder="N 51 20.(a*b) E 006 07.(3*c)..."/>
+            <Button x:Name="calculateButton" Text="Bereken" Clicked="calculateButton_Clicked"/>
+            <Label x:Name="answerLabel" Style="{StaticResource answer}"/>
+            <Label Text="Letterwaardes" Style="{StaticResource h2}"/>
+            <Label x:Name="noFormulaLettersLabel" Text="Je hebt nog geen letterwaardes opgeslagen. Sla een letterwaarde op door rechtsboven op 'nieuw' te tikken." IsVisible="false"/>
+            <ListView x:Name="lettersListView" ItemSelected="lettersListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Letter}" Detail="{Binding Value}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
