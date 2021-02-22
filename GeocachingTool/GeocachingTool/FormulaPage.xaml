@@ -12,7 +12,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Formule berekenen" Style="{x:DynamicResource h1}"/>
-            <Entry x:Name="formulaEntry" Placeholder="N 51 20.(a*b) E 006 07.(3*c)..."/>
+            <Entry x:Name="formulaEntry" Placeholder="a*3+2..."/>
             <Button x:Name="calculateButton" Text="Bereken" Clicked="calculateButton_Clicked"/>
             <Label x:Name="answerLabel" Style="{x:DynamicResource answer}"/>
             <Label Text="Letterwaardes" Style="{x:DynamicResource h2}"/>
