@@ -61,6 +61,9 @@ namespace GeocachingTool
             }
             else
             {
+                // Calculate result
+                formula = formula.Replace(",", ".");
+                
                 string result = Calculate(formula);
 
                 answerLabel.Text = result;
