@@ -20,16 +20,27 @@ namespace GeocachingTool
         private void convertButton_Clicked(object sender, EventArgs e)
         {
             // Get input
-            float north = float.Parse(northEntry.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
-            float east = float.Parse(eastEntry.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
+            string northInput = northEntry.Text;
+            string eastInput = eastEntry.Text;
 
-            int northDegrees = (int)Math.Floor(north);
-            float northMinutes = (north - (float)Math.Floor(north)) * 60;
+            // Check if filled in
+            if (String.IsNullOrEmpty(northInput) || String.IsNullOrEmpty(eastInput))
+            {
+                DisplayAlert("Fout", "Niet alle velden zijn ingevuld. Vul alle velden in en probeer het opnieuw.", "Oke");
+            } else
+            {
+                // Convert to floats
+                float north = float.Parse(northInput.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
+                float east = float.Parse(eastInput.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
 
-            int eastDegrees = (int)Math.Floor(east);
-            float eastMinutes = (east - (float)Math.Floor(east)) * 60;
+                int northDegrees = (int)Math.Floor(north);
+                float northMinutes = (north - (float)Math.Floor(north)) * 60;
 
-            answerLabel.Text = String.Format("N{0}° {1} E{2}° {3}", northDegrees, northMinutes, eastDegrees, eastMinutes);
+                int eastDegrees = (int)Math.Floor(east);
+                float eastMinutes = (east - (float)Math.Floor(east)) * 60;
+
+                answerLabel.Text = String.Format("N{0}° {1} E{2}° {3}", northDegrees, northMinutes, eastDegrees, eastMinutes);
+            }
         }
     }
 }
