@@ -11,16 +11,16 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Formule berekenen" Style="{StaticResource h1}"/>
+            <Label Text="Formule berekenen" Style="{x:DynamicResource h1}"/>
             <Entry x:Name="formulaEntry" Placeholder="N 51 20.(a*b) E 006 07.(3*c)..."/>
             <Button x:Name="calculateButton" Text="Bereken" Clicked="calculateButton_Clicked"/>
-            <Label x:Name="answerLabel" Style="{StaticResource answer}"/>
-            <Label Text="Letterwaardes" Style="{StaticResource h2}"/>
+            <Label x:Name="answerLabel" Style="{x:DynamicResource answer}"/>
+            <Label Text="Letterwaardes" Style="{x:DynamicResource h2}"/>
             <Label x:Name="noFormulaLettersLabel" Text="Je hebt nog geen letterwaardes opgeslagen. Sla een letterwaarde op door rechtsboven op 'nieuw' te tikken." IsVisible="false"/>
             <ListView x:Name="lettersListView" ItemSelected="lettersListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Letter}" Detail="{Binding Value}"  TextColor="{StaticResource PrimaryColor}"/>
+                        <TextCell Text="{Binding Letter}" Detail="{Binding Value}" TextColor="{x:DynamicResource PrimaryColor}" DetailColor="{x:DynamicResource PlaceholderTextColor}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

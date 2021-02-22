@@ -5,7 +5,7 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Woordwaarde" Style="{StaticResource h1}"/>
+            <Label Text="Woordwaarde" Style="{x:DynamicResource h1}"/>
             <Entry x:Name="inputEntry" Placeholder="Woord..." TextChanged="inputEntry_TextChanged"/>
             <Label x:Name="answerLabel">
                 <Label.FormattedText>

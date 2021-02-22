@@ -9,12 +9,12 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Notities" Style="{StaticResource h1}"/>
+            <Label Text="Notities" Style="{x:DynamicResource h1}"/>
             <Label x:Name="noNotesLabel" Text="Je hebt nog geen notities. Maak een nieuwe notitie aan door rechtsboven op 'nieuw' te tikken." IsVisible="False"/>
             <ListView x:Name="notesListView" ItemSelected="notesListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Name}" TextColor="{StaticResource PrimaryColor}"/>
+                        <TextCell Text="{Binding Name}" TextColor="{x:DynamicResource PrimaryColor}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

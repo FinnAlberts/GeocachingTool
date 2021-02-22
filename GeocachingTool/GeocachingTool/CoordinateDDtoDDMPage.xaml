@@ -10,7 +10,7 @@
                 <Entry x:Name="eastEntry" Grid.Column="1" Placeholder="Oost..." Keyboard="Numeric"/>
             </Grid>
             <Button x:Name="convertButton" Text="Omzetten" Clicked="convertButton_Clicked"/>
-            <Label x:Name="answerLabel"  Style="{StaticResource answer}"/>
+            <Label x:Name="answerLabel"  Style="{x:DynamicResource answer}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

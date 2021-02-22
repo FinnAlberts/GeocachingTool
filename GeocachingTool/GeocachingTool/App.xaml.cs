@@ -26,6 +26,7 @@ namespace GeocachingTool
 
         protected override void OnStart()
         {
+
         }
 
         protected override void OnSleep()
