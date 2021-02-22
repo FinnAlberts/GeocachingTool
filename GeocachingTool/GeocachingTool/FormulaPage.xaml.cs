@@ -55,9 +55,16 @@ namespace GeocachingTool
         {
             string formula = formulaEntry.Text;
 
-            string result = SolveCoordinates(formula);
+            if (String.IsNullOrEmpty(formula))
+            {
+                DisplayAlert("Fout", "Niet alle velden zijn ingevuld. Vul alle velden in en probeer het opnieuw.", "Oke");
+            }
+            else
+            {
+                string result = SolveCoordinates(formula);
 
-            answerLabel.Text = result;
+                answerLabel.Text = result;
+            }
         }
 
         private void lettersListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
