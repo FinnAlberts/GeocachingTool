@@ -26,7 +26,24 @@ namespace GeocachingTool
 
         protected override void OnStart()
         {
+            // Check for dark theme
+            OSAppTheme currentTheme = Application.Current.RequestedTheme;
 
+            if (currentTheme == OSAppTheme.Dark)
+            {
+                App.Current.Resources["PrimaryTextColor"] = "#fffeff";
+                App.Current.Resources["BackgroundColor"] = "#383838";
+                
+
+                /*
+                 <Color x:Key="PrimaryColor">#02874d</Color>
+            <Color x:Key="SecondaryColor">#CCE7DB</Color>
+            <Color x:Key="PrimaryTextColor">#4a4a4a</Color>
+            <Color x:Key="SecondaryTextColor">#ffffff</Color>
+            <Color x:Key="PlaceholderTextColor">#9c9a9c</Color>
+            <Color x:Key="BackgroundColor">#fffeff</Color>
+                 */
+            }
         }
 
         protected override void OnSleep()
