@@ -13,7 +13,7 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="Versie: " FontAttributes="Bold"  FontSize="16"/>
-                        <Span Text="1.1"/>
+                        <Span Text="1.2"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>

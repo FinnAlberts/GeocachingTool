@@ -54,6 +54,11 @@
             <local:WordValuePage/>
         </ShellContent>
     </FlyoutItem>
+    <FlyoutItem Title="Stapeltellen" Icon="calculator.png">
+        <ShellContent>
+            <local:StackNumbersPage/>
+        </ShellContent>
+    </FlyoutItem>
 
     <MenuItem>
         <!-- Vertical line -->
