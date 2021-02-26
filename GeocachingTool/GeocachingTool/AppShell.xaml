@@ -20,6 +20,11 @@
             <local:NotesPage/>
         </ShellContent>
     </FlyoutItem>
+    <FlyoutItem Title="Kompas" Icon="compass.png">
+        <ShellContent>
+            <local:CompassPage/>
+        </ShellContent>
+    </FlyoutItem>
     
     <MenuItem> <!-- Vertical line -->
         <Shell.MenuItemTemplate>
@@ -44,9 +49,19 @@
             </ShellContent>
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Title="Projectie berekenen" Icon="draftingCompass.png">
+        <ShellContent>
+            <local:CalculateProjectionCoordinatePage/>
+        </ShellContent>
+    </FlyoutItem>
     <FlyoutItem Title="Woordwaarde" Icon="letter.png">
         <ShellContent>
             <local:WordValuePage/>
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Stapeltellen" Icon="plus.png">
+        <ShellContent>
+            <local:StackNumbersPage/>
         </ShellContent>
     </FlyoutItem>
 

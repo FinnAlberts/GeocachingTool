@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeocachingTool.StackNumbersPage">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Stapeltellen" Style="{x:DynamicResource h1}"/>
+            <Entry x:Name="inputEntry" Placeholder="Getal..." Keyboard="Numeric" TextChanged="inputEntry_TextChanged"/>
+            <Label x:Name="answerLabel" Text="0" Style="{x:DynamicResource answer}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -16,7 +16,7 @@
                     <Entry x:Name="eastMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="1" Placeholder="Oost..." Keyboard="Numeric"/>
                 </Grid>
                 <Button x:Name="convertButton" Text="Omzetten" Clicked="convertButton_Clicked"/>
-                <Label x:Name="answerLabel"  Style="{StaticResource answer}"/>
+                <Label x:Name="answerLabel"  Style="{x:DynamicResource answer}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

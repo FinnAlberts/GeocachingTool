@@ -8,12 +8,12 @@
     <ContentPage.Content>
         <StackLayout>
             <Image Source="{markupExtensions:EmbeddedImage ResourceId=GeocachingTool.Assets.Images.logo.png}" Aspect="AspectFill" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
-            <Label Text="Over Geocaching Backpack" Style="{StaticResource h1}"/>
+            <Label Text="Over Geocaching Backpack" Style="{x:DynamicResource h1}"/>
             <Label>
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="Versie: " FontAttributes="Bold"  FontSize="16"/>
-                        <Span Text="1.1"/>
+                        <Span Text="1.2"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
