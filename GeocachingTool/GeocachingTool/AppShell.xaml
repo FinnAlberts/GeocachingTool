@@ -54,7 +54,7 @@
             <local:WordValuePage/>
         </ShellContent>
     </FlyoutItem>
-    <FlyoutItem Title="Stapeltellen" Icon="calculator.png">
+    <FlyoutItem Title="Stapeltellen" Icon="plus.png">
         <ShellContent>
             <local:StackNumbersPage/>
         </ShellContent>
