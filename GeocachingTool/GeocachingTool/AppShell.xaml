@@ -49,6 +49,11 @@
             </ShellContent>
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Title="Projectie berekenen" Icon="draftingCompass.png">
+        <ShellContent>
+            <local:CalculateProjectionCoordinatePage/>
+        </ShellContent>
+    </FlyoutItem>
     <FlyoutItem Title="Woordwaarde" Icon="letter.png">
         <ShellContent>
             <local:WordValuePage/>
