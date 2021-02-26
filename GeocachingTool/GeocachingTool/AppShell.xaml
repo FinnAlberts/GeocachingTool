@@ -20,6 +20,11 @@
             <local:NotesPage/>
         </ShellContent>
     </FlyoutItem>
+    <FlyoutItem Title="Kompas" Icon="compass.png">
+        <ShellContent>
+            <local:CompassPage/>
+        </ShellContent>
+    </FlyoutItem>
     
     <MenuItem> <!-- Vertical line -->
         <Shell.MenuItemTemplate>

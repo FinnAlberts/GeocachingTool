@@ -36,6 +36,11 @@
                 <Setter Property="FontAttributes" Value="Bold"/>
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
             </Style>
+            <Style TargetType="Label" x:Key="error">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
             
             <Style TargetType="Entry">
                 <Setter Property="TextColor" Value="{x:DynamicResource PrimaryTextColor}"/>

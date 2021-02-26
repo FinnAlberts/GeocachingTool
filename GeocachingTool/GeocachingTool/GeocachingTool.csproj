@@ -12,11 +12,13 @@
 
   <ItemGroup>
     <None Remove="Assets\Images\banner.png" />
+    <None Remove="Assets\Images\compass.png" />
     <None Remove="Assets\Images\logo.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Assets\Images\banner.png" />
+    <EmbeddedResource Include="Assets\Images\compass.png" />
     <EmbeddedResource Include="Assets\Images\logo.png" />
   </ItemGroup>
 
@@ -31,6 +33,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="AppShell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CompassPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CompassTargetPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="CoordinateDDMtoDDPage.xaml">
