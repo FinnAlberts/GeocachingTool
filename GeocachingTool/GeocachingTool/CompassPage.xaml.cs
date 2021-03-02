@@ -15,6 +15,7 @@ namespace GeocachingTool
         private Location startLocation = null;
         private Location endLocation = new Location();
         private bool locationFound = false;
+        private bool getLocation;
 
 
         public CompassPage()
@@ -22,23 +23,6 @@ namespace GeocachingTool
             InitializeComponent();
 
             Compass.ReadingChanged += Compass_ReadingChanged;
-
-            try
-            {
-                if (!Compass.IsMonitoring)
-                {
-                    Compass.Start(SensorSpeed.UI, applyLowPassFilter: true);
-                }
-            }
-            catch (FeatureNotSupportedException fnsEx)
-            {
-                DisplayAlert("Fout", "Je apparaat biedt helaas geen ondersteuning voor een kompas.", "Oke");
-            }
-            catch
-            {
-                DisplayAlert("Fout", "Er is iets misgegaan. Probeer het opnieuw.", "Oke");
-            }
-            
         }
 
         protected async override void OnAppearing()
@@ -55,7 +39,24 @@ namespace GeocachingTool
                 endLocation.Latitude = Preferences.Get("targetLatitude", 0f);
                 endLocation.Longitude = Preferences.Get("targetLongitude", 0f);
 
-                while (true)
+                try
+                {
+                    if (!Compass.IsMonitoring)
+                    {
+                        Compass.Start(SensorSpeed.UI, applyLowPassFilter: true);
+                    }
+                }
+                catch (FeatureNotSupportedException fnsEx)
+                {
+                    await DisplayAlert("Fout", "Je apparaat biedt helaas geen ondersteuning voor een kompas.", "Oke");
+                }
+                catch
+                {
+                    await DisplayAlert("Fout", "Er is iets misgegaan. Probeer het opnieuw.", "Oke");
+                }
+
+                getLocation = true;
+                while (getLocation)
                 {
                     try
                     {
@@ -76,6 +77,25 @@ namespace GeocachingTool
                         locationFound = false;
                     }
                 }
+            }
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            getLocation = false;
+
+            try
+            {
+                if (Compass.IsMonitoring)
+                {
+                    Compass.Stop();
+                }
+            }
+            catch
+            {
+                DisplayAlert("Fout", "Er is iets misgegaan. Probeer het opnieuw.", "Oke");
             }
         }
 
