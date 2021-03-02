@@ -42,12 +42,13 @@ namespace GeocachingTool
 
                     formulaLetters = (from formulaLetter in formulaLetters where formulaLetter.Letter == letter select formulaLetter).ToList();
 
-                    if (formulaLetters.Count == 0) // Letter does not yet exist, add letter
+                    if (formulaLetters.Count == 0) // Letter does not yet exist
                     {
+                        // Insert new letter
                         FormulaLetter newFormulaLetter = new FormulaLetter { Letter = letter, Value = value };
                         int rows = connection.Insert(newFormulaLetter);
 
-                        // Check for errors while inserting
+                        // Check for errors
                         if (rows > 0)
                         {
                             DisplayAlert("Succes", "De letter is succesvol toegevoegd.", "Oke");

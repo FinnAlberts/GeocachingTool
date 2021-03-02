@@ -22,6 +22,7 @@ namespace GeocachingTool
         {
             InitializeComponent();
 
+            // When the reading of the compass has changed, run Compass_ReadingChange
             Compass.ReadingChanged += Compass_ReadingChanged;
         }
 
@@ -29,16 +30,19 @@ namespace GeocachingTool
         {
             base.OnAppearing();
 
+            // Check if the application has permission to use location
             var hasLocationPermission = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 
-            if (hasLocationPermission != PermissionStatus.Granted)
+            if (hasLocationPermission != PermissionStatus.Granted) // No permission to use location
             {
                 await DisplayAlert("Fout", "Voor het gebruiken van het kompas is je locatie nodig.", "Oke");
             } else
             {
+                // Get the set endpoint coordinates
                 endLocation.Latitude = Preferences.Get("targetLatitude", 0f);
                 endLocation.Longitude = Preferences.Get("targetLongitude", 0f);
 
+                // Start the compass
                 try
                 {
                     if (!Compass.IsMonitoring)
@@ -46,15 +50,16 @@ namespace GeocachingTool
                         Compass.Start(SensorSpeed.UI, applyLowPassFilter: true);
                     }
                 }
-                catch (FeatureNotSupportedException fnsEx)
+                catch (FeatureNotSupportedException) // Device doesn't support compass
                 {
                     await DisplayAlert("Fout", "Je apparaat biedt helaas geen ondersteuning voor een kompas.", "Oke");
                 }
-                catch
+                catch // Some other exception while starting compass
                 {
                     await DisplayAlert("Fout", "Er is iets misgegaan. Probeer het opnieuw.", "Oke");
                 }
 
+                // Constantly get the users location, until leaving the page
                 getLocation = true;
                 while (getLocation)
                 {
@@ -66,12 +71,12 @@ namespace GeocachingTool
                         errorLabel.IsVisible = false;
                         locationFound = true;
                     }
-                    catch (FeatureNotEnabledException)
+                    catch (FeatureNotEnabledException) // GPS is not enabled
                     {
                         await DisplayAlert("Fout", "De locatie op je apparaat is niet ingeschakeld.", "Oke");
                         break;
                     }
-                    catch
+                    catch // Some other exception while getting GPS-location
                     {
                         errorLabel.IsVisible = true;
                         locationFound = false;
@@ -84,8 +89,10 @@ namespace GeocachingTool
         {
             base.OnDisappearing();
 
+            // Stop getting the current location of the user
             getLocation = false;
 
+            // Stop the compass
             try
             {
                 if (Compass.IsMonitoring)
@@ -101,11 +108,14 @@ namespace GeocachingTool
 
         async void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
         {
+            // Get the deviation compared to north
             var data = e.Reading;
             double north = data.HeadingMagneticNorth;
 
+            // Check if the user's location was succesfully collected
             if (locationFound)
             {
+                // Calculate the angle the compass should head towards
                 double dy = endLocation.Latitude - startLocation.Latitude;
                 double dx = Math.Cos(Math.PI / 180 * startLocation.Latitude) * (endLocation.Longitude - startLocation.Longitude);
                 double angle = Math.Atan2(dy, dx) * (180 / Math.PI);
@@ -117,13 +127,15 @@ namespace GeocachingTool
                     angle += 360;
                 }
 
+                // Calculate distance between user's location and endpoint
                 double distance = Location.CalculateDistance(startLocation, endLocation, DistanceUnits.Kilometers) * 1000;
 
+                // Return results
                 distanceLabel.Text = String.Format("{0:f1} meter", distance);
 
                 await compassImage.RotateTo(angle - north);
             }
-            else
+            else // Error while finding the user's location
             {
                 distanceLabel.Text = "?? meter";
 

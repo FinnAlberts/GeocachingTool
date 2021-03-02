@@ -33,12 +33,14 @@ namespace GeocachingTool
                 float north = float.Parse(northInput.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
                 float east = float.Parse(eastInput.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
 
+                // Convert DD to DDM
                 int northDegrees = (int)Math.Floor(north);
                 float northMinutes = (north - (float)Math.Floor(north)) * 60;
 
                 int eastDegrees = (int)Math.Floor(east);
                 float eastMinutes = (east - (float)Math.Floor(east)) * 60;
 
+                // Return results
                 answerLabel.Text = String.Format("N{0}° {1} E{2}° {3}", northDegrees, northMinutes, eastDegrees, eastMinutes);
             }
         }

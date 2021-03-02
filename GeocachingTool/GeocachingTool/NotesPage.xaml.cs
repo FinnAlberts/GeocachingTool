@@ -23,6 +23,7 @@ namespace GeocachingTool
         {
             base.OnAppearing();
 
+            // Get all notes and put them into the ListView
             using (SQLiteConnection connenction = new SQLiteConnection(App.DatabaseLocation))
             {
                 connenction.CreateTable<Note>();
@@ -31,6 +32,7 @@ namespace GeocachingTool
 
                 notesListView.ItemsSource = notes;
 
+                // Show a label saying no notes have been created yet if no notes have been created
                 if (notes.Count > 0)
                 {
                     noNotesLabel.IsVisible = false;

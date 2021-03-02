@@ -27,6 +27,7 @@ namespace GeocachingTool
         {
             base.OnAppearing();
 
+            // Set existing values in entries
             nameEntry.Text = note.Name;
             detailsEditor.Text = note.Details;
         }
@@ -55,6 +56,7 @@ namespace GeocachingTool
 
                     int rows = connection.Update(note);
 
+                    // Check for errors
                     if (rows > 0)
                     {
                         Navigation.PopModalAsync();
@@ -69,6 +71,7 @@ namespace GeocachingTool
 
         private async void deleteButton_Clicked(object sender, EventArgs e)
         {
+            // Ask for confirmation
             bool answer = await DisplayAlert("Waarschuwing", "Weet je zeker dat je deze notitie wilt verwijderen? Dit kan niet ongedaan worden gemaakt.", "Ja", "Nee");
 
             if (answer)
@@ -81,6 +84,7 @@ namespace GeocachingTool
                     // Delete note
                     int rows = connection.Delete(note);
 
+                    // Check for errors
                     if (rows > 0)
                     {
                         await Navigation.PopModalAsync();

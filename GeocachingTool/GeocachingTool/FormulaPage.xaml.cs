@@ -33,8 +33,10 @@ namespace GeocachingTool
 
                 formulaLetters = connection.Table<FormulaLetter>().ToList();
 
+                // Put letters in ListView
                 lettersListView.ItemsSource = formulaLetters;
 
+                // If not letters have been set, show a message saying no letters have been set yet
                 if (formulaLetters.Count > 0)
                 {
                     noFormulaLettersLabel.IsVisible = false;
@@ -53,10 +55,13 @@ namespace GeocachingTool
 
         private void calculateButton_Clicked(object sender, EventArgs e)
         {
+            // Get input
             string formula = formulaEntry.Text;
 
+            // Check if filled in
             if (String.IsNullOrEmpty(formula))
             {
+                // Not filled in
                 DisplayAlert("Fout", "Niet alle velden zijn ingevuld. Vul alle velden in en probeer het opnieuw.", "Oke");
             }
             else
@@ -65,7 +70,8 @@ namespace GeocachingTool
                 formula = formula.Replace(",", ".");
                 
                 string result = Calculate(formula);
-
+                
+                // Return result
                 answerLabel.Text = result;
             }
         }
@@ -77,38 +83,47 @@ namespace GeocachingTool
             Navigation.PushModalAsync(new FormulaEditLetterPage(formulaLetter));
         }
 
+        // Function for calculating equations containing letters. Letters are replaced by their saved values.
         private string Calculate(string formula)
         {
+            // Convert to lowercase to make sure e.g. 'a' and 'A' are the same
             formula = formula.ToLower();
             
+            // Replace each letter by its value
             foreach (FormulaLetter formulaLetter in formulaLetters)
             {
                 formula = formula.Replace(formulaLetter.Letter.ToLower(), formulaLetter.Value.ToString());
             }
-
+            
+            // Try to calculate the answer
             try
             {
                 var result = new DataTable().Compute(formula, null);
 
+                // Succesfully calculated, return result
                 return result.ToString();
             }
             catch
             {
+                // Could not calculate answer
                 return "n/d";
             }
         }
 
         private async void deleteAllToolbarItem_Clicked(object sender, EventArgs e)
         {
+            // Ask for confirmation
             bool answer = await DisplayAlert("Waarschuwing", "Weet je zeker dat je alle opgeslagen letters inclusief waarde wilt verwijderen? Dit kan niet ongedaan worden gemaakt.", "Ja", "Nee");
 
             if (answer)
             {
+                // Delete all FormulaLetters
                 using (SQLiteConnection connection = new SQLiteConnection(App.DatabaseLocation))
                 {
                     connection.CreateTable<FormulaLetter>();
                     connection.DeleteAll<FormulaLetter>();
 
+                    // Update ListView and "no letters have been set yet"-label
                     formulaLetters = connection.Table<FormulaLetter>().ToList();
 
                     lettersListView.ItemsSource = formulaLetters;
