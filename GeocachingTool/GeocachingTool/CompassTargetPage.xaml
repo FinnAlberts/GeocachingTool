@@ -4,7 +4,7 @@
              x:Class="GeocachingTool.CompassTargetPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Stel de coördianten in" Style="{x:DynamicResource h1}"/>
+            <Label Text="Stel de coördinaten in" Style="{x:DynamicResource h1}"/>
             <Grid>
                 <Entry x:Name="northCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="0" Placeholder="Noord..." Keyboard="Numeric"/>
                 <Label Grid.Column="12" Grid.ColumnSpan="5" Grid.Row="0" Text="°" FontSize="30"/>

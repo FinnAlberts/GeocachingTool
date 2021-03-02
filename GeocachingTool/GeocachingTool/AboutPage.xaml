@@ -13,7 +13,7 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="Versie: " FontAttributes="Bold"  FontSize="16"/>
-                        <Span Text="1.2"/>
+                        <Span Text="1.2.1"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
@@ -26,6 +26,8 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
+            <BoxView BackgroundColor="Black" HeightRequest="1" Margin="0"/>
+            <Label Text="Geocaching is een spel waarbij je in de echte wereld op zoek gaat naar zogenaamde 'caches'. Geocaching is eigendom van Groundspeak Incorporated. Meer informatie op www.geocaching.com."/>
             <Label Text="Gebruikte icoontjes zijn eigendom van Font Awesome en worden gebruikt onder de CCA 4.0 licentie. Meer informatie op www.fontawesome.com/license."/>
         </StackLayout>
     </ContentPage.Content>

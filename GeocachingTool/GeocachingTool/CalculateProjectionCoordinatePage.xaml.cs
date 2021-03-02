@@ -42,10 +42,11 @@ namespace GeocachingTool
                 float bearing = float.Parse(bearingEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
                 float distance = float.Parse(meteresEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture) / 1000;
 
-                // Convert
+                // Convert from DDM to DD
                 float north = northDegrees + northMinutes / 60;
                 float east = eastDegrees + eastMinutes / 60;
 
+                // Calculate endpoint
                 double earthRadius = 6371.01;
                 var distRatio = distance/ earthRadius;
                 var distRatioSine = Math.Sin(distRatio);
@@ -70,16 +71,19 @@ namespace GeocachingTool
                 var eastDegreesAnswer = (int)Math.Floor(endEast);
                 var eastMinutesAnswer = (endEast - (float)Math.Floor(endEast)) * 60;
 
+                // Return answer
                 answerLabel.Text = String.Format("N{0}° {1:f3} E{2}° {3:f3}", northDegreesAnswer, northMinutesAnswer, eastDegreesAnswer, eastMinutesAnswer);
             }
         }
 
+        // Convert degrees to radians
         public static double DegreesToRadians(double degrees)
         {
             const double degToRadFactor = Math.PI / 180;
             return degrees * degToRadFactor;
         }
 
+        // Convert radians to degrees
         public static double RadiansToDegrees(double radians)
         {
             const double radToDegFactor = 180 / Math.PI;

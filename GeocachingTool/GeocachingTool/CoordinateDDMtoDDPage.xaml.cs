@@ -37,10 +37,11 @@ namespace GeocachingTool
                 float eastDegrees = float.Parse(eastDegreesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
                 float eastMinutes = float.Parse(eastMinutesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
 
-                // Convert
+                // Convert DDM to DD
                 float north = northDegrees + northMinutes / 60;
                 float east = eastDegrees + eastMinutes / 60;
 
+                // Return results
                 answerLabel.Text = String.Format("N{0} E{1}", north, east);
             }
         }

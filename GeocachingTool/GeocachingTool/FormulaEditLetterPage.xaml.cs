@@ -27,6 +27,7 @@ namespace GeocachingTool
         {
             base.OnAppearing();
 
+            // Set the set data into label and entry
             letterLabel.Text = formulaLetter.Letter;
             ValueEntry.Text = formulaLetter.Value.ToString();
         }
@@ -53,6 +54,7 @@ namespace GeocachingTool
 
                     int rows = connection.Update(formulaLetter);
 
+                    // Check for errors
                     if (rows > 0)
                     {
                         Navigation.PopModalAsync();
@@ -67,6 +69,7 @@ namespace GeocachingTool
 
         private async void deleteButton_Clicked(object sender, EventArgs e)
         {
+            // Ask for confirmation
             bool answer = await DisplayAlert("Waarschuwing", "Weet je zeker dat je deze letter inclusief waarde wilt verwijderen? Dit kan niet ongedaan worden gemaakt.", "Ja", "Nee");
 
             if (answer)
@@ -79,6 +82,7 @@ namespace GeocachingTool
                     // Delete letter
                     int rows = connection.Delete(formulaLetter);
 
+                    // Check for errors
                     if (rows > 0)
                     {
                         await Navigation.PopModalAsync();

@@ -19,8 +19,10 @@ namespace GeocachingTool
 
         private void inputEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
+            // Get input
             string word = inputEntry.Text.ToLower();
 
+            // Initialize wordValue variable
             int wordValue = 0;
 
             // For each character in the input, get the ASCII value and subtract 96 ('a' = 97 in ASCII). Add this to wordValue.
@@ -37,15 +39,19 @@ namespace GeocachingTool
             // Add individual integers together to get a single digit answer
             int oneDigitWordValue = 0;
             int oneDigitWordValueTemp = wordValue;
+            
+            // While number will contain more than 1 digit, done will be false
             bool done = false;
 
             while (!done)
             {
+                // Add every digit to the sum
                 foreach (char c in oneDigitWordValueTemp.ToString())
                 {
                     oneDigitWordValue += Int32.Parse(c.ToString());
                 }
 
+                // Check if answer is 1 digit long, if not: start again, with the found answer, else return the answer
                 if (oneDigitWordValue.ToString().Length == 1)
                 {
                     done = true;

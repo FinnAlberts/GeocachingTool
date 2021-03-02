@@ -21,16 +21,18 @@ namespace GeocachingTool
         {
             base.OnAppearing();
 
-            // Convert to floats
+            // Get set coordiantes if already set
             float north = Preferences.Get("targetLatitude", 0f);
             float east = Preferences.Get("targetLongitude", 0f);
 
+            // Convert DD to DDM
             int northDegrees = (int)Math.Floor(north);
             float northMinutes = (north - (float)Math.Floor(north)) * 60;
 
             int eastDegrees = (int)Math.Floor(east);
             float eastMinutes = (east - (float)Math.Floor(east)) * 60;
 
+            // Put set coordinates into entries
             northCoordinateEntry.Text = northDegrees.ToString();
             northMinuteEntry.Text = northMinutes.ToString();
 
@@ -59,10 +61,11 @@ namespace GeocachingTool
                 float eastDegrees = float.Parse(eastDegreesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
                 float eastMinutes = float.Parse(eastMinutesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
 
-                // Convert
+                // Convert DDM to DD
                 float north = northDegrees + northMinutes / 60;
                 float east = eastDegrees + eastMinutes / 60;
 
+                // Save coordinates
                 Preferences.Set("targetLatitude", north);
                 Preferences.Set("targetLongitude", east);
 
