@@ -3,32 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GeocachingTool.AboutPage"
              xmlns:markupExtensions="clr-namespace:GeocachingTool.MarkupExtensions"
+             xmlns:resource="clr-namespace:GeocachingTool.Resources"
              >
     
     <ContentPage.Content>
         <StackLayout>
             <Image Source="{markupExtensions:EmbeddedImage ResourceId=GeocachingTool.Assets.Images.logo.png}" Aspect="AspectFill" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
-            <Label Text="Over Geocaching Backpack" Style="{x:DynamicResource h1}"/>
+            <Label Text="{Static resource:AppResources.aboutPageHeader}" Style="{x:DynamicResource h1}"/>
             <Label>
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Versie: " FontAttributes="Bold"  FontSize="16"/>
-                        <Span Text="1.2.1"/>
+                        <Span Text="{Static resource:AppResources.aboutPageVersion}" FontAttributes="Bold"  FontSize="16"/>
+                        <Span Text="1.3.0"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Text="Geocaching backpack is ontwikkeld en wordt onderhouden door Finn Alberts. Problemen kunnen worden gemeld via www.finnalberts.nl/contact."/>
+            <Label Text="{Static resource:AppResources.aboutPageParagraph1}"/>
             <Label>
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Lees meer op "/>
+                        <Span Text="{Static resource:AppResources.aboutPageReadMore}"/>
                         <Span Text="www.finnalberts.nl" FontAttributes="Bold" FontSize="16"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
             <BoxView BackgroundColor="Black" HeightRequest="1" Margin="0"/>
-            <Label Text="Geocaching is een spel waarbij je in de echte wereld op zoek gaat naar zogenaamde 'caches'. Geocaching is eigendom van Groundspeak Incorporated. Meer informatie op www.geocaching.com."/>
-            <Label Text="Gebruikte icoontjes zijn eigendom van Font Awesome en worden gebruikt onder de CCA 4.0 licentie. Meer informatie op www.fontawesome.com/license."/>
+            <Label Text="{Static resource:AppResources.aboutPageParagraph2}"/>
+            <Label Text="{Static resource:AppResources.aboutPageParagraph3}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

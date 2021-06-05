@@ -1,4 +1,5 @@
 ﻿using GeocachingTool.Model;
+using GeocachingTool.Resources;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -37,7 +38,7 @@ namespace GeocachingTool
             // Check if filled in 
             if (String.IsNullOrEmpty(nameEntry.Text) || String.IsNullOrEmpty(detailsEditor.Text))
             {
-                DisplayAlert("Fout", "Niet alle velden zijn ingevuld. Vul alle velden in en probeer het opnieuw.", "Oke");
+                DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             }
             else
             {
@@ -63,7 +64,7 @@ namespace GeocachingTool
                     }
                     else
                     {
-                        DisplayAlert("Fout", "Er is iets misgegaan. Probeer het opnieuw.", "Oke");
+                        DisplayAlert(AppResources.error, AppResources.errorDefault, AppResources.ok);
                     }
                 }
             }
@@ -72,7 +73,7 @@ namespace GeocachingTool
         private async void deleteButton_Clicked(object sender, EventArgs e)
         {
             // Ask for confirmation
-            bool answer = await DisplayAlert("Waarschuwing", "Weet je zeker dat je deze notitie wilt verwijderen? Dit kan niet ongedaan worden gemaakt.", "Ja", "Nee");
+            bool answer = await DisplayAlert(AppResources.warning, AppResources.areYouSureDelete, AppResources.yes, AppResources.no);
 
             if (answer)
             {
@@ -91,7 +92,7 @@ namespace GeocachingTool
                     }
                     else
                     {
-                        await DisplayAlert("Fout", "Er is iets misgegaan. Probeer het opnieuw.", "Oke");
+                        await DisplayAlert(AppResources.error, AppResources.errorDefault, AppResources.ok);
                     }
                 }
             }

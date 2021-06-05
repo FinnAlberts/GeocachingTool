@@ -1,4 +1,5 @@
 ﻿using GeocachingTool.Model;
+using GeocachingTool.Resources;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace GeocachingTool
         {
             // Check if filled in
             if (String.IsNullOrEmpty(nameEntry.Text) || String.IsNullOrEmpty(detailsEditor.Text)) {
-                DisplayAlert("Fout", "Niet alle velden zijn ingevuld. Vul alle velden in en probeer het opnieuw.", "Oke");
+                DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             } else
             {
                 // Get input
@@ -47,7 +48,7 @@ namespace GeocachingTool
                     }
                     else
                     {
-                        DisplayAlert("Fout", "Er is iets misgegaan. Probeer het opnieuw.", "Oke");
+                        DisplayAlert(AppResources.error, AppResources.errorDefault, AppResources.ok);
                     }
                 }
             }

@@ -1,4 +1,5 @@
 ﻿using GeocachingTool.Model;
+using GeocachingTool.Resources;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -62,7 +63,7 @@ namespace GeocachingTool
             if (String.IsNullOrEmpty(formula))
             {
                 // Not filled in
-                DisplayAlert("Fout", "Niet alle velden zijn ingevuld. Vul alle velden in en probeer het opnieuw.", "Oke");
+                DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             }
             else
             {
@@ -113,7 +114,7 @@ namespace GeocachingTool
         private async void deleteAllToolbarItem_Clicked(object sender, EventArgs e)
         {
             // Ask for confirmation
-            bool answer = await DisplayAlert("Waarschuwing", "Weet je zeker dat je alle opgeslagen letters inclusief waarde wilt verwijderen? Dit kan niet ongedaan worden gemaakt.", "Ja", "Nee");
+            bool answer = await DisplayAlert(AppResources.warning, AppResources.areYouSureDelete, AppResources.yes, AppResources.no);
 
             if (answer)
             {
@@ -134,7 +135,7 @@ namespace GeocachingTool
 
         private void helpToolbarItem_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Help", "Voeg letters toe door op 'Nieuw' te tikken. Geef voor iedere letter aan wat de waarde van deze letter is. De letter zal nu in het overzicht verschijnen. Vanaf hier kun je letter ook verwijderen of aanpassen. \n\nBovenin kun je een formule invoeren om een waarde uit te rekenen. Deze kunnen simpel zijn zoals 5+5, maar deze mogen ook letters bevatten die je hebt toegevoegd. Je kunt gebruik maken van +, -, * en /.\n\nVoorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te voeren zul je als antwoord 6 krijgen.", "Oke");
+            DisplayAlert(AppResources.help, AppResources.formulaPageHelp, AppResources.ok);
         }
     }
 }

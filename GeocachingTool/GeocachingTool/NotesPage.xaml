@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resource="clr-namespace:GeocachingTool.Resources"
              x:Class="GeocachingTool.NotesPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="newToolbarItem" Text="Nieuw" Clicked="newToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="newToolbarItem" Text="{Static resource:AppResources.newText}" Clicked="newToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Notities" Style="{x:DynamicResource h1}"/>
-            <Label x:Name="noNotesLabel" Text="Je hebt nog geen notities. Maak een nieuwe notitie aan door rechtsboven op 'nieuw' te tikken." IsVisible="False"/>
+            <Label Text="{Static resource:AppResources.notesPageTitle}" Style="{x:DynamicResource h1}"/>
+            <Label x:Name="noNotesLabel" Text="{Static resource:AppResources.notesPageNoNotes}" IsVisible="False"/>
             <ListView x:Name="notesListView" ItemSelected="notesListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>

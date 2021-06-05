@@ -3,24 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GeocachingTool.AppShell"
              xmlns:local="clr-namespace:GeocachingTool"
+             xmlns:resource="clr-namespace:GeocachingTool.Resources"
              xmlns:markupExtensions="clr-namespace:GeocachingTool.MarkupExtensions">
 
     <Shell.FlyoutHeader>
         <local:ShellHeaderView/>
     </Shell.FlyoutHeader>
 
-    <FlyoutItem Title="Home" Icon="home.png">
+    <FlyoutItem Title="{Static resource:AppResources.mainPageTitle}" Icon="home.png">
         <ShellContent>
             <local:MainPage/>
         </ShellContent>
     </FlyoutItem>
     <MenuItem x:Name="openWebsiteMenuItem" Text="Geocaching.com" Clicked="openWebsiteMenuItem_Clicked" IconImageSource="internet.png"/>
-    <FlyoutItem Title="Notities" Icon="note.png">
+    <FlyoutItem Title="{Static resource:AppResources.notesPageTitle}" Icon="note.png">
         <ShellContent>
             <local:NotesPage/>
         </ShellContent>
     </FlyoutItem>
-    <FlyoutItem Title="Kompas" Icon="compass.png">
+    <FlyoutItem Title="{Static resource:AppResources.compassPageTitle}" Icon="compass.png">
         <ShellContent>
             <local:CompassPage/>
         </ShellContent>
@@ -34,32 +35,32 @@
         </Shell.MenuItemTemplate>
     </MenuItem>
 
-    <FlyoutItem Title="Formule berekenen" Icon="calculator.png">
+    <FlyoutItem Title="{Static resource:AppResources.formulaPageTitle}" Icon="calculator.png">
         <ShellContent>
             <local:FormulaPage/>
         </ShellContent>
     </FlyoutItem>
-    <FlyoutItem Title="Coördinaten omzetten" Icon="gps.png">
+    <FlyoutItem Title="{Static resource:AppResources.coordinatePageTitle}" Icon="gps.png">
         <Tab>
-            <ShellContent Title="DD naar DDM">
+            <ShellContent Title="{Static resource:AppResources.ddToDdm}">
                 <local:CoordinateDDtoDDMPage/>
             </ShellContent>
-            <ShellContent Title="DDM naar DD">
+            <ShellContent Title="{Static resource:AppResources.ddmToDd}">
                 <local:CoordinateDDMtoDDPage/>
             </ShellContent>
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="Projectie berekenen" Icon="draftingCompass.png">
+    <FlyoutItem Title="{Static resource:AppResources.calculateProjectionPageTitle}" Icon="draftingCompass.png">
         <ShellContent>
             <local:CalculateProjectionCoordinatePage/>
         </ShellContent>
     </FlyoutItem>
-    <FlyoutItem Title="Woordwaarde" Icon="letter.png">
+    <FlyoutItem Title="{Static resource:AppResources.wordValuePageTitle}" Icon="letter.png">
         <ShellContent>
             <local:WordValuePage/>
         </ShellContent>
     </FlyoutItem>
-    <FlyoutItem Title="Stapeltellen" Icon="plus.png">
+    <FlyoutItem Title="{Static resource:AppResources.stackCountingPageTitle}" Icon="plus.png">
         <ShellContent>
             <local:StackNumbersPage/>
         </ShellContent>
@@ -74,7 +75,7 @@
         </Shell.MenuItemTemplate>
     </MenuItem>
 
-    <FlyoutItem Title="Over" Icon="about.png">
+    <FlyoutItem Title="{Static resource:AppResources.aboutPageTitle}" Icon="about.png">
         <ShellContent>
             <local:AboutPage/>
         </ShellContent>

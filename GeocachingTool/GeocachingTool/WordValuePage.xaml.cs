@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeocachingTool.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -66,9 +67,9 @@ namespace GeocachingTool
             // Return answers
             var answerString = new FormattedString();
 
-            answerString.Spans.Add(new Span { Text = "De woordwaarde is " });
+            answerString.Spans.Add(new Span { Text = AppResources.wordValuePageWordValue });
             answerString.Spans.Add(new Span { Text = wordValue.ToString(), FontAttributes = FontAttributes.Bold});
-            answerString.Spans.Add(new Span { Text = ". Doorgeteld is dat " });
+            answerString.Spans.Add(new Span { Text = AppResources.wordValuePageCountedThrough });
             answerString.Spans.Add(new Span { Text = oneDigitWordValue.ToString(), FontAttributes = FontAttributes.Bold });
             answerString.Spans.Add(new Span { Text = "." });
 

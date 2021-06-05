@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resource="clr-namespace:GeocachingTool.Resources"
              x:Class="GeocachingTool.CompassTargetPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Stel de coördinaten in" Style="{x:DynamicResource h1}"/>
+            <Label Text="{Static resource:AppResources.compassPageSetTarget}" Style="{x:DynamicResource h1}"/>
             <Grid>
-                <Entry x:Name="northCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="0" Placeholder="Noord..." Keyboard="Numeric"/>
+                <Entry x:Name="northCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="0" Placeholder="{Static resource:AppResources.north}" Keyboard="Numeric"/>
                 <Label Grid.Column="12" Grid.ColumnSpan="5" Grid.Row="0" Text="°" FontSize="30"/>
-                <Entry x:Name="northMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="0" Placeholder="Noord..." Keyboard="Numeric"/>
+                <Entry x:Name="northMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="0" Placeholder="{Static resource:AppResources.north}" Keyboard="Numeric"/>
 
-                <Entry x:Name="eastCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="1" Placeholder="Oost..." Keyboard="Numeric"/>
+                <Entry x:Name="eastCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="1" Placeholder="{Static resource:AppResources.east}" Keyboard="Numeric"/>
                 <Label Grid.Column="12" Grid.ColumnSpan="5" Grid.Row="1" Text="°" FontSize="30"/>
-                <Entry x:Name="eastMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="1" Placeholder="Oost..." Keyboard="Numeric"/>
+                <Entry x:Name="eastMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="1" Placeholder="{Static resource:AppResources.east}" Keyboard="Numeric"/>
             </Grid>
-            <Button x:Name="setButton" Text="Stel in" Clicked="setButton_Clicked"/>
+            <Button x:Name="setButton" Text="{Static resource:AppResources.compassPageSetTarget}" Clicked="setButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

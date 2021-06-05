@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeocachingTool.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,7 +36,7 @@ namespace GeocachingTool
 
             if (hasLocationPermission != PermissionStatus.Granted) // No permission to use location
             {
-                await DisplayAlert("Fout", "Voor het gebruiken van het kompas is je locatie nodig.", "Oke");
+                await DisplayAlert(AppResources.error, AppResources.errorCompassNoPermission, AppResources.ok);
             } else
             {
                 // Get the set endpoint coordinates
@@ -52,11 +53,11 @@ namespace GeocachingTool
                 }
                 catch (FeatureNotSupportedException) // Device doesn't support compass
                 {
-                    await DisplayAlert("Fout", "Je apparaat biedt helaas geen ondersteuning voor een kompas.", "Oke");
+                    await DisplayAlert(AppResources.error, AppResources.errorCompassNoSupport, AppResources.ok);
                 }
                 catch // Some other exception while starting compass
                 {
-                    await DisplayAlert("Fout", "Er is iets misgegaan. Probeer het opnieuw.", "Oke");
+                    await DisplayAlert(AppResources.error, AppResources.errorDefault, AppResources.ok);
                 }
 
                 // Constantly get the users location, until leaving the page
@@ -73,7 +74,7 @@ namespace GeocachingTool
                     }
                     catch (FeatureNotEnabledException) // GPS is not enabled
                     {
-                        await DisplayAlert("Fout", "De locatie op je apparaat is niet ingeschakeld.", "Oke");
+                        await DisplayAlert(AppResources.error, AppResources.errorCompassLocationOff, AppResources.ok);
                         break;
                     }
                     catch // Some other exception while getting GPS-location
@@ -102,7 +103,7 @@ namespace GeocachingTool
             }
             catch
             {
-                DisplayAlert("Fout", "Er is iets misgegaan. Probeer het opnieuw.", "Oke");
+                DisplayAlert(AppResources.error, AppResources.errorDefault, AppResources.ok);
             }
         }
 
@@ -131,13 +132,13 @@ namespace GeocachingTool
                 double distance = Location.CalculateDistance(startLocation, endLocation, DistanceUnits.Kilometers) * 1000;
 
                 // Return results
-                distanceLabel.Text = String.Format("{0:f1} meter", distance);
+                distanceLabel.Text = String.Format("{0:f1} " + AppResources.meter, distance);
 
                 await compassImage.RotateTo(angle - north);
             }
             else // Error while finding the user's location
             {
-                distanceLabel.Text = "?? meter";
+                distanceLabel.Text = "?? " + AppResources.meter;
 
                 await compassImage.RotateTo(0);
             }
@@ -146,7 +147,7 @@ namespace GeocachingTool
 
         private void disclaimerToolbarItem_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Disclaimer", "Hou er rekening mee dat de accuraatheid van het kompas en de afstand sterk afhangt van je apparaat. Je locatie wordt ongeveer iedere 15 seconden bijgewerkt en is tot op ongeveer 10 meter nauwkeurig. Ook dit hangt af van je apparaat. Hou hier rekening mee tijdens het cachen.", "Oke");
+            DisplayAlert(AppResources.compassPageDisclaimer, AppResources.compassPageDisclaimerText, AppResources.ok);
         }
 
         private void setTargetToolbarItem_Clicked(object sender, EventArgs e)

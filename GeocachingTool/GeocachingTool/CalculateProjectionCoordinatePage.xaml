@@ -1,23 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resource="clr-namespace:GeocachingTool.Resources"
              x:Class="GeocachingTool.CalculateProjectionCoordinatePage">
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Projectie berekenen" Style="{x:DynamicResource h1}"/>
+            <Label Text="{Static resource:AppResources.calculateProjectionPageTitle}" Style="{x:DynamicResource h1}"/>
             <Grid>
-                <Entry x:Name="northCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="0" Placeholder="Noord..." Keyboard="Numeric"/>
+                <Entry x:Name="northCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="0" Placeholder="{Static resource:AppResources.north}" Keyboard="Numeric"/>
                 <Label Grid.Column="12" Grid.ColumnSpan="5" Grid.Row="0" Text="°" FontSize="30"/>
-                <Entry x:Name="northMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="0" Placeholder="Noord..." Keyboard="Numeric"/>
+                <Entry x:Name="northMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="0" Placeholder="{Static resource:AppResources.north}" Keyboard="Numeric"/>
 
-                <Entry x:Name="eastCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="1" Placeholder="Oost..." Keyboard="Numeric"/>
+                <Entry x:Name="eastCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="1" Placeholder="{Static resource:AppResources.east}" Keyboard="Numeric"/>
                 <Label Grid.Column="12" Grid.ColumnSpan="5" Grid.Row="1" Text="°" FontSize="30"/>
-                <Entry x:Name="eastMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="1" Placeholder="Oost..." Keyboard="Numeric"/>
+                <Entry x:Name="eastMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="1" Placeholder="{Static resource:AppResources.north}" Keyboard="Numeric"/>
             </Grid>
-            <Entry x:Name="angleEntry" Placeholder="Hoek in graden..." Keyboard="Numeric"/>
-            <Entry x:Name="distanceEntry" Placeholder="Afstand in meter..." Keyboard="Numeric"/>
-            <Button x:Name="calculateButton" Text="Bereken" Clicked="calculateButton_Clicked"/>
+            <Entry x:Name="angleEntry" Placeholder="{Static resource:AppResources.calculateProjectionPageAngle}" Keyboard="Numeric"/>
+            <Entry x:Name="distanceEntry" Placeholder="{Static resource:AppResources.calculateProjectionPageDistance}" Keyboard="Numeric"/>
+            <Button x:Name="calculateButton" Text="{Static resource:AppResources.calculate}" Clicked="calculateButton_Clicked"/>
             <Label x:Name="answerLabel"  Style="{x:DynamicResource answer}"/>
         </StackLayout>
     </ContentPage.Content>
