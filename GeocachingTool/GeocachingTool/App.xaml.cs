@@ -1,4 +1,7 @@
-﻿using System;
+﻿using GeocachingTool.Resources;
+using System;
+using System.Globalization;
+using System.Threading;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -34,6 +37,11 @@ namespace GeocachingTool
                 App.Current.Resources["PrimaryTextColor"] = "#fffeff";
                 App.Current.Resources["BackgroundColor"] = "#383838";
             }
+
+            // Language selection
+            CultureInfo language = CultureInfo.InstalledUICulture;
+            Thread.CurrentThread.CurrentUICulture = language;
+            AppResources.Culture = language;
         }
 
         protected override void OnSleep()

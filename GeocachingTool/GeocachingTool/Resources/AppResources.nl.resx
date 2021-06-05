@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="aboutPageHeader" xml:space="preserve">
+    <value>Over Geocaching Backpack</value>
+  </data>
+	<data name="aboutPageParagraph1" xml:space="preserve">
+    <value>Geocaching backpack is ontwikkeld en wordt onderhouden door Finn Alberts. Problemen kunnen worden gemeld via www.finnalberts.nl/contact.</value>
+  </data>
+	<data name="aboutPageParagraph2" xml:space="preserve">
+    <value>Geocaching is een spel waarbij je in de echte wereld op zoek gaat naar zogenaamde 'caches'. Geocaching is eigendom van Groundspeak Incorporated. Meer informatie op www.geocaching.com.</value>
+  </data>
+	<data name="aboutPageParagraph3" xml:space="preserve">
+    <value>Gebruikte icoontjes zijn eigendom van Font Awesome en worden gebruikt onder de CCA 4.0 licentie. Meer informatie op www.fontawesome.com/license.</value>
+  </data>
+	<data name="aboutPageReadMore" xml:space="preserve">
+    <value>Lees meer op </value>
+  </data>
+	<data name="aboutPageTitle" xml:space="preserve">
+    <value>Over</value>
+  </data>
+	<data name="aboutPageVersion" xml:space="preserve">
+    <value>Versie: </value>
+  </data>
+	<data name="areYouSureDelete" xml:space="preserve">
+    <value>Weet je zeker dat je dit wil verwijderen? Dit kan niet ongedaan worden gemaakt.</value>
+  </data>
+	<data name="cachename" xml:space="preserve">
+    <value>Cachenaam</value>
+  </data>
+	<data name="calculate" xml:space="preserve">
+    <value>Bereken</value>
+  </data>
+	<data name="calculateProjectionPageAngle" xml:space="preserve">
+    <value>Hoek in graden</value>
+  </data>
+	<data name="calculateProjectionPageDistance" xml:space="preserve">
+    <value>Afstand in meters</value>
+  </data>
+	<data name="calculateProjectionPageTitle" xml:space="preserve">
+    <value>Bereken projectie</value>
+  </data>
+	<data name="compassPageDisclaimer" xml:space="preserve">
+    <value>Disclaimer</value>
+  </data>
+	<data name="compassPageDisclaimerText" xml:space="preserve">
+    <value>Hou er rekening mee dat de accuraatheid van het kompas en de afstand sterk afhangt van je apparaat. Je locatie wordt ongeveer iedere 15 seconden bijgewerkt en is tot op ongeveer 10 meter nauwkeurig. Ook dit hangt af van je apparaat. Hou hier rekening mee tijdens het cachen.</value>
+  </data>
+	<data name="compassPageNoLocation" xml:space="preserve">
+    <value>Je locatie kon niet worden bepaald.</value>
+  </data>
+	<data name="compassPageSetTarget" xml:space="preserve">
+    <value>Zet doel</value>
+  </data>
+	<data name="compassPageTitle" xml:space="preserve">
+    <value>Kompas</value>
+  </data>
+	<data name="convert" xml:space="preserve">
+    <value>Omzetten</value>
+  </data>
+	<data name="coordinatePageTitle" xml:space="preserve">
+    <value>Coördinaten omzetten</value>
+  </data>
+	<data name="ddmToDd" xml:space="preserve">
+    <value>DDM naar DD</value>
+  </data>
+	<data name="ddToDdm" xml:space="preserve">
+    <value>DD naar DDM</value>
+  </data>
+	<data name="delete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+	<data name="east" xml:space="preserve">
+    <value>Oost</value>
+  </data>
+	<data name="error" xml:space="preserve">
+    <value>Fout</value>
+  </data>
+	<data name="errorCompassLocationOff" xml:space="preserve">
+    <value>De locatie op je apparaat is uitgeschakeld.</value>
+  </data>
+	<data name="errorCompassNoPermission" xml:space="preserve">
+    <value>Voor het gebruiken van het kompas is je locatie noodzakelijk.</value>
+  </data>
+	<data name="errorCompassNoSupport" xml:space="preserve">
+    <value>Je apparaat ondersteunt helaas geen kompas.</value>
+  </data>
+	<data name="errorDefault" xml:space="preserve">
+    <value>Er is iets misgegaan. Probeer het opnieuw.</value>
+  </data>
+	<data name="errorLetterAlreadyExists" xml:space="preserve">
+    <value>Deze letters bestaat al. Gebruik een andere letter.</value>
+  </data>
+	<data name="formulaPageDeleteAllLetters" xml:space="preserve">
+    <value>Verwijder alle letters</value>
+  </data>
+	<data name="formulaPageHelp" xml:space="preserve">
+    <value>Voeg letters toe door op 'Nieuw' te tikken. Geef voor iedere letter aan wat de waarde van deze letter is. De letter zal nu in het overzicht verschijnen. Vanaf hier kun je letter ook verwijderen of aanpassen.
+
+Bovenin kun je een formule invoeren om een waarde uit te rekenen. Deze kunnen simpel zijn zoals 5+5, maar deze mogen ook letters bevatten die je hebt toegevoegd. Je kunt gebruik maken van +, -, * en /.
+
+Voorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te voeren zul je als antwoord 6 krijgen.</value>
+  </data>
+	<data name="formulaPageLetter" xml:space="preserve">
+    <value>Letter</value>
+  </data>
+	<data name="formulaPageLetterValues" xml:space="preserve">
+    <value>Letterwaardes</value>
+  </data>
+	<data name="formulaPageNoLetters" xml:space="preserve">
+    <value>Je hebt nog geen letterwaardes opgeslagen. Sla een letterwaarde op door rechtsboven op 'nieuw' te tikken.</value>
+  </data>
+	<data name="formulaPageTitle" xml:space="preserve">
+    <value>Formule berekenen</value>
+  </data>
+	<data name="help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+	<data name="mainPageDescription" xml:space="preserve">
+    <value>Deze backpack bevat dé tools die je als echte Geocacher onderweg nodig hebt. Vind snel de woordwaarde, bereken de volgende coördinaat en sla gegevens op die van belang zijn bij het vinden van de cache.</value>
+  </data>
+	<data name="mainPageHeader" xml:space="preserve">
+    <value>Ga op pad en zoek wat caches!</value>
+  </data>
+	<data name="mainPageTitle" xml:space="preserve">
+    <value>Home</value>
+  </data>
+	<data name="mainPageWelcome" xml:space="preserve">
+    <value>Welkom bij Geocaching Backpack!</value>
+  </data>
+	<data name="meter" xml:space="preserve">
+    <value>meter</value>
+  </data>
+	<data name="newText" xml:space="preserve">
+    <value>Nieuw</value>
+  </data>
+	<data name="no" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+	<data name="north" xml:space="preserve">
+    <value>Noord</value>
+  </data>
+	<data name="notAllFieldFilledIn" xml:space="preserve">
+    <value>Niet alle velden zijn ingevuld. Vul alle velden in en probeer het opnieuw.</value>
+  </data>
+	<data name="notesPageNoNotes" xml:space="preserve">
+    <value>Je hebt nog geen notities. Maak een nieuwe notitie aan door rechtsboven op 'nieuw' te tikken.</value>
+  </data>
+	<data name="notesPageTitle" xml:space="preserve">
+    <value>Notities</value>
+  </data>
+	<data name="number" xml:space="preserve">
+    <value>Getal</value>
+  </data>
+	<data name="ok" xml:space="preserve">
+    <value>Oké</value>
+  </data>
+	<data name="save" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+	<data name="set" xml:space="preserve">
+    <value>Stel in</value>
+  </data>
+	<data name="stackCountingPageTitle" xml:space="preserve">
+    <value>Stapeltellen</value>
+  </data>
+	<data name="succes" xml:space="preserve">
+    <value>Succes</value>
+  </data>
+	<data name="succesLetterAdded" xml:space="preserve">
+    <value>De letter is succesvol toegevoegd</value>
+  </data>
+	<data name="value" xml:space="preserve">
+    <value>Waarde</value>
+  </data>
+	<data name="warning" xml:space="preserve">
+    <value>Waarschuwing</value>
+  </data>
+	<data name="wordValuePageCountedThrough" xml:space="preserve">
+    <value>. Doorgeteld is dat </value>
+  </data>
+	<data name="wordValuePageTitle" xml:space="preserve">
+    <value>Woordwaarde</value>
+  </data>
+	<data name="wordValuePageWordValue" xml:space="preserve">
+    <value>De woordwaarde is </value>
+  </data>
+	<data name="wordValueWord" xml:space="preserve">
+    <value>Woord</value>
+  </data>
+	<data name="yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+	<data name="yourNote" xml:space="preserve">
+    <value>Jouw notitie</value>
+  </data>
+</root>

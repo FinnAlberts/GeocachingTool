@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resource="clr-namespace:GeocachingTool.Resources"
              x:Class="GeocachingTool.CoordinateDDtoDDMPage">
     
     <ContentPage.Content>
         <StackLayout>
             <Grid>
-                <Entry x:Name="northEntry" Grid.Column="0" Placeholder="Noord..." Keyboard="Numeric"/>
-                <Entry x:Name="eastEntry" Grid.Column="1" Placeholder="Oost..." Keyboard="Numeric"/>
+                <Entry x:Name="northEntry" Grid.Column="0" Placeholder="{Static resource:AppResources.north}" Keyboard="Numeric"/>
+                <Entry x:Name="eastEntry" Grid.Column="1" Placeholder="{Static resource:AppResources.east}" Keyboard="Numeric"/>
             </Grid>
-            <Button x:Name="convertButton" Text="Omzetten" Clicked="convertButton_Clicked"/>
-            <Label x:Name="answerLabel"  Style="{x:DynamicResource answer}"/>
+            <Button x:Name="convertButton" Text="{Static resource:AppResources.convert}" Clicked="convertButton_Clicked"/>
+            <Label x:Name="answerLabel" Style="{x:DynamicResource answer}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

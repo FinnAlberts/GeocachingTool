@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeocachingTool.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -51,7 +52,7 @@ namespace GeocachingTool
             // Check if filled in
             if (String.IsNullOrEmpty(northDegreesEntry) || String.IsNullOrEmpty(northMinutesEntry) || String.IsNullOrEmpty(eastDegreesEntry) || String.IsNullOrEmpty(eastMinutesEntry))
             {
-                DisplayAlert("Fout", "Niet alle velden zijn ingevuld. Vul alle velden in en probeer het opnieuw.", "Oke");
+                DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             }
             else
             {

@@ -3,18 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GeocachingTool.MainPage"
              xmlns:markupExtensions="clr-namespace:GeocachingTool.MarkupExtensions"
+             xmlns:resource="clr-namespace:GeocachingTool.Resources"
              Padding="0">
 
     <ContentPage.Content>
         <StackLayout>
             <Grid>
                 <Image Grid.Column="0" Grid.Row="0" Source="{markupExtensions:EmbeddedImage ResourceId=GeocachingTool.Assets.Images.banner.png}" Aspect="AspectFill"/>
-                <Label Grid.Column="0" Grid.Row="0" Text="Welkom bij Geocaching Backpack!" FontSize="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="{x:DynamicResource SecondaryTextColor}" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                <Label Grid.Column="0" Grid.Row="0" Text="{x:Static resource:AppResources.mainPageWelcome}" FontSize="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="{x:DynamicResource SecondaryTextColor}" FontAttributes="Bold" HorizontalTextAlignment="Center" />
             </Grid>
 
             <StackLayout Padding="15, 5">
-                <Label Text="Ga op pad en zoek wat caches!" Style="{x:DynamicResource h1}"/>
-                <Label Text="Deze backpack bevat dé tools die je als echte Geocacher onderweg nodig hebt. Vind snel de woordwaarde, bereken de volgende coördinaat en sla gegevens op die van belang zijn bij het vinden van de cache."/>
+                <Label Text="{Static resource:AppResources.mainPageHeader}" Style="{x:DynamicResource h1}"/>
+                <Label Text="{Static resource:AppResources.mainPageDescription}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

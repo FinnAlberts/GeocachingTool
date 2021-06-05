@@ -2,18 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GeocachingTool.CompassPage"
+             xmlns:resource="clr-namespace:GeocachingTool.Resources"
              xmlns:markupExtensions="clr-namespace:GeocachingTool.MarkupExtensions">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="setTargetToolbarItem" Text="Zet doel" Clicked="setTargetToolbarItem_Clicked"/>
-        <ToolbarItem x:Name="disclaimerToolbarItem" Text="Disclaimer" Order="Secondary" Clicked="disclaimerToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="setTargetToolbarItem" Text="{Static resource:AppResources.compassPageSetTarget}" Clicked="setTargetToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="disclaimerToolbarItem" Text="{Static resource:AppResources.compassPageDisclaimer}" Order="Secondary" Clicked="disclaimerToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="distanceLabel" Style="{x:DynamicResource h1}" HorizontalOptions="CenterAndExpand"/>
             <Image x:Name="compassImage" Source="{markupExtensions:EmbeddedImage ResourceId=GeocachingTool.Assets.Images.compass.png}" VerticalOptions="CenterAndExpand"/>
-            <Label x:Name="errorLabel" Text="Je locatie kon niet worden bepaald." Style="{DynamicResource error}"/>
+            <Label x:Name="errorLabel" Text="{Static resource:AppResources.compassPageNoLocation}" Style="{DynamicResource error}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

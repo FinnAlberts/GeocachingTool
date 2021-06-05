@@ -1,4 +1,5 @@
 ﻿using GeocachingTool.Model;
+using GeocachingTool.Resources;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace GeocachingTool
             // Check if filled in
             if (String.IsNullOrEmpty(letterEntry.Text) || String.IsNullOrEmpty(valueEntry.Text))
             {
-                DisplayAlert("Fout", "Niet alle velden zijn ingevuld. Vul alle velden in en probeer het opnieuw.", "Oke");
+                DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             }
             else
             {
@@ -51,17 +52,17 @@ namespace GeocachingTool
                         // Check for errors
                         if (rows > 0)
                         {
-                            DisplayAlert("Succes", "De letter is succesvol toegevoegd.", "Oke");
+                            DisplayAlert(AppResources.succes, AppResources.succesLetterAdded, AppResources.ok);
                             Navigation.PopModalAsync();
                         }
                         else
                         {
-                            DisplayAlert("Fout", "Er is iets misgegaan. Probeer het opnieuw.", "Oke");
+                            DisplayAlert(AppResources.error, AppResources.errorDefault, AppResources.ok);
                         }
                     }
                     else // Letter does already exist
                     {
-                        DisplayAlert("Fout", "Deze letter bestaat al. Gebruik een andere letter.", "Oke");
+                        DisplayAlert(AppResources.error, AppResources.errorLetterAlreadyExists, AppResources.ok);
                     }
                 }
             }

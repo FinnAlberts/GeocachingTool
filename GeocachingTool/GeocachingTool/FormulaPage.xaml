@@ -1,22 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resource="clr-namespace:GeocachingTool.Resources"
              x:Class="GeocachingTool.FormulaPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="newLetterToolbarItem" Text="Nieuw" Clicked="newLetterToolbarItem_Clicked"/>
-        <ToolbarItem x:Name="deleteAllToolbarItem" Text="Verwijder alle letters" Order="Secondary" Clicked="deleteAllToolbarItem_Clicked"/>
-        <ToolbarItem x:Name="helpToolbarItem" Text="Help" Order="Secondary" Clicked="helpToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="newLetterToolbarItem" Text="{Static resource:AppResources.newText}" Clicked="newLetterToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="deleteAllToolbarItem" Text="{Static resource:AppResources.formulaPageDeleteAllLetters}" Order="Secondary" Clicked="deleteAllToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="helpToolbarItem" Text="{Static resource:AppResources.help}" Order="Secondary" Clicked="helpToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Formule berekenen" Style="{x:DynamicResource h1}"/>
+            <Label Text="{Static resource:AppResources.formulaPageTitle}" Style="{x:DynamicResource h1}"/>
             <Entry x:Name="formulaEntry" Placeholder="a*3+2..."/>
-            <Button x:Name="calculateButton" Text="Bereken" Clicked="calculateButton_Clicked"/>
+            <Button x:Name="calculateButton" Text="{Static resource:AppResources.calculate}" Clicked="calculateButton_Clicked"/>
             <Label x:Name="answerLabel" Style="{x:DynamicResource answer}"/>
-            <Label Text="Letterwaardes" Style="{x:DynamicResource h2}"/>
-            <Label x:Name="noFormulaLettersLabel" Text="Je hebt nog geen letterwaardes opgeslagen. Sla een letterwaarde op door rechtsboven op 'nieuw' te tikken." IsVisible="false"/>
+            <Label Text="{Static resource:AppResources.formulaPageLetterValues}" Style="{x:DynamicResource h2}"/>
+            <Label x:Name="noFormulaLettersLabel" Text="{Static resource:AppResources.formulaPageNoLetters}" IsVisible="false"/>
             <ListView x:Name="lettersListView" ItemSelected="lettersListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>

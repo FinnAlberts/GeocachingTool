@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resource="clr-namespace:GeocachingTool.Resources"
              x:Class="GeocachingTool.NotesNewPage">
     
     <ContentPage.Content>
         <StackLayout>
-            <Entry x:Name="nameEntry" Placeholder="Cachenaam..."/>
-            <Editor x:Name="detailsEditor" Placeholder="Jouw notitie..." HeightRequest="500"/>
-            <Button x:Name="saveButton" Text="Opslaan" Clicked="saveButton_Clicked"/>
+            <Entry x:Name="nameEntry" Placeholder="{Static resource:AppResources.cachename}"/>
+            <Editor x:Name="detailsEditor" Placeholder="{Static resource:AppResources.yourNote}" HeightRequest="500"/>
+            <Button x:Name="saveButton" Text="{Static resource:AppResources.save}" Clicked="saveButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
