@@ -296,7 +296,7 @@ Example: you added the letter 'a' with a value of 4. By entering 10-a you will h
     <value>. Counted through returns </value>
   </data>
   <data name="wordValuePageTitle" xml:space="preserve">
-    <value>Word Value</value>
+    <value>Word value</value>
   </data>
   <data name="wordValuePageWordValue" xml:space="preserve">
     <value>The word value is </value>

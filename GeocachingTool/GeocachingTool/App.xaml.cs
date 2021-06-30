@@ -2,6 +2,7 @@
 using System;
 using System.Globalization;
 using System.Threading;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,15 +15,11 @@ namespace GeocachingTool
         public App()
         {
             InitializeComponent();
-
-            MainPage = new AppShell();
         }
 
         public App(string dbLocation)
         {
             InitializeComponent();
-
-            MainPage = new AppShell();
 
             DatabaseLocation = dbLocation;
         }
@@ -39,9 +36,20 @@ namespace GeocachingTool
             }
 
             // Language selection
-            CultureInfo language = CultureInfo.InstalledUICulture;
-            Thread.CurrentThread.CurrentUICulture = language;
-            AppResources.Culture = language;
+            string preferedLanguage = Preferences.Get("preferedLanguage", "system");
+
+            if (preferedLanguage == "system")
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.InstalledUICulture;
+                AppResources.Culture = CultureInfo.InstalledUICulture;
+            }
+            else
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(preferedLanguage);
+                AppResources.Culture = new CultureInfo(preferedLanguage);
+            }
+
+            MainPage = new AppShell();
         }
 
         protected override void OnSleep()

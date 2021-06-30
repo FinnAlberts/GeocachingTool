@@ -587,7 +587,7 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Word Value.
+        ///   Looks up a localized string similar to Word value.
         /// </summary>
         internal static string wordValuePageTitle {
             get {

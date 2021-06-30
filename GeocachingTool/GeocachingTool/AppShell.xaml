@@ -75,6 +75,11 @@
         </Shell.MenuItemTemplate>
     </MenuItem>
 
+    <FlyoutItem Title="SETTINGS PLACEHOLDER" Icon="SET THIS">
+        <ShellContent>
+            <local:SettingsPage/>
+        </ShellContent>
+    </FlyoutItem>
     <FlyoutItem Title="{Static resource:AppResources.aboutPageTitle}" Icon="about.png">
         <ShellContent>
             <local:AboutPage/>
