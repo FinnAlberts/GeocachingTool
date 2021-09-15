@@ -118,220 +118,220 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="aboutPageHeader" xml:space="preserve">
-    <value>Over Geocaching Backpack</value>
+    <value>Über Geocaching Backpack</value>
   </data>
   <data name="aboutPageParagraph1" xml:space="preserve">
-    <value>Geocaching backpack is ontwikkeld en wordt onderhouden door Finn Alberts. Problemen kunnen worden gemeld via www.finnalberts.nl/contact.</value>
+    <value>Geocaching Backpack wird von Finn Alberts entwickelt und gewartet. Probleme können über www.finnalberts.nl/contact gemeldet werden.</value>
   </data>
   <data name="aboutPageParagraph2" xml:space="preserve">
-    <value>Geocaching is een spel waarbij je in de echte wereld op zoek gaat naar zogenaamde 'caches'. Geocaching is eigendom van Groundspeak Incorporated. Meer informatie op www.geocaching.com.</value>
+    <value>Geocaching ist ein Spiel, bei dem Sie in der realen Welt nach sogenannten Caches suchen. Geocaching ist Eigentum von Groundspeak Incorporated. Erfahren Sie mehr unter www.geocaching.com.</value>
   </data>
   <data name="aboutPageParagraph3" xml:space="preserve">
-    <value>Gebruikte icoontjes zijn eigendom van Font Awesome en worden gebruikt onder de CCA 4.0 licentie. Meer informatie op www.fontawesome.com/license.</value>
+    <value>Die verwendeten Icons sind Eigentum von Font Awesome und werden unter der CCA 4.0-Lizenz verwendet. Erfahren Sie mehr unter www.fontawesome.com/license.</value>
   </data>
   <data name="aboutPageReadMore" xml:space="preserve">
-    <value>Lees meer op </value>
+    <value>Erfahren Sie mehr unter</value>
   </data>
   <data name="aboutPageTitle" xml:space="preserve">
-    <value>Over</value>
+    <value>Über</value>
   </data>
   <data name="aboutPageVersion" xml:space="preserve">
-    <value>Versie: </value>
+    <value>Version: </value>
   </data>
   <data name="areYouSureDelete" xml:space="preserve">
-    <value>Weet je zeker dat je dit wil verwijderen? Dit kan niet ongedaan worden gemaakt.</value>
+    <value>Möchten Sie dies wirklich löschen? Das kann nicht rückgängig gemacht werden.</value>
   </data>
   <data name="cachename" xml:space="preserve">
-    <value>Cachenaam</value>
+    <value>Cache-Name</value>
   </data>
   <data name="calculate" xml:space="preserve">
-    <value>Bereken</value>
+    <value>Berechnen</value>
   </data>
   <data name="calculateProjectionPageAngle" xml:space="preserve">
-    <value>Hoek in graden</value>
+    <value>Winkel in Grad</value>
   </data>
   <data name="calculateProjectionPageDistance" xml:space="preserve">
-    <value>Afstand in meters</value>
+    <value>Entfernung in Metern</value>
   </data>
   <data name="calculateProjectionPageTitle" xml:space="preserve">
-    <value>Bereken projectie</value>
+    <value>Projektion berechnen</value>
   </data>
   <data name="chooseLanguage" xml:space="preserve">
-    <value>Kies een taal</value>
+    <value>Wahl eine Sprache</value>
   </data>
   <data name="chooseTheme" xml:space="preserve">
-    <value>Kies een thema</value>
+    <value>Wahl ein Thema</value>
   </data>
   <data name="compassPageDisclaimer" xml:space="preserve">
-    <value>Disclaimer</value>
+    <value>Haftungsausschluss</value>
   </data>
   <data name="compassPageDisclaimerText" xml:space="preserve">
-    <value>Hou er rekening mee dat de accuraatheid van het kompas en de afstand sterk afhangt van je apparaat. Je locatie wordt ongeveer iedere 15 seconden bijgewerkt en is tot op ongeveer 10 meter nauwkeurig. Ook dit hangt af van je apparaat. Hou hier rekening mee tijdens het cachen.</value>
+    <value>Beachten Sie, dass die Genauigkeit des Kompasses und die Entfernung stark von Ihrem Gerät abhängig ist. Ihr Standort wird etwa alle 15 Sekunden aktualisiert und ist auf etwa 10 Meter genau. Dies hängt auch von Ihrem Gerät ab. Beachten Sie dies beim Caching.</value>
   </data>
   <data name="compassPageNoLocation" xml:space="preserve">
-    <value>Je locatie kon niet worden bepaald.</value>
+    <value>Ihr Standort konnte nicht ermittelt werden.</value>
   </data>
   <data name="compassPageSetTarget" xml:space="preserve">
-    <value>Zet doel</value>
+    <value>Anvisieren</value>
   </data>
   <data name="compassPageTitle" xml:space="preserve">
-    <value>Kompas</value>
+    <value>Kompass</value>
   </data>
   <data name="convert" xml:space="preserve">
-    <value>Omzetten</value>
+    <value>Umrechnen</value>
   </data>
   <data name="coordinatePageTitle" xml:space="preserve">
-    <value>Coördinaten omzetten</value>
+    <value>Koordinaten umrechnen</value>
   </data>
   <data name="darkTheme" xml:space="preserve">
-    <value>Donker</value>
+    <value>Dunkel</value>
   </data>
   <data name="ddmToDd" xml:space="preserve">
-    <value>DDM naar DD</value>
+    <value>DDM in DD</value>
   </data>
   <data name="ddToDdm" xml:space="preserve">
-    <value>DD naar DDM</value>
+    <value>DD in DDM</value>
   </data>
   <data name="delete" xml:space="preserve">
-    <value>Verwijderen</value>
+    <value>Löschen</value>
   </data>
   <data name="east" xml:space="preserve">
-    <value>Oost</value>
+    <value>Ost</value>
   </data>
   <data name="error" xml:space="preserve">
-    <value>Fout</value>
+    <value>Error</value>
   </data>
   <data name="errorCompassLocationOff" xml:space="preserve">
-    <value>De locatie op je apparaat is uitgeschakeld.</value>
+    <value>Der Standort auf Ihrem Gerät ist deaktiviert.</value>
   </data>
   <data name="errorCompassNoPermission" xml:space="preserve">
-    <value>Voor het gebruiken van het kompas is je locatie noodzakelijk.</value>
+    <value>Ihr Standort ist erforderlich, um den Kompass zu verwenden.</value>
   </data>
   <data name="errorCompassNoSupport" xml:space="preserve">
-    <value>Je apparaat ondersteunt helaas geen kompas.</value>
+    <value>Leider unterstützt Ihr Gerät keinen Kompass.</value>
   </data>
   <data name="errorDefault" xml:space="preserve">
-    <value>Er is iets misgegaan. Probeer het opnieuw.</value>
+    <value>Etwas ist schief gelaufen. Versuchen Sie es nochmal.</value>
   </data>
   <data name="errorLetterAlreadyExists" xml:space="preserve">
-    <value>Deze letters bestaat al. Gebruik een andere letter.</value>
+    <value>Diese Buchstaben sind bereits vorhanden. Verwenden Sie einen anderen Buchstaben.</value>
   </data>
   <data name="formulaPageDeleteAllLetters" xml:space="preserve">
-    <value>Verwijder alle letters</value>
+    <value>Alle Buchstaben löschen</value>
   </data>
   <data name="formulaPageHelp" xml:space="preserve">
-    <value>Voeg letters toe door op 'Nieuw' te tikken. Geef voor iedere letter aan wat de waarde van deze letter is. De letter zal nu in het overzicht verschijnen. Vanaf hier kun je letter ook verwijderen of aanpassen.
+    <value>Fügen Sie Buchstaben hinzu, indem Sie auf „Neu“ tippen. Geben Sie für jeden Buchstaben an, welchen Wert dieser Buchstabe hat. Der Buchstabe erscheint nun in der Übersicht. Von hier aus können Sie auch Buchstaben löschen oder ändern.
 
-Bovenin kun je een formule invoeren om een waarde uit te rekenen. Deze kunnen simpel zijn zoals 5+5, maar deze mogen ook letters bevatten die je hebt toegevoegd. Je kunt gebruik maken van +, -, * en /.
+Oben können Sie eine Formel eingeben, um einen Wert zu berechnen. Diese können einfach wie 5+5 sein, aber sie können auch Buchstaben enthalten, die Sie hinzugefügt haben. Sie können +, -, * und / verwenden.
 
-Voorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te voeren zul je als antwoord 6 krijgen.</value>
+Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-a eingeben, erhalten Sie 6 als Antwort.</value>
   </data>
   <data name="formulaPageLetter" xml:space="preserve">
-    <value>Letter</value>
+    <value>Buchstabe</value>
   </data>
   <data name="formulaPageLetterValues" xml:space="preserve">
-    <value>Letterwaardes</value>
+    <value>Buchstabenwerte</value>
   </data>
   <data name="formulaPageNoLetters" xml:space="preserve">
-    <value>Je hebt nog geen letterwaardes opgeslagen. Sla een letterwaarde op door rechtsboven op 'nieuw' te tikken.</value>
+    <value>Sie haben noch keine Buchstabenwerte gespeichert. Speichern Sie einen Buchstabenwert, indem Sie oben rechts auf „Neu“ tippen.</value>
   </data>
   <data name="formulaPageTitle" xml:space="preserve">
-    <value>Formule berekenen</value>
+    <value>Formel berechnen</value>
   </data>
   <data name="help" xml:space="preserve">
-    <value>Help</value>
+    <value>Hilfe</value>
   </data>
   <data name="lightTheme" xml:space="preserve">
-    <value>Licht</value>
+    <value>Hell</value>
   </data>
   <data name="mainPageDescription" xml:space="preserve">
-    <value>Deze backpack bevat dé tools die je als echte Geocacher onderweg nodig hebt. Vind snel de woordwaarde, bereken de volgende coördinaat en sla gegevens op die van belang zijn bij het vinden van de cache.</value>
+    <value>Dieser Backpack enthält die Werkzeuge, die du als echter Geocacher unterwegs brauchst. Finden Sie schnell den Wortwert, berechnen Sie die nächste Koordinate und speichern Sie wichtige Daten, um den Cache zu finden.</value>
   </data>
   <data name="mainPageHeader" xml:space="preserve">
-    <value>Ga op pad en zoek wat caches!</value>
+    <value>Geh raus und finde ein paar Caches!</value>
   </data>
   <data name="mainPageTitle" xml:space="preserve">
     <value>Home</value>
   </data>
   <data name="mainPageWelcome" xml:space="preserve">
-    <value>Welkom bij Geocaching Backpack!</value>
+    <value>Willkommen beim Geocaching Backpack!</value>
   </data>
   <data name="meter" xml:space="preserve">
-    <value>meter</value>
+    <value>Meter</value>
   </data>
   <data name="newText" xml:space="preserve">
-    <value>Nieuw</value>
+    <value>Neu</value>
   </data>
   <data name="no" xml:space="preserve">
-    <value>Nee</value>
+    <value>Nein</value>
   </data>
   <data name="north" xml:space="preserve">
-    <value>Noord</value>
+    <value>Norden</value>
   </data>
   <data name="notAllFieldFilledIn" xml:space="preserve">
-    <value>Niet alle velden zijn ingevuld. Vul alle velden in en probeer het opnieuw.</value>
+    <value>Nicht alle Felder sind ausgefüllt. Bitte füllen Sie alle Felder aus und versuchen Sie es wieder.</value>
   </data>
   <data name="notesPageNoNotes" xml:space="preserve">
-    <value>Je hebt nog geen notities. Maak een nieuwe notitie aan door rechtsboven op 'nieuw' te tikken.</value>
+    <value>Sie haben noch keine Notizen. Erstellen Sie eine neue Notiz, indem Sie oben rechts auf "Neu" tippen.</value>
   </data>
   <data name="notesPageTitle" xml:space="preserve">
-    <value>Notities</value>
+    <value>Notizen</value>
   </data>
   <data name="number" xml:space="preserve">
-    <value>Getal</value>
+    <value>Nummer</value>
   </data>
   <data name="ok" xml:space="preserve">
-    <value>Oké</value>
+    <value>Okay</value>
   </data>
   <data name="restart" xml:space="preserve">
-    <value>Start de app opnieuw om de wijzigingen te verwerken.</value>
+    <value>Starten Sie die App neu, um die Änderungen zu verarbeiten.</value>
   </data>
   <data name="save" xml:space="preserve">
-    <value>Opslaan</value>
+    <value>Speichern</value>
   </data>
   <data name="set" xml:space="preserve">
-    <value>Stel in</value>
+    <value>Aufstellen</value>
   </data>
   <data name="settingsPageTitle" xml:space="preserve">
-    <value>Instellingen</value>
+    <value>Einstellungen</value>
   </data>
   <data name="stackCountingPageTitle" xml:space="preserve">
-    <value>Stapeltellen</value>
+    <value>Quersumme</value>
   </data>
   <data name="succes" xml:space="preserve">
-    <value>Succes</value>
+    <value>Erfolg</value>
   </data>
   <data name="succesLetterAdded" xml:space="preserve">
-    <value>De letter is succesvol toegevoegd</value>
+    <value>Der Buchstabe wurde erfolgreich hinzugefügt</value>
   </data>
   <data name="systemLanguage" xml:space="preserve">
-    <value>Apparaattaal</value>
+    <value>Gerätesprache</value>
   </data>
   <data name="systemTheme" xml:space="preserve">
-    <value>Apparaatthema</value>
+    <value>Gerätethema</value>
   </data>
   <data name="value" xml:space="preserve">
-    <value>Waarde</value>
+    <value>Wert</value>
   </data>
   <data name="warning" xml:space="preserve">
-    <value>Waarschuwing</value>
+    <value>Warnung</value>
   </data>
   <data name="wordValuePageCountedThrough" xml:space="preserve">
-    <value>. Doorgeteld is dat </value>
+    <value>. Die Quersumme davon ist  </value>
   </data>
   <data name="wordValuePageTitle" xml:space="preserve">
-    <value>Woordwaarde</value>
+    <value>Buchstabenwert</value>
   </data>
   <data name="wordValuePageWordValue" xml:space="preserve">
-    <value>De woordwaarde is </value>
+    <value>Die Buchstaben wert ist </value>
   </data>
   <data name="wordValueWord" xml:space="preserve">
-    <value>Woord</value>
+    <value>Wort</value>
   </data>
   <data name="yes" xml:space="preserve">
     <value>Ja</value>
   </data>
   <data name="yourNote" xml:space="preserve">
-    <value>Jouw notitie</value>
+    <value>Ihre Notiz</value>
   </data>
 </root>

@@ -2,6 +2,7 @@
 using System;
 using System.Globalization;
 using System.Threading;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,34 +15,48 @@ namespace GeocachingTool
         public App()
         {
             InitializeComponent();
-
-            MainPage = new AppShell();
         }
 
         public App(string dbLocation)
         {
-            InitializeComponent();
 
-            MainPage = new AppShell();
+            InitializeComponent();
 
             DatabaseLocation = dbLocation;
         }
 
         protected override void OnStart()
         {
-            // Check for dark theme
-            OSAppTheme currentTheme = Application.Current.RequestedTheme;
+            // Theme selection
+            int preferedTheme = int.Parse(Preferences.Get("preferedTheme", "0"));
 
-            if (currentTheme == OSAppTheme.Dark)
+            if ((preferedTheme == 0 && Application.Current.RequestedTheme == OSAppTheme.Dark) || preferedTheme == 2)
             {
+                // Apply dark theme
                 App.Current.Resources["PrimaryTextColor"] = "#fffeff";
                 App.Current.Resources["BackgroundColor"] = "#383838";
+                DependencyService.Get<IChangeTheme>().EnableDarkTheme(true);
+            } else
+            {
+                // Apply light theme
+                DependencyService.Get<IChangeTheme>().EnableDarkTheme(false);
             }
 
             // Language selection
-            CultureInfo language = CultureInfo.InstalledUICulture;
-            Thread.CurrentThread.CurrentUICulture = language;
-            AppResources.Culture = language;
+            string preferedLanguage = Preferences.Get("preferedLanguage", "system");
+
+            if (preferedLanguage == "system")
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.InstalledUICulture;
+                AppResources.Culture = CultureInfo.InstalledUICulture;
+            }
+            else
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(preferedLanguage);
+                AppResources.Culture = new CultureInfo(preferedLanguage);
+            }
+
+            MainPage = new AppShell();
         }
 
         protected override void OnSleep()

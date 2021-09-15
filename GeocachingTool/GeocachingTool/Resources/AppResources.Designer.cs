@@ -178,6 +178,24 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Choose your language.
+        /// </summary>
+        internal static string chooseLanguage {
+            get {
+                return ResourceManager.GetString("chooseLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a theme.
+        /// </summary>
+        internal static string chooseTheme {
+            get {
+                return ResourceManager.GetString("chooseTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disclaimer.
         /// </summary>
         internal static string compassPageDisclaimer {
@@ -237,6 +255,15 @@ namespace GeocachingTool.Resources {
         internal static string coordinatePageTitle {
             get {
                 return ResourceManager.GetString("coordinatePageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dark.
+        /// </summary>
+        internal static string darkTheme {
+            get {
+                return ResourceManager.GetString("darkTheme", resourceCulture);
             }
         }
         
@@ -398,6 +425,15 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Light.
+        /// </summary>
+        internal static string lightTheme {
+            get {
+                return ResourceManager.GetString("lightTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This backpack contains all the tools you&apos;ll need while searching for Geocaches. Quickly find the word value, calculate the next coordinate and save all important information for finding the cache..
         /// </summary>
         internal static string mainPageDescription {
@@ -515,6 +551,15 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please restart the app for the changes to apply..
+        /// </summary>
+        internal static string restart {
+            get {
+                return ResourceManager.GetString("restart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
         internal static string save {
@@ -533,7 +578,16 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Stack counting.
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string settingsPageTitle {
+            get {
+                return ResourceManager.GetString("settingsPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Digital root.
         /// </summary>
         internal static string stackCountingPageTitle {
             get {
@@ -560,6 +614,24 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Based on system settings.
+        /// </summary>
+        internal static string systemLanguage {
+            get {
+                return ResourceManager.GetString("systemLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Based on system settings.
+        /// </summary>
+        internal static string systemTheme {
+            get {
+                return ResourceManager.GetString("systemTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Value.
         /// </summary>
         internal static string value {
@@ -578,7 +650,7 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to . Counted through returns .
+        ///   Looks up a localized string similar to . The digital root of that is .
         /// </summary>
         internal static string wordValuePageCountedThrough {
             get {
@@ -587,7 +659,7 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Word Value.
+        ///   Looks up a localized string similar to Word value.
         /// </summary>
         internal static string wordValuePageTitle {
             get {

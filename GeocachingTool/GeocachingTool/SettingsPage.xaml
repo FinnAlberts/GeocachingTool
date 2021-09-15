@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resource="clr-namespace:GeocachingTool.Resources"
+             x:Class="GeocachingTool.SettingsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Static resource:AppResources.settingsPageTitle}" Style="{x:DynamicResource h1}"/>
+            <Label Text="{Static resource:AppResources.chooseLanguage}"/>
+            <Picker x:Name="languagePicker" Title="{Static resource:AppResources.chooseLanguage}" SelectedIndexChanged="languagePicker_SelectedIndexChanged"/>
+            <Label Text="{Static resource:AppResources.chooseTheme}"/>
+            <Picker x:Name="themePicker" Title="{Static resource:AppResources.chooseTheme}" SelectedIndexChanged="themePicker_SelectedIndexChanged" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
