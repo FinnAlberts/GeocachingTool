@@ -317,7 +317,7 @@ Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-
     <value>Warnung</value>
   </data>
   <data name="wordValuePageCountedThrough" xml:space="preserve">
-    <value>. Die Quersumme davon ist  </value>
+    <value>. Die Quersumme davon ist </value>
   </data>
   <data name="wordValuePageTitle" xml:space="preserve">
     <value>Buchstabenwert</value>
