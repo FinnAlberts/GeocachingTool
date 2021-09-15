@@ -19,6 +19,7 @@ namespace GeocachingTool
 
         public App(string dbLocation)
         {
+
             InitializeComponent();
 
             DatabaseLocation = dbLocation;
@@ -26,13 +27,19 @@ namespace GeocachingTool
 
         protected override void OnStart()
         {
-            // Check for dark theme
-            OSAppTheme currentTheme = Application.Current.RequestedTheme;
+            // Theme selection
+            int preferedTheme = int.Parse(Preferences.Get("preferedTheme", "0"));
 
-            if (currentTheme == OSAppTheme.Dark)
+            if ((preferedTheme == 0 && Application.Current.RequestedTheme == OSAppTheme.Dark) || preferedTheme == 2)
             {
+                // Apply dark theme
                 App.Current.Resources["PrimaryTextColor"] = "#fffeff";
                 App.Current.Resources["BackgroundColor"] = "#383838";
+                DependencyService.Get<IChangeTheme>().EnableDarkTheme(true);
+            } else
+            {
+                // Apply light theme
+                DependencyService.Get<IChangeTheme>().EnableDarkTheme(false);
             }
 
             // Language selection

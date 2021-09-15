@@ -31,8 +31,7 @@ namespace GeocachingTool
             // Check if filled in
             if (String.IsNullOrEmpty(northDegreesEntry) || String.IsNullOrEmpty(northMinutesEntry) || String.IsNullOrEmpty(eastDegreesEntry) || String.IsNullOrEmpty(eastMinutesEntry) || String.IsNullOrEmpty(bearingEntry) || String.IsNullOrEmpty(meteresEntry))
             {
-                
-                (AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
+                DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             }
             else
             {
