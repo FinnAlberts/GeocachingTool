@@ -16,6 +16,10 @@ namespace GeocachingTool
         public CompassTargetPage()
         {
             InitializeComponent();
+
+            // Set default values for pickers
+            northPicker.SelectedIndex = 0;
+            eastPicker.SelectedIndex = 0;
         }
 
         protected override void OnAppearing()
@@ -25,6 +29,18 @@ namespace GeocachingTool
             // Get set coordiantes if already set
             float north = Preferences.Get("targetLatitude", 0f);
             float east = Preferences.Get("targetLongitude", 0f);
+
+            if (north < 0)
+            {
+                north *= -1;
+                northPicker.SelectedIndex = 1;
+            }
+
+            if (east < 0)
+            {
+                east *= -1;
+                eastPicker.SelectedIndex = 1;
+            }
 
             // Convert DD to DDM
             int northDegrees = (int)Math.Floor(north);
@@ -65,6 +81,17 @@ namespace GeocachingTool
                 // Convert DDM to DD
                 float north = northDegrees + northMinutes / 60;
                 float east = eastDegrees + eastMinutes / 60;
+
+                // Check for south and west
+                if (northPicker.SelectedIndex == 1)
+                {
+                    north *= -1;
+                }
+
+                if (eastPicker.SelectedIndex == 1)
+                {
+                    east *= -1;
+                }
 
                 // Save coordinates
                 Preferences.Set("targetLatitude", north);

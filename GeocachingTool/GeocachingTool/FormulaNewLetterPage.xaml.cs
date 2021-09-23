@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -31,7 +32,7 @@ namespace GeocachingTool
             {
                 // Get input
                 string letter = letterEntry.Text;
-                int value = Int32.Parse(valueEntry.Text);
+                float value = float.Parse(valueEntry.Text);
 
                 // Connect to database
                 using (SQLiteConnection connection = new SQLiteConnection(App.DatabaseLocation))
@@ -65,6 +66,16 @@ namespace GeocachingTool
                         DisplayAlert(AppResources.error, AppResources.errorLetterAlreadyExists, AppResources.ok);
                     }
                 }
+            }
+        }
+
+        private void letterEntry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var isValid = Regex.IsMatch(e.NewTextValue, "^[a-zA-Z]+$");
+
+            if (e.NewTextValue.Length > 0)
+            {
+                ((Entry)sender).Text = isValid ? e.NewTextValue : e.NewTextValue.Remove(e.NewTextValue.Length - 1);
             }
         }
     }

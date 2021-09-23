@@ -34,6 +34,22 @@ namespace GeocachingTool
                 float north = float.Parse(northInput.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
                 float east = float.Parse(eastInput.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
 
+                // Check if north/south or east/west
+                string northLabel = "N";
+                string eastLabel = "E";
+
+                if (north < 0)
+                {
+                    north *= -1;
+                    northLabel = "S";
+                }
+
+                if (east < 0)
+                {
+                    east *= -1;
+                    eastLabel = "W";
+                }
+
                 // Convert DD to DDM
                 int northDegrees = (int)Math.Floor(north);
                 float northMinutes = (north - (float)Math.Floor(north)) * 60;
@@ -42,7 +58,7 @@ namespace GeocachingTool
                 float eastMinutes = (east - (float)Math.Floor(east)) * 60;
 
                 // Return results
-                answerLabel.Text = String.Format("N{0}° {1} E{2}° {3}", northDegrees, northMinutes, eastDegrees, eastMinutes);
+                answerLabel.Text = String.Format("{0}{1}° {2} {3}{4}° {5}", northLabel, northDegrees, northMinutes, eastLabel, eastDegrees, eastMinutes);
             }
         }
     }

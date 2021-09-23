@@ -43,7 +43,7 @@ namespace GeocachingTool
             else
             {
                 // Get input
-                int value = Int32.Parse(ValueEntry.Text);
+                float value = float.Parse(ValueEntry.Text);
 
                 // Connect to database
                 using (SQLiteConnection connection = new SQLiteConnection(App.DatabaseLocation))

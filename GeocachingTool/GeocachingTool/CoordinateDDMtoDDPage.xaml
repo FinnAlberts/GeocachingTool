@@ -8,13 +8,25 @@
         <StackLayout>
             <StackLayout>
                 <Grid>
-                    <Entry x:Name="northCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="0" Placeholder="{Static resource:AppResources.north}" Keyboard="Numeric"/>
-                    <Label Grid.Column="12" Grid.ColumnSpan="5" Grid.Row="0" Text="°" FontSize="30"/>
-                    <Entry x:Name="northMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="0" Placeholder="{Static resource:AppResources.north}" Keyboard="Numeric"/>
+                    <Picker x:Name="northPicker" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10" Title="NORTH OR SOUTH">
+                        <Picker.Items>
+                            <x:String>N</x:String>
+                            <x:String>S</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Entry x:Name="northCoordinateEntry" Grid.Column="10" Grid.ColumnSpan="15" Grid.Row="0" Placeholder="LATITUDE" Keyboard="Numeric"/>
+                    <Label Grid.Column="25" Grid.ColumnSpan="5" Grid.Row="0" Text="°" FontSize="30"/>
+                    <Entry x:Name="northMinuteEntry" Grid.Column="28" Grid.ColumnSpan="35" Grid.Row="0" Placeholder="LATITUDE" Keyboard="Numeric"/>
 
-                    <Entry x:Name="eastCoordinateEntry" Grid.Column="0" Grid.ColumnSpan="14" Grid.Row="1" Placeholder="{Static resource:AppResources.east}" Keyboard="Numeric"/>
-                    <Label Grid.Column="12" Grid.ColumnSpan="5" Grid.Row="1" Text="°" FontSize="30"/>
-                    <Entry x:Name="eastMinuteEntry" Grid.Column="15" Grid.ColumnSpan="50" Grid.Row="1" Placeholder="{Static resource:AppResources.east}" Keyboard="Numeric"/>
+                    <Picker x:Name="eastPicker" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="10" Title="eastPicker">
+                        <Picker.Items>
+                            <x:String>E</x:String>
+                            <x:String>W</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Entry x:Name="eastCoordinateEntry" Grid.Column="10" Grid.ColumnSpan="15" Grid.Row="1" Placeholder="LONGITUDE" Keyboard="Numeric"/>
+                    <Label Grid.Column="25" Grid.ColumnSpan="5" Grid.Row="1" Text="°" FontSize="30"/>
+                    <Entry x:Name="eastMinuteEntry" Grid.Column="28" Grid.ColumnSpan="35" Grid.Row="1" Placeholder="LONGITUDE" Keyboard="Numeric"/>
                 </Grid>
                 <Button x:Name="convertButton" Text="{Static resource:AppResources.convert}" Clicked="convertButton_Clicked"/>
                 <Label x:Name="answerLabel"  Style="{x:DynamicResource answer}"/>

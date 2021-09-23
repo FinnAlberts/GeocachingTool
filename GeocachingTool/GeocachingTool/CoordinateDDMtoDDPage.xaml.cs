@@ -16,6 +16,10 @@ namespace GeocachingTool
         public CoordinateDDMtoDDPage()
         {
             InitializeComponent();
+
+            // Set default values for pickers
+            northPicker.SelectedIndex = 0;
+            eastPicker.SelectedIndex = 0;
         }
 
         private void convertButton_Clicked(object sender, EventArgs e)
@@ -42,8 +46,19 @@ namespace GeocachingTool
                 float north = northDegrees + northMinutes / 60;
                 float east = eastDegrees + eastMinutes / 60;
 
+                // Check for south and west
+                if (northPicker.SelectedIndex == 1)
+                {
+                    north *= -1;
+                }
+
+                if (eastPicker.SelectedIndex == 1)
+                {
+                    east *= -1;
+                }
+
                 // Return results
-                answerLabel.Text = String.Format("N{0} E{1}", north, east);
+                answerLabel.Text = String.Format("{0} N {1} E", north, east);
             }
         }
     }

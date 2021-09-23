@@ -12,6 +12,6 @@ namespace GeocachingTool.Model
 
         public string Letter { get; set; }
 
-        public int Value { get; set; }
+        public float Value { get; set; }
     }
 }

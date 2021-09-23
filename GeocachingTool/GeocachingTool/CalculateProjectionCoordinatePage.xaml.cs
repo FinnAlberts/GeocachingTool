@@ -16,6 +16,10 @@ namespace GeocachingTool
         public CalculateProjectionCoordinatePage()
         {
             InitializeComponent();
+
+            // Set default values for pickers
+            northPicker.SelectedIndex = 0;
+            eastPicker.SelectedIndex = 0;
         }
 
         private void calculateButton_Clicked(object sender, EventArgs e)
@@ -47,6 +51,17 @@ namespace GeocachingTool
                 float north = northDegrees + northMinutes / 60;
                 float east = eastDegrees + eastMinutes / 60;
 
+                // Check for south and west
+                if (northPicker.SelectedIndex == 1)
+                {
+                    north *= -1;
+                }
+
+                if (eastPicker.SelectedIndex == 1)
+                {
+                    east *= -1;
+                }
+
                 // Calculate endpoint
                 double earthRadius = 6371.01;
                 var distRatio = distance/ earthRadius;
@@ -66,6 +81,21 @@ namespace GeocachingTool
                 var endNorth = RadiansToDegrees(endLatRads);
                 var endEast = RadiansToDegrees(endLonRads);
 
+                string northLabel = "N";
+                string eastLabel = "E";
+
+                if (endNorth < 0)
+                {
+                    endNorth *= -1;
+                    northLabel = "S";
+                }
+
+                if (endEast < 0)
+                {
+                    endEast *= -1;
+                    eastLabel = "W";
+                }
+
                 var northDegreesAnswer = (int)Math.Floor(endNorth);
                 var northMinutesAnswer = (endNorth - (float)Math.Floor(endNorth)) * 60;
 
@@ -73,7 +103,7 @@ namespace GeocachingTool
                 var eastMinutesAnswer = (endEast - (float)Math.Floor(endEast)) * 60;
 
                 // Return answer
-                answerLabel.Text = String.Format("N{0}° {1:f3} E{2}° {3:f3}", northDegreesAnswer, northMinutesAnswer, eastDegreesAnswer, eastMinutesAnswer);
+                answerLabel.Text = String.Format("{0}{1}° {2:f3} {3}{4}° {5:f3}", northLabel, northDegreesAnswer, northMinutesAnswer, eastLabel, eastDegreesAnswer, eastMinutesAnswer);
             }
         }
 
