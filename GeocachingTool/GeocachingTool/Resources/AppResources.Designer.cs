@@ -304,6 +304,15 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to East or west?.
+        /// </summary>
+        internal static string eastOrWest {
+            get {
+                return ResourceManager.GetString("eastOrWest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         internal static string error {
@@ -425,11 +434,29 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Latitude.
+        /// </summary>
+        internal static string latitude {
+            get {
+                return ResourceManager.GetString("latitude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Light.
         /// </summary>
         internal static string lightTheme {
             get {
                 return ResourceManager.GetString("lightTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Longitude.
+        /// </summary>
+        internal static string longitude {
+            get {
+                return ResourceManager.GetString("longitude", resourceCulture);
             }
         }
         
@@ -502,6 +529,15 @@ namespace GeocachingTool.Resources {
         internal static string north {
             get {
                 return ResourceManager.GetString("north", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to North or south?.
+        /// </summary>
+        internal static string northOrSouth {
+            get {
+                return ResourceManager.GetString("northOrSouth", resourceCulture);
             }
         }
         

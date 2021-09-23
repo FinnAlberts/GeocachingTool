@@ -198,6 +198,9 @@
   <data name="east" xml:space="preserve">
     <value>Ost</value>
   </data>
+  <data name="eastOrWest" xml:space="preserve">
+    <value>Ost oder West?</value>
+  </data>
   <data name="error" xml:space="preserve">
     <value>Error</value>
   </data>
@@ -241,8 +244,14 @@ Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-
   <data name="help" xml:space="preserve">
     <value>Hilfe</value>
   </data>
+  <data name="latitude" xml:space="preserve">
+    <value>Breitengrad</value>
+  </data>
   <data name="lightTheme" xml:space="preserve">
     <value>Hell</value>
+  </data>
+  <data name="longitude" xml:space="preserve">
+    <value>Längengrad</value>
   </data>
   <data name="mainPageDescription" xml:space="preserve">
     <value>Dieser Backpack enthält die Werkzeuge, die du als echter Geocacher unterwegs brauchst. Finden Sie schnell den Wortwert, berechnen Sie die nächste Koordinate und speichern Sie wichtige Daten, um den Cache zu finden.</value>
@@ -267,6 +276,9 @@ Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-
   </data>
   <data name="north" xml:space="preserve">
     <value>Norden</value>
+  </data>
+  <data name="northOrSouth" xml:space="preserve">
+    <value>Norden oder Süden?</value>
   </data>
   <data name="notAllFieldFilledIn" xml:space="preserve">
     <value>Nicht alle Felder sind ausgefüllt. Bitte füllen Sie alle Felder aus und versuchen Sie es wieder.</value>

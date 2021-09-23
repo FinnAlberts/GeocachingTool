@@ -198,6 +198,9 @@
   <data name="east" xml:space="preserve">
     <value>Oost</value>
   </data>
+  <data name="eastOrWest" xml:space="preserve">
+    <value>Oost of west?</value>
+  </data>
   <data name="error" xml:space="preserve">
     <value>Fout</value>
   </data>
@@ -241,8 +244,14 @@ Voorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te vo
   <data name="help" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="latitude" xml:space="preserve">
+    <value>Breedtegraad</value>
+  </data>
   <data name="lightTheme" xml:space="preserve">
     <value>Licht</value>
+  </data>
+  <data name="longitude" xml:space="preserve">
+    <value>Lengtegraad</value>
   </data>
   <data name="mainPageDescription" xml:space="preserve">
     <value>Deze backpack bevat dé tools die je als echte Geocacher onderweg nodig hebt. Vind snel de woordwaarde, bereken de volgende coördinaat en sla gegevens op die van belang zijn bij het vinden van de cache.</value>
@@ -267,6 +276,9 @@ Voorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te vo
   </data>
   <data name="north" xml:space="preserve">
     <value>Noord</value>
+  </data>
+  <data name="northOrSouth" xml:space="preserve">
+    <value>Noord of zuid?</value>
   </data>
   <data name="notAllFieldFilledIn" xml:space="preserve">
     <value>Niet alle velden zijn ingevuld. Vul alle velden in en probeer het opnieuw.</value>

@@ -198,6 +198,9 @@
   <data name="east" xml:space="preserve">
     <value>East</value>
   </data>
+  <data name="eastOrWest" xml:space="preserve">
+    <value>East or west?</value>
+  </data>
   <data name="error" xml:space="preserve">
     <value>Error</value>
   </data>
@@ -241,8 +244,14 @@ Example: you added the letter 'a' with a value of 4. By entering 10-a you will h
   <data name="help" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="latitude" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
   <data name="lightTheme" xml:space="preserve">
     <value>Light</value>
+  </data>
+  <data name="longitude" xml:space="preserve">
+    <value>Longitude</value>
   </data>
   <data name="mainPageDescription" xml:space="preserve">
     <value>This backpack contains all the tools you'll need while searching for Geocaches. Quickly find the word value, calculate the next coordinate and save all important information for finding the cache.</value>
@@ -267,6 +276,9 @@ Example: you added the letter 'a' with a value of 4. By entering 10-a you will h
   </data>
   <data name="north" xml:space="preserve">
     <value>North</value>
+  </data>
+  <data name="northOrSouth" xml:space="preserve">
+    <value>North or south?</value>
   </data>
   <data name="notAllFieldFilledIn" xml:space="preserve">
     <value>Not all fields are filled in. Fill in all fields and try again.</value>
