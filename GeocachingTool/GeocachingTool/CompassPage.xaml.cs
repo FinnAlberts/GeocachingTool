@@ -145,12 +145,12 @@ namespace GeocachingTool
             
         }
 
-        private void disclaimerToolbarItem_Clicked(object sender, EventArgs e)
+        private void DisclaimerToolbarItem_Clicked(object sender, EventArgs e)
         {
             DisplayAlert(AppResources.compassPageDisclaimer, AppResources.compassPageDisclaimerText, AppResources.ok);
         }
 
-        private void setTargetToolbarItem_Clicked(object sender, EventArgs e)
+        private void SetTargetToolbarItem_Clicked(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new CompassTargetPage());
         }

@@ -33,7 +33,7 @@ namespace GeocachingTool
             detailsEditor.Text = note.Details;
         }
 
-        private void saveButton_Clicked(object sender, EventArgs e)
+        private void SaveButton_Clicked(object sender, EventArgs e)
         {
             // Check if filled in 
             if (String.IsNullOrEmpty(nameEntry.Text) || String.IsNullOrEmpty(detailsEditor.Text))
@@ -70,7 +70,7 @@ namespace GeocachingTool
             }
         }
 
-        private async void deleteButton_Clicked(object sender, EventArgs e)
+        private async void DeleteButton_Clicked(object sender, EventArgs e)
         {
             // Ask for confirmation
             bool answer = await DisplayAlert(AppResources.warning, AppResources.areYouSureDelete, AppResources.yes, AppResources.no);

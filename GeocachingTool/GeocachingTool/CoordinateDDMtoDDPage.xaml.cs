@@ -22,7 +22,7 @@ namespace GeocachingTool
             eastPicker.SelectedIndex = 0;
         }
 
-        private void convertButton_Clicked(object sender, EventArgs e)
+        private void ConvertButton_Clicked(object sender, EventArgs e)
         {
             // Get input
             string northDegreesEntry = northCoordinateEntry.Text;

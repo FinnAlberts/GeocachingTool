@@ -15,7 +15,7 @@
             <local:MainPage/>
         </ShellContent>
     </FlyoutItem>
-    <MenuItem x:Name="openWebsiteMenuItem" Text="Geocaching.com" Clicked="openWebsiteMenuItem_Clicked" IconImageSource="internet.png"/>
+    <MenuItem x:Name="openWebsiteMenuItem" Text="Geocaching.com" Clicked="OpenWebsiteMenuItem_Clicked" IconImageSource="internet.png"/>
     <FlyoutItem Title="{Static resource:AppResources.notesPageTitle}" Icon="note.png">
         <ShellContent>
             <local:NotesPage/>

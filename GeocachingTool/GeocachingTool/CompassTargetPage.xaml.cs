@@ -57,7 +57,7 @@ namespace GeocachingTool
             eastMinuteEntry.Text = eastMinutes.ToString();
         }
 
-        private void setButton_Clicked(object sender, EventArgs e)
+        private void SetButton_Clicked(object sender, EventArgs e)
         {
             // Get input
             string northDegreesEntry = northCoordinateEntry.Text;

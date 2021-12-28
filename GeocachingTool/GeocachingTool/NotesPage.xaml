@@ -5,14 +5,14 @@
              x:Class="GeocachingTool.NotesPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="newToolbarItem" Text="{Static resource:AppResources.newText}" Clicked="newToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="newToolbarItem" Text="{Static resource:AppResources.newText}" Clicked="NewToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
         <StackLayout>
             <Label Text="{Static resource:AppResources.notesPageTitle}" Style="{x:DynamicResource h1}"/>
             <Label x:Name="noNotesLabel" Text="{Static resource:AppResources.notesPageNoNotes}" IsVisible="False"/>
-            <ListView x:Name="notesListView" ItemSelected="notesListView_ItemSelected">
+            <ListView x:Name="notesListView" ItemSelected="NotesListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding Name}" TextColor="{x:DynamicResource PrimaryColor}"/>

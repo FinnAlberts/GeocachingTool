@@ -7,9 +7,9 @@
         <StackLayout>
             <Label Text="{Static resource:AppResources.settingsPageTitle}" Style="{x:DynamicResource h1}"/>
             <Label Text="{Static resource:AppResources.chooseLanguage}"/>
-            <Picker x:Name="languagePicker" Title="{Static resource:AppResources.chooseLanguage}" SelectedIndexChanged="languagePicker_SelectedIndexChanged"/>
+            <Picker x:Name="languagePicker" Title="{Static resource:AppResources.chooseLanguage}" SelectedIndexChanged="LanguagePicker_SelectedIndexChanged"/>
             <Label Text="{Static resource:AppResources.chooseTheme}"/>
-            <Picker x:Name="themePicker" Title="{Static resource:AppResources.chooseTheme}" SelectedIndexChanged="themePicker_SelectedIndexChanged" />
+            <Picker x:Name="themePicker" Title="{Static resource:AppResources.chooseTheme}" SelectedIndexChanged="ThemePicker_SelectedIndexChanged" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

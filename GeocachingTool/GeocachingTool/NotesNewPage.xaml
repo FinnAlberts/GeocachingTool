@@ -8,7 +8,7 @@
         <StackLayout>
             <Entry x:Name="nameEntry" Placeholder="{Static resource:AppResources.cachename}"/>
             <Editor x:Name="detailsEditor" Placeholder="{Static resource:AppResources.yourNote}" HeightRequest="500"/>
-            <Button x:Name="saveButton" Text="{Static resource:AppResources.save}" Clicked="saveButton_Clicked"/>
+            <Button x:Name="saveButton" Text="{Static resource:AppResources.save}" Clicked="SaveButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

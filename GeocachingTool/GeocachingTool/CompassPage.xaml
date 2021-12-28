@@ -6,8 +6,8 @@
              xmlns:markupExtensions="clr-namespace:GeocachingTool.MarkupExtensions">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="setTargetToolbarItem" Text="{Static resource:AppResources.compassPageSetTarget}" Clicked="setTargetToolbarItem_Clicked"/>
-        <ToolbarItem x:Name="disclaimerToolbarItem" Text="{Static resource:AppResources.compassPageDisclaimer}" Order="Secondary" Clicked="disclaimerToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="setTargetToolbarItem" Text="{Static resource:AppResources.compassPageSetTarget}" Clicked="SetTargetToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="disclaimerToolbarItem" Text="{Static resource:AppResources.compassPageDisclaimer}" Order="Secondary" Clicked="DisclaimerToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>

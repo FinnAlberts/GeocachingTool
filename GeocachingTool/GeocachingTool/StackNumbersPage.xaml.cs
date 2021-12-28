@@ -17,7 +17,7 @@ namespace GeocachingTool
             InitializeComponent();
         }
 
-        private void inputEntry_TextChanged(object sender, TextChangedEventArgs e)
+        private void InputEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
             // Get input
             string numberInput = inputEntry.Text;

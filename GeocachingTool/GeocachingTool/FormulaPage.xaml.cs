@@ -49,12 +49,12 @@ namespace GeocachingTool
             }
         }
 
-        private void newLetterToolbarItem_Clicked(object sender, EventArgs e)
+        private void NewLetterToolbarItem_Clicked(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new FormulaNewLetterPage());
         }
 
-        private void calculateButton_Clicked(object sender, EventArgs e)
+        private void CalculateButton_Clicked(object sender, EventArgs e)
         {
             // Get input
             string formula = formulaEntry.Text;
@@ -77,7 +77,7 @@ namespace GeocachingTool
             }
         }
 
-        private void lettersListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void LettersListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             FormulaLetter formulaLetter = lettersListView.SelectedItem as FormulaLetter;
 
@@ -111,7 +111,7 @@ namespace GeocachingTool
             }
         }
 
-        private async void deleteAllToolbarItem_Clicked(object sender, EventArgs e)
+        private async void DeleteAllToolbarItem_Clicked(object sender, EventArgs e)
         {
             // Ask for confirmation
             bool answer = await DisplayAlert(AppResources.warning, AppResources.areYouSureDelete, AppResources.yes, AppResources.no);
@@ -133,7 +133,7 @@ namespace GeocachingTool
             }
         }
 
-        private void helpToolbarItem_Clicked(object sender, EventArgs e)
+        private void HelpToolbarItem_Clicked(object sender, EventArgs e)
         {
             DisplayAlert(AppResources.help, AppResources.formulaPageHelp, AppResources.ok);
         }

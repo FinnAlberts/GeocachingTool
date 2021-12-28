@@ -18,7 +18,7 @@ namespace GeocachingTool
             InitializeComponent();
         }
 
-        private void convertButton_Clicked(object sender, EventArgs e)
+        private void ConvertButton_Clicked(object sender, EventArgs e)
         {
             // Get input
             string northInput = northEntry.Text;

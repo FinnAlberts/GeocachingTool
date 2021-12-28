@@ -17,7 +17,7 @@ namespace GeocachingTool
             InitializeComponent();
         }
 
-        private async void openWebsiteMenuItem_Clicked(object sender, EventArgs e)
+        private async void OpenWebsiteMenuItem_Clicked(object sender, EventArgs e)
         {
             await Browser.OpenAsync("https://www.geocaching.com/", BrowserLaunchMode.SystemPreferred);
         }

@@ -21,7 +21,7 @@ namespace GeocachingTool
             InitializeComponent();
         }
 
-        private void saveButton_Clicked(object sender, EventArgs e)
+        private void SaveButton_Clicked(object sender, EventArgs e)
         {
             // Check if filled in
             if (String.IsNullOrEmpty(letterEntry.Text) || String.IsNullOrEmpty(valueEntry.Text))
@@ -69,7 +69,7 @@ namespace GeocachingTool
             }
         }
 
-        private void letterEntry_TextChanged(object sender, TextChangedEventArgs e)
+        private void LetterEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
             var isValid = Regex.IsMatch(e.NewTextValue, "^[a-zA-Z]+$");
 

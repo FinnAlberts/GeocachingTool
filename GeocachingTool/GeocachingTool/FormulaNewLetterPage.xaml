@@ -5,9 +5,9 @@
              x:Class="GeocachingTool.FormulaNewLetterPage">
     <ContentPage.Content>
         <StackLayout>
-            <Entry x:Name="letterEntry" Placeholder="{Static resource:AppResources.formulaPageLetter}" MaxLength="1" TextChanged="letterEntry_TextChanged"/>
+            <Entry x:Name="letterEntry" Placeholder="{Static resource:AppResources.formulaPageLetter}" MaxLength="1" TextChanged="LetterEntry_TextChanged"/>
             <Entry x:Name="valueEntry" Placeholder="{Static resource:AppResources.value}" Keyboard="Numeric"/>
-            <Button x:Name="saveButton" Text="{Static resource:AppResources.save}" Clicked="saveButton_Clicked"/>
+            <Button x:Name="saveButton" Text="{Static resource:AppResources.save}" Clicked="SaveButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

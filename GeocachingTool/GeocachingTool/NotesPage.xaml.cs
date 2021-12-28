@@ -44,14 +44,14 @@ namespace GeocachingTool
             }
         }
 
-        private void notesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void NotesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Note note = notesListView.SelectedItem as Note;
 
             Navigation.PushModalAsync(new NotesEditPage(note));
         }
 
-        private void newToolbarItem_Clicked(object sender, EventArgs e)
+        private void NewToolbarItem_Clicked(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new NotesNewPage());
         }

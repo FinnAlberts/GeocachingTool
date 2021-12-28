@@ -20,7 +20,7 @@ namespace GeocachingTool
             InitializeComponent();
         }
 
-        private void saveButton_Clicked(object sender, EventArgs e)
+        private void SaveButton_Clicked(object sender, EventArgs e)
         {
             // Check if filled in
             if (String.IsNullOrEmpty(nameEntry.Text) || String.IsNullOrEmpty(detailsEditor.Text)) {

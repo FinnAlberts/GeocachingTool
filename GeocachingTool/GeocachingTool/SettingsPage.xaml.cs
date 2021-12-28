@@ -45,7 +45,7 @@ namespace GeocachingTool
             themePicker.SelectedIndex = int.Parse(Preferences.Get("preferedTheme", "0"));
         }
 
-        private void languagePicker_SelectedIndexChanged(object sender, EventArgs e)
+        private void LanguagePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Get selected language
             string selectedLanguage = languages[languagePicker.SelectedItem.ToString()];
@@ -60,7 +60,7 @@ namespace GeocachingTool
             }
         }
 
-        private void themePicker_SelectedIndexChanged(object sender, EventArgs e)
+        private void ThemePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Get selected theme
             int selectedTheme = themePicker.SelectedIndex;
