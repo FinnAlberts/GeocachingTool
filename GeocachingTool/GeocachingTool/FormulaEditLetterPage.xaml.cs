@@ -15,7 +15,7 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FormulaEditLetterPage : ContentPage
     {
-        private FormulaLetter formulaLetter;
+        private readonly FormulaLetter formulaLetter;
 
         public FormulaEditLetterPage(FormulaLetter formulaLetter)
         {
@@ -36,7 +36,7 @@ namespace GeocachingTool
         private void SaveButton_Clicked(object sender, EventArgs e)
         {
             // Check if filled in 
-            if (String.IsNullOrEmpty(ValueEntry.Text))
+            if (string.IsNullOrEmpty(ValueEntry.Text))
             {
                 DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             }

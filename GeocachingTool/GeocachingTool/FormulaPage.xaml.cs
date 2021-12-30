@@ -60,7 +60,7 @@ namespace GeocachingTool
             string formula = formulaEntry.Text;
 
             // Check if filled in
-            if (String.IsNullOrEmpty(formula))
+            if (string.IsNullOrEmpty(formula))
             {
                 // Not filled in
                 DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);

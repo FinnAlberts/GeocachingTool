@@ -26,7 +26,7 @@ namespace GeocachingTool
             int answer = 0;
 
             // Check if filled in
-            if (!String.IsNullOrEmpty(numberInput))
+            if (!string.IsNullOrEmpty(numberInput))
             {
                 // While number contains more than 1 digit, done will be false
                 bool done = false;

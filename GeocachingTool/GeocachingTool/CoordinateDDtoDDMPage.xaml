@@ -7,8 +7,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Grid>
-                <Entry x:Name="northEntry" Grid.Column="0" Placeholder="{Static resource:AppResources.latitude}" Keyboard="Numeric"/>
-                <Entry x:Name="eastEntry" Grid.Column="1" Placeholder="{Static resource:AppResources.longitude}" Keyboard="Numeric"/>
+                <Entry x:Name="latitudeEntry" Grid.Column="0" Placeholder="{Static resource:AppResources.latitude}" Keyboard="Numeric"/>
+                <Entry x:Name="longitudeEntry" Grid.Column="1" Placeholder="{Static resource:AppResources.longitude}" Keyboard="Numeric"/>
             </Grid>
             <Button x:Name="convertButton" Text="{Static resource:AppResources.convert}" Clicked="ConvertButton_Clicked"/>
             <Label x:Name="answerLabel" Style="{x:DynamicResource answer}"/>

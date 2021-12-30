@@ -15,7 +15,7 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotesEditPage : ContentPage
     {
-        private Note note;
+        private readonly Note note;
 
         public NotesEditPage(Note note)
         {
@@ -36,7 +36,7 @@ namespace GeocachingTool
         private void SaveButton_Clicked(object sender, EventArgs e)
         {
             // Check if filled in 
-            if (String.IsNullOrEmpty(nameEntry.Text) || String.IsNullOrEmpty(detailsEditor.Text))
+            if (string.IsNullOrEmpty(nameEntry.Text) || string.IsNullOrEmpty(detailsEditor.Text))
             {
                 DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             }

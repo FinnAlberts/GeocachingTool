@@ -24,7 +24,7 @@ namespace GeocachingTool
         private void SaveButton_Clicked(object sender, EventArgs e)
         {
             // Check if filled in
-            if (String.IsNullOrEmpty(letterEntry.Text) || String.IsNullOrEmpty(valueEntry.Text))
+            if (string.IsNullOrEmpty(letterEntry.Text) || string.IsNullOrEmpty(valueEntry.Text))
             {
                 DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             }

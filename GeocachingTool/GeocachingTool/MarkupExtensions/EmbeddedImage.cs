@@ -12,7 +12,7 @@ namespace GeocachingTool.MarkupExtensions
 
         public object ProvideValue(IServiceProvider serviceProvider)
         {
-            if (String.IsNullOrWhiteSpace(ResourceId))
+            if (string.IsNullOrWhiteSpace(ResourceId))
             {
                 return null;
             }

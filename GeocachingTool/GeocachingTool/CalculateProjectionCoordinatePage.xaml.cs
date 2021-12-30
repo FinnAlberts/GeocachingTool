@@ -1,4 +1,5 @@
-﻿using GeocachingTool.Resources;
+﻿using GeocachingTool.Model;
+using GeocachingTool.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,112 +14,64 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CalculateProjectionCoordinatePage : ContentPage
     {
+        /// <summary>
+        /// Page constructor
+        /// </summary>
         public CalculateProjectionCoordinatePage()
         {
             InitializeComponent();
 
             // Set default values for pickers
-            northPicker.SelectedIndex = 0;
-            eastPicker.SelectedIndex = 0;
+            latitudePicker.SelectedIndex = 0;
+            longitudePicker.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Runs when calculate button is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void CalculateButton_Clicked(object sender, EventArgs e)
         {
             // Get input
-            string northDegreesEntry = northCoordinateEntry.Text;
-            string northMinutesEntry = northMinuteEntry.Text;
-            string eastDegreesEntry = eastCoordinateEntry.Text;
-            string eastMinutesEntry = eastMinuteEntry.Text;
+            string latitudeDegreesEntry = latitudeCoordinateEntry.Text;
+            string latitudeMinutesEntry = latitudeMinuteEntry.Text;
+            string longitudeDegreesEntry = longitudeCoordinateEntry.Text;
+            string longitudeMinutesEntry = longitudeMinuteEntry.Text;
             string bearingEntry = angleEntry.Text;
             string meteresEntry = distanceEntry.Text;
 
             // Check if filled in
-            if (String.IsNullOrEmpty(northDegreesEntry) || String.IsNullOrEmpty(northMinutesEntry) || String.IsNullOrEmpty(eastDegreesEntry) || String.IsNullOrEmpty(eastMinutesEntry) || String.IsNullOrEmpty(bearingEntry) || String.IsNullOrEmpty(meteresEntry))
+            if (string.IsNullOrEmpty(latitudeDegreesEntry) || string.IsNullOrEmpty(latitudeMinutesEntry) || string.IsNullOrEmpty(longitudeDegreesEntry) || string.IsNullOrEmpty(longitudeMinutesEntry) || string.IsNullOrEmpty(bearingEntry) || string.IsNullOrEmpty(meteresEntry))
             {
                 DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             }
             else
             {
-                // Convert to floats
-                float northDegrees = float.Parse(northDegreesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
-                float northMinutes = float.Parse(northMinutesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
-                float eastDegrees = float.Parse(eastDegreesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
-                float eastMinutes = float.Parse(eastMinutesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
+                // Set coordinates in DegreesDecimalMinutes object
+                DegreesDecimalMinutesCoordinates startPointInDegreesDecimalMinutes = new DegreesDecimalMinutesCoordinates
+                {
+                    LatitudeDegrees = float.Parse(latitudeDegreesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture),
+                    LatitudeMinutes = float.Parse(latitudeMinutesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture),
+                    IsNorth = !Convert.ToBoolean(latitudePicker.SelectedIndex),
+                    LongitudeDegrees = float.Parse(longitudeDegreesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture),
+                    LongitudeMinutes = float.Parse(longitudeMinutesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture),
+                    IsEast = !Convert.ToBoolean(longitudePicker.SelectedIndex)
+                };
+
+                // Convert DDM to DD
+                DecimalDegreesCoordinates startPoint = startPointInDegreesDecimalMinutes.ToDecimalDegreesCoordinates();
+
+                // Get bearing and distance
                 float bearing = float.Parse(bearingEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
                 float distance = float.Parse(meteresEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture) / 1000;
 
-                // Convert from DDM to DD
-                float north = northDegrees + northMinutes / 60;
-                float east = eastDegrees + eastMinutes / 60;
-
-                // Check for south and west
-                if (northPicker.SelectedIndex == 1)
-                {
-                    north *= -1;
-                }
-
-                if (eastPicker.SelectedIndex == 1)
-                {
-                    east *= -1;
-                }
-
-                // Calculate endpoint
-                double earthRadius = 6371.01;
-                var distRatio = distance/ earthRadius;
-                var distRatioSine = Math.Sin(distRatio);
-                var distRatioCosine = Math.Cos(distRatio);
-
-                var startLatRad = DegreesToRadians(north);
-                var startLonRad = DegreesToRadians(east);
-
-                var startLatCos = Math.Cos(startLatRad);
-                var startLatSin = Math.Sin(startLatRad);
-
-                var endLatRads = Math.Asin((startLatSin * distRatioCosine) + (startLatCos * distRatioSine * Math.Cos(DegreesToRadians(bearing))));
-
-                var endLonRads = startLonRad + Math.Atan2(Math.Sin(DegreesToRadians(bearing)) * distRatioSine * startLatCos, distRatioCosine - startLatSin * Math.Sin(endLatRads));
-
-                var endNorth = RadiansToDegrees(endLatRads);
-                var endEast = RadiansToDegrees(endLonRads);
-
-                string northLabel = "N";
-                string eastLabel = "E";
-
-                if (endNorth < 0)
-                {
-                    endNorth *= -1;
-                    northLabel = "S";
-                }
-
-                if (endEast < 0)
-                {
-                    endEast *= -1;
-                    eastLabel = "W";
-                }
-
-                var northDegreesAnswer = (int)Math.Floor(endNorth);
-                var northMinutesAnswer = (endNorth - (float)Math.Floor(endNorth)) * 60;
-
-                var eastDegreesAnswer = (int)Math.Floor(endEast);
-                var eastMinutesAnswer = (endEast - (float)Math.Floor(endEast)) * 60;
+                // Calculate projection
+                DegreesDecimalMinutesCoordinates endPoint = startPoint.CalculateProjection(bearing, distance).ToDegreesDecimalMinutesCoordinates();
 
                 // Return answer
-                answerLabel.Text = String.Format("{0}{1}° {2:f3} {3}{4}° {5:f3}", northLabel, northDegreesAnswer, northMinutesAnswer, eastLabel, eastDegreesAnswer, eastMinutesAnswer);
+                answerLabel.Text = string.Format("{0}{1}° {2:f3} {3}{4}° {5:f3}", endPoint.GetLatitudeLabel(), endPoint.LatitudeDegrees, endPoint.LatitudeMinutes, endPoint.GetLongitudeLabel(), endPoint.LongitudeDegrees, endPoint.LongitudeMinutes);
             }
-        }
-
-        // Convert degrees to radians
-        public static double DegreesToRadians(double degrees)
-        {
-            const double degToRadFactor = Math.PI / 180;
-            return degrees * degToRadFactor;
-        }
-
-        // Convert radians to degrees
-        public static double RadiansToDegrees(double radians)
-        {
-            const double radToDegFactor = 180 / Math.PI;
-            return radians * radToDegFactor;
         }
     }
 }
