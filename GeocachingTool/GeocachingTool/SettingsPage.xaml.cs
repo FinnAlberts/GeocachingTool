@@ -11,8 +11,14 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SettingsPage : ContentPage
     {
+        /// <summary>
+        /// Dictionary containing language label and code 
+        /// </summary>
         public Dictionary<string, string> languages;
 
+        /// <summary>
+        /// Page constructor
+        /// </summary>
         public SettingsPage()
         {
             InitializeComponent();
@@ -41,6 +47,11 @@ namespace GeocachingTool
             themePicker.SelectedIndex = int.Parse(Preferences.Get("preferedTheme", "0"));
         }
 
+        /// <summary>
+        /// Runs when a language is selected
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void LanguagePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Get selected language
@@ -56,6 +67,11 @@ namespace GeocachingTool
             }
         }
 
+        /// <summary>
+        /// Runs when a theme is selected
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void ThemePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Get selected theme

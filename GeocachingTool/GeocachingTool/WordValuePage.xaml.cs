@@ -8,11 +8,19 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WordValuePage : ContentPage
     {
+        /// <summary>
+        /// Page constructor
+        /// </summary>
         public WordValuePage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Runs when input is changed
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void InputEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
             // Get input

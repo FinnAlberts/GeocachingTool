@@ -6,6 +6,9 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ShellHeaderView : ContentView
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public ShellHeaderView()
         {
             InitializeComponent();

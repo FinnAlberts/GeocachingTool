@@ -10,11 +10,19 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotesNewPage : ContentPage
     {
+        /// <summary>
+        /// Page constructor
+        /// </summary>
         public NotesNewPage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Runs when save button is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void SaveButton_Clicked(object sender, EventArgs e)
         {
             // Check if filled in

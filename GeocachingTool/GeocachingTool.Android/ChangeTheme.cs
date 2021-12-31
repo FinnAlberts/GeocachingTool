@@ -17,9 +17,9 @@ namespace GeocachingTool.Droid
 {
     class ChangeTheme : IChangeTheme
     {
-        public void EnableDarkTheme(bool _)
+        public void EnableDarkTheme(bool isDarkTheme)
         {
-            AppCompatDelegate.DefaultNightMode = _ ? AppCompatDelegate.ModeNightYes : AppCompatDelegate.ModeNightNo;
+            AppCompatDelegate.DefaultNightMode = isDarkTheme ? AppCompatDelegate.ModeNightYes : AppCompatDelegate.ModeNightNo;
         }
     }
 }

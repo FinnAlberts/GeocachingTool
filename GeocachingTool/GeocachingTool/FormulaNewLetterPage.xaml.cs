@@ -13,11 +13,19 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FormulaNewLetterPage : ContentPage
     {
+        /// <summary>
+        /// Page constructor
+        /// </summary>
         public FormulaNewLetterPage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Runs when save button is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void SaveButton_Clicked(object sender, EventArgs e)
         {
             // Check if filled in
@@ -41,7 +49,7 @@ namespace GeocachingTool
 
                     formulaLetters = (from formulaLetter in formulaLetters where formulaLetter.Letter == letter select formulaLetter).ToList();
 
-                    if (formulaLetters.Count == 0) // Letter does not yet exist
+                    if (formulaLetters.Count == 0) 
                     {
                         // Insert new letter
                         FormulaLetter newFormulaLetter = new FormulaLetter { Letter = letter, Value = value };
@@ -58,18 +66,26 @@ namespace GeocachingTool
                             DisplayAlert(AppResources.error, AppResources.errorDefault, AppResources.ok);
                         }
                     }
-                    else // Letter does already exist
+                    else 
                     {
+                        // Letter does already exist
                         DisplayAlert(AppResources.error, AppResources.errorLetterAlreadyExists, AppResources.ok);
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Runs when text in letter entry is changed
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void LetterEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var isValid = Regex.IsMatch(e.NewTextValue, "^[a-zA-Z]+$");
+            /// Check if input is 1 letter only
+            bool isValid = Regex.IsMatch(e.NewTextValue, "^[a-zA-Z]+$");
 
+            // Update the entry accordingly
             if (e.NewTextValue.Length > 0)
             {
                 ((Entry)sender).Text = isValid ? e.NewTextValue : e.NewTextValue.Remove(e.NewTextValue.Length - 1);
