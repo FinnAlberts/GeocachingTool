@@ -298,6 +298,12 @@ Example: you added the letter 'a' with a value of 4. By entering 10-a you will h
   <data name="restart" xml:space="preserve">
     <value>Please restart the app for the changes to apply.</value>
   </data>
+  <data name="review" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="reviewBody" xml:space="preserve">
+    <value>Do you enjoy using Geocaching Backpack? Please leave a review.</value>
+  </data>
   <data name="save" xml:space="preserve">
     <value>Save</value>
   </data>

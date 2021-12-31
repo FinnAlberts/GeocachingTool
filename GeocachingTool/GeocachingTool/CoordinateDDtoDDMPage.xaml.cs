@@ -1,4 +1,5 @@
-﻿using GeocachingTool.Model;
+﻿using GeocachingTool.Handler;
+using GeocachingTool.Model;
 using GeocachingTool.Resources;
 using System;
 using Xamarin.Forms;
@@ -38,6 +39,10 @@ namespace GeocachingTool
 
                 // Return results
                 answerLabel.Text = string.Format("{0}{1}° {2:f3} {3}{4}° {5:f3}", degreesDecimalMinutesCoordinates.GetLatitudeLabel(), degreesDecimalMinutesCoordinates.LatitudeDegrees, degreesDecimalMinutesCoordinates.LatitudeMinutes, degreesDecimalMinutesCoordinates.GetLongitudeLabel(), degreesDecimalMinutesCoordinates.LongitudeDegrees, degreesDecimalMinutesCoordinates.LongitudeMinutes);
+
+                // Review handling
+                ReviewHandler reviewHandler = new ReviewHandler();
+                reviewHandler.AskReviewAfterUsage();
             }
         }
     }

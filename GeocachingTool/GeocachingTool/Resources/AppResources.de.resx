@@ -298,6 +298,9 @@ Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-
   <data name="restart" xml:space="preserve">
     <value>Starten Sie die App neu, um die Änderungen zu verarbeiten.</value>
   </data>
+  <data name="review" xml:space="preserve">
+    <value>Bewertung</value>
+  </data>
   <data name="save" xml:space="preserve">
     <value>Speichern</value>
   </data>
@@ -309,6 +312,9 @@ Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-
   </data>
   <data name="stackCountingPageTitle" xml:space="preserve">
     <value>Quersumme</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Gefällt dir Geocaching Rucksack? Dann hinterlasse eine Bewertung.</value>
   </data>
   <data name="succes" xml:space="preserve">
     <value>Erfolg</value>

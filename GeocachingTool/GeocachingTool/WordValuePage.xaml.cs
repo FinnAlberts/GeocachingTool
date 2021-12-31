@@ -1,4 +1,5 @@
-﻿using GeocachingTool.Resources;
+﻿using GeocachingTool.Handler;
+using GeocachingTool.Resources;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -77,6 +78,18 @@ namespace GeocachingTool
             answerString.Spans.Add(new Span { Text = "." });
 
             answerLabel.FormattedText = answerString; 
+        }
+
+        /// <summary>
+        /// Runs on page dissappearance
+        /// </summary>
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            // Review handling
+            ReviewHandler reviewHandler = new ReviewHandler();
+            reviewHandler.AskReviewAfterUsage();
         }
     }
 }

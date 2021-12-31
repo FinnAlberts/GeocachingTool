@@ -1,4 +1,5 @@
-﻿using GeocachingTool.Model;
+﻿using GeocachingTool.Handler;
+using GeocachingTool.Model;
 using GeocachingTool.Resources;
 using SQLite;
 using System;
@@ -91,6 +92,10 @@ namespace GeocachingTool
                 // Return result
                 answerLabel.Text = result;
             }
+
+            // Review handling
+            ReviewHandler reviewHandler = new ReviewHandler();
+            reviewHandler.AskReviewAfterUsage();
         }
 
         /// <summary>

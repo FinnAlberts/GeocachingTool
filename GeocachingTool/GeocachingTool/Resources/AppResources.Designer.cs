@@ -596,6 +596,24 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Review.
+        /// </summary>
+        internal static string review {
+            get {
+                return ResourceManager.GetString("review", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you enjoy using Geocaching Backpack? Please leave a review..
+        /// </summary>
+        internal static string reviewBody {
+            get {
+                return ResourceManager.GetString("reviewBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
         internal static string save {

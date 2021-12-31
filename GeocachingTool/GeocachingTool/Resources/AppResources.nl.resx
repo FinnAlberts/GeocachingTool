@@ -298,6 +298,12 @@ Voorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te vo
   <data name="restart" xml:space="preserve">
     <value>Start de app opnieuw om de wijzigingen te verwerken.</value>
   </data>
+  <data name="review" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="reviewBody" xml:space="preserve">
+    <value>Vind je Geocaching Backpack leuk? Laat dan een review achter.</value>
+  </data>
   <data name="save" xml:space="preserve">
     <value>Opslaan</value>
   </data>

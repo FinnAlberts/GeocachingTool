@@ -1,4 +1,5 @@
-﻿using GeocachingTool.Model;
+﻿using GeocachingTool.Handler;
+using GeocachingTool.Model;
 using GeocachingTool.Resources;
 using SQLite;
 using System;
@@ -58,8 +59,11 @@ namespace GeocachingTool
                         // Check for errors
                         if (rows > 0)
                         {
-                            DisplayAlert(AppResources.succes, AppResources.succesLetterAdded, AppResources.ok);
                             Navigation.PopModalAsync();
+
+                            // Review handling
+                            ReviewHandler reviewHandler = new ReviewHandler();
+                            reviewHandler.AskReviewAfterUsage();
                         }
                         else
                         {
