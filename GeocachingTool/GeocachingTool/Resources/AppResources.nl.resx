@@ -310,6 +310,9 @@ Voorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te vo
   <data name="set" xml:space="preserve">
     <value>Stel in</value>
   </data>
+  <data name="setAsCompassTarget" xml:space="preserve">
+    <value>Als kompasdoel instellen</value>
+  </data>
   <data name="settingsPageTitle" xml:space="preserve">
     <value>Instellingen</value>
   </data>
@@ -318,6 +321,9 @@ Voorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te vo
   </data>
   <data name="succes" xml:space="preserve">
     <value>Succes</value>
+  </data>
+  <data name="succesfullySetCompassTarget" xml:space="preserve">
+    <value>Het doel is succesvol ingesteld</value>
   </data>
   <data name="succesLetterAdded" xml:space="preserve">
     <value>De letter is succesvol toegevoegd</value>

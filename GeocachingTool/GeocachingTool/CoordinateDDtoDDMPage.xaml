@@ -12,6 +12,7 @@
             </Grid>
             <Button x:Name="convertButton" Text="{Static resource:AppResources.convert}" Clicked="ConvertButton_Clicked"/>
             <Label x:Name="answerLabel" Style="{x:DynamicResource answer}"/>
+            <Button x:Name="setAsCompassTargetButton" Text="{Static resource:AppResources.setAsCompassTarget}" IsVisible="False" Clicked="SetAsCompassTargetButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

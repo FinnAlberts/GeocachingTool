@@ -310,6 +310,9 @@ Example: you added the letter 'a' with a value of 4. By entering 10-a you will h
   <data name="set" xml:space="preserve">
     <value>Set</value>
   </data>
+  <data name="setAsCompassTarget" xml:space="preserve">
+    <value>Set as compass target</value>
+  </data>
   <data name="settingsPageTitle" xml:space="preserve">
     <value>Settings</value>
   </data>
@@ -318,6 +321,9 @@ Example: you added the letter 'a' with a value of 4. By entering 10-a you will h
   </data>
   <data name="succes" xml:space="preserve">
     <value>Success</value>
+  </data>
+  <data name="succesfullySetCompassTarget" xml:space="preserve">
+    <value>The target for the compass has been set succesfully</value>
   </data>
   <data name="succesLetterAdded" xml:space="preserve">
     <value>The letter was succesfully added.</value>

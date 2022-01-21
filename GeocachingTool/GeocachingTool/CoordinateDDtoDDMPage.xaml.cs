@@ -10,6 +10,11 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CoordinateDDtoDDMPage : ContentPage
     {
+        /// <summary>
+        /// The inputed coordinates
+        /// </summary>
+        private DecimalDegreesCoordinates _decimalDegreesCoordinates;
+
         public CoordinateDDtoDDMPage()
         {
             InitializeComponent();
@@ -28,22 +33,36 @@ namespace GeocachingTool
             } else
             {
                 // Create DecimalDegreesCoordinates object for storing the coordinates
-                DecimalDegreesCoordinates decimalDegreesCoordinates = new DecimalDegreesCoordinates
+                _decimalDegreesCoordinates = new DecimalDegreesCoordinates
                 {
                     Latitude = float.Parse(latitudeInput.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture),
                     Longitude = float.Parse(longitudeInput.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture)
                 };
 
                 // Convert DD to DDM
-                DegreesDecimalMinutesCoordinates degreesDecimalMinutesCoordinates = decimalDegreesCoordinates.ToDegreesDecimalMinutesCoordinates();
+                DegreesDecimalMinutesCoordinates degreesDecimalMinutesCoordinates = _decimalDegreesCoordinates.ToDegreesDecimalMinutesCoordinates();
 
                 // Return results
                 answerLabel.Text = string.Format("{0}{1}° {2:f3} {3}{4}° {5:f3}", degreesDecimalMinutesCoordinates.GetLatitudeLabel(), degreesDecimalMinutesCoordinates.LatitudeDegrees, degreesDecimalMinutesCoordinates.LatitudeMinutes, degreesDecimalMinutesCoordinates.GetLongitudeLabel(), degreesDecimalMinutesCoordinates.LongitudeDegrees, degreesDecimalMinutesCoordinates.LongitudeMinutes);
+
+                // Show set as compass target button
+                setAsCompassTargetButton.IsVisible = true;
 
                 // Review handling
                 ReviewHandler reviewHandler = new ReviewHandler();
                 reviewHandler.AskReviewAfterUsage();
             }
+        }
+
+        /// <summary>
+        /// Runs when set as compass target button is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
+        private void SetAsCompassTargetButton_Clicked(object sender, EventArgs e)
+        {
+            _decimalDegreesCoordinates.SetAsCompassTarget();
+            DisplayAlert(AppResources.succes, AppResources.succesfullySetCompassTarget, AppResources.ok);
         }
     }
 }

@@ -31,7 +31,8 @@
             <Entry x:Name="angleEntry" Placeholder="{Static resource:AppResources.calculateProjectionPageAngle}" Keyboard="Numeric"/>
             <Entry x:Name="distanceEntry" Placeholder="{Static resource:AppResources.calculateProjectionPageDistance}" Keyboard="Numeric"/>
             <Button x:Name="calculateButton" Text="{Static resource:AppResources.calculate}" Clicked="CalculateButton_Clicked"/>
-            <Label x:Name="answerLabel"  Style="{x:DynamicResource answer}"/>
+            <Label x:Name="answerLabel" Style="{x:DynamicResource answer}"/>
+            <Button x:Name="setAsCompassTargetButton" Text="{Static resource:AppResources.setAsCompassTarget}" IsVisible="False" Clicked="SetAsCompassTargetButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

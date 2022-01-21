@@ -632,6 +632,15 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set as compass target.
+        /// </summary>
+        internal static string setAsCompassTarget {
+            get {
+                return ResourceManager.GetString("setAsCompassTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         internal static string settingsPageTitle {
@@ -655,6 +664,15 @@ namespace GeocachingTool.Resources {
         internal static string succes {
             get {
                 return ResourceManager.GetString("succes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The target for the compass has been set succesfully.
+        /// </summary>
+        internal static string succesfullySetCompassTarget {
+            get {
+                return ResourceManager.GetString("succesfullySetCompassTarget", resourceCulture);
             }
         }
         

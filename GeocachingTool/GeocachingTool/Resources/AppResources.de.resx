@@ -301,11 +301,17 @@ Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-
   <data name="review" xml:space="preserve">
     <value>Bewertung</value>
   </data>
+  <data name="reviewBody" xml:space="preserve">
+    <value>Gefällt dir Geocaching Rucksack? Dann hinterlasse eine Bewertung.</value>
+  </data>
   <data name="save" xml:space="preserve">
     <value>Speichern</value>
   </data>
   <data name="set" xml:space="preserve">
     <value>Aufstellen</value>
+  </data>
+  <data name="setAsCompassTarget" xml:space="preserve">
+    <value>Als Kompassziel festlegen</value>
   </data>
   <data name="settingsPageTitle" xml:space="preserve">
     <value>Einstellungen</value>
@@ -313,11 +319,11 @@ Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-
   <data name="stackCountingPageTitle" xml:space="preserve">
     <value>Quersumme</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value>Gefällt dir Geocaching Rucksack? Dann hinterlasse eine Bewertung.</value>
-  </data>
   <data name="succes" xml:space="preserve">
     <value>Erfolg</value>
+  </data>
+  <data name="succesfullySetCompassTarget" xml:space="preserve">
+    <value>Das Ziel wurde erfolgreich erreicht</value>
   </data>
   <data name="succesLetterAdded" xml:space="preserve">
     <value>Der Buchstabe wurde erfolgreich hinzugefügt</value>
