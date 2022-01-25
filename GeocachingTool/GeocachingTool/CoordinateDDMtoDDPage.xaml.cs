@@ -48,7 +48,7 @@ namespace GeocachingTool
                 DecimalDegreesCoordinates decimalDegreesCoordinates = degreesDecimalMinutesCoordinates.ToDecimalDegreesCoordinates();
 
                 // Return results
-                answerLabel.Text = string.Format("{0:5f}; {1:5f}", decimalDegreesCoordinates.Latitude, decimalDegreesCoordinates.Longitude);
+                answerLabel.Text = string.Format("{0:f5}; {1:f5}", decimalDegreesCoordinates.Latitude, decimalDegreesCoordinates.Longitude);
 
                 // Review handling
                 ReviewHandler reviewHandler = new ReviewHandler();
