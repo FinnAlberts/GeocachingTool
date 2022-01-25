@@ -10,6 +10,9 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CoordinateDDMtoDDPage : ContentPage
     {
+        /// <summary>
+        /// Page constructor
+        /// </summary>
         public CoordinateDDMtoDDPage()
         {
             InitializeComponent();
@@ -19,6 +22,11 @@ namespace GeocachingTool
             longitudePicker.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Runs when convert button is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void ConvertButton_Clicked(object sender, EventArgs e)
         {
             // Get input

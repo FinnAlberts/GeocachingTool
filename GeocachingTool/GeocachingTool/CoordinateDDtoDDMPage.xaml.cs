@@ -15,11 +15,19 @@ namespace GeocachingTool
         /// </summary>
         private DecimalDegreesCoordinates _decimalDegreesCoordinates;
 
+        /// <summary>
+        /// Page constructor
+        /// </summary>
         public CoordinateDDtoDDMPage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Runs when the convert button is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void ConvertButton_Clicked(object sender, EventArgs e)
         {
             // Get input
