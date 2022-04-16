@@ -193,6 +193,11 @@ namespace GeocachingTool
             Navigation.PushModalAsync(new CompassTargetPage());
         }
 
+        /// <summary>
+        /// Runs when the open in maps button is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void OpenInMapsButton_Clicked(object sender, EventArgs e)
         {
             Map.OpenAsync(_targetLocation);
