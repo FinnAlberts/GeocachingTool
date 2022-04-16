@@ -316,6 +316,9 @@ Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-
   <data name="settingsPageTitle" xml:space="preserve">
     <value>Einstellungen</value>
   </data>
+  <data name="showOnMap" xml:space="preserve">
+    <value>Auf der Karte anzeigen</value>
+  </data>
   <data name="stackCountingPageTitle" xml:space="preserve">
     <value>Quersumme</value>
   </data>

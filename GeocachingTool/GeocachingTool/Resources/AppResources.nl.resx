@@ -316,6 +316,9 @@ Voorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te vo
   <data name="settingsPageTitle" xml:space="preserve">
     <value>Instellingen</value>
   </data>
+  <data name="showOnMap" xml:space="preserve">
+    <value>Geef op kaart weer</value>
+  </data>
   <data name="stackCountingPageTitle" xml:space="preserve">
     <value>Stapeltellen</value>
   </data>

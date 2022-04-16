@@ -316,6 +316,9 @@ Example: you added the letter 'a' with a value of 4. By entering 10-a you will h
   <data name="settingsPageTitle" xml:space="preserve">
     <value>Settings</value>
   </data>
+  <data name="showOnMap" xml:space="preserve">
+    <value>Show location on map</value>
+  </data>
   <data name="stackCountingPageTitle" xml:space="preserve">
     <value>Digital root</value>
   </data>
