@@ -34,8 +34,18 @@ namespace GeocachingTool.Handler
                 {
                     // Ask for review
                     await CrossStoreReview.Current.RequestReview(false);
+                    Console.WriteLine("Review requested");
                 }
             }
+        }
+
+        /// <summary>
+        /// Ask a review directly
+        /// </summary>
+        public async void AskDirectReview()
+        {
+            await CrossStoreReview.Current.RequestReview(false);
+            Console.WriteLine("Review requested");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeocachingTool.Handler;
+using System;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -24,6 +25,17 @@ namespace GeocachingTool
         private async void OpenWebsiteMenuItem_Clicked(object sender, EventArgs e)
         {
             await Browser.OpenAsync("https://www.geocaching.com/", BrowserLaunchMode.SystemPreferred);
+        }
+
+        /// <summary>
+        /// Runs when the open review menu item is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
+        private void OpenReviewMenuItem_Clicked(object sender, EventArgs e)
+        {
+            ReviewHandler reviewHandler = new ReviewHandler();
+            reviewHandler.AskDirectReview();
         }
     }
 }

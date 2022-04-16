@@ -80,6 +80,7 @@
             <local:SettingsPage/>
         </ShellContent>
     </FlyoutItem>
+    <MenuItem x:Name="openReviewMenuItem" Text="{Static resource:AppResources.review}" Clicked="OpenReviewMenuItem_Clicked" IconImageSource="star.png"/>
     <FlyoutItem Title="{Static resource:AppResources.aboutPageTitle}" Icon="about.png">
         <ShellContent>
             <local:AboutPage/>
