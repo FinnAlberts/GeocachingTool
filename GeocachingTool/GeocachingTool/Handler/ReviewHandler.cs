@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace GeocachingTool.Handler
 {
-    public class ReviewHandler
+    public static class ReviewHandler
     {
         /// <summary>
         /// The amount of times the app has been used
@@ -20,9 +20,11 @@ namespace GeocachingTool.Handler
         /// <summary>
         /// Ask a review when this method is called for the 20th time (alltime) (so after 20 interactions) 
         /// </summary>
-        public async void AskReviewAfterUsage()
+        public static async void AskReviewAfterUsage()
         {
             Usage++;
+
+            Console.WriteLine("App usage is now: {0}", Usage);
 
             // Check if app review should be asked
             if (Usage == 20)
@@ -33,8 +35,7 @@ namespace GeocachingTool.Handler
                 if (answer)
                 {
                     // Ask for review
-                    await CrossStoreReview.Current.RequestReview(false);
-                    Console.WriteLine("Review requested");
+                    AskDirectReview();
                 }
             }
         }
@@ -42,7 +43,7 @@ namespace GeocachingTool.Handler
         /// <summary>
         /// Ask a review directly
         /// </summary>
-        public async void AskDirectReview()
+        public static async void AskDirectReview()
         {
             await CrossStoreReview.Current.RequestReview(false);
             Console.WriteLine("Review requested");

@@ -94,8 +94,7 @@ namespace GeocachingTool
             }
 
             // Review handling
-            ReviewHandler reviewHandler = new ReviewHandler();
-            reviewHandler.AskReviewAfterUsage();
+            ReviewHandler.AskReviewAfterUsage();
         }
 
         /// <summary>

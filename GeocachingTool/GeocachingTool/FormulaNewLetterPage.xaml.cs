@@ -62,8 +62,7 @@ namespace GeocachingTool
                             Navigation.PopModalAsync();
 
                             // Review handling
-                            ReviewHandler reviewHandler = new ReviewHandler();
-                            reviewHandler.AskReviewAfterUsage();
+                            ReviewHandler.AskReviewAfterUsage();
                         }
                         else
                         {

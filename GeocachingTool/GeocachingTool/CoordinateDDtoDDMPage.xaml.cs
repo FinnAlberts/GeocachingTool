@@ -57,8 +57,7 @@ namespace GeocachingTool
                 setAsCompassTargetButton.IsVisible = true;
 
                 // Review handling
-                ReviewHandler reviewHandler = new ReviewHandler();
-                reviewHandler.AskReviewAfterUsage();
+                ReviewHandler.AskReviewAfterUsage();
             }
         }
 

@@ -59,8 +59,7 @@ namespace GeocachingTool
                 answerLabel.Text = string.Format("{0:f5}; {1:f5}", decimalDegreesCoordinates.Latitude, decimalDegreesCoordinates.Longitude);
 
                 // Review handling
-                ReviewHandler reviewHandler = new ReviewHandler();
-                reviewHandler.AskReviewAfterUsage();
+                ReviewHandler.AskReviewAfterUsage();
             }
         }
     }
