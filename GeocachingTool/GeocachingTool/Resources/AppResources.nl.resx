@@ -244,6 +244,9 @@ Voorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te vo
   <data name="help" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="later" xml:space="preserve">
+    <value>Later</value>
+  </data>
   <data name="latitude" xml:space="preserve">
     <value>Breedtegraad</value>
   </data>

@@ -8,34 +8,41 @@ namespace GeocachingTool.Handler
 {
     public static class ReviewHandler
     {
+        private const int ActionsBeforeReviewRequest = 20;
+
         /// <summary>
         /// The amount of times the app has been used
         /// </summary>
-        public static int Usage
+        public static int AppUsage
         {
-            get => Preferences.Get(nameof(Usage), 0);
-            set => Preferences.Set(nameof(Usage), value);
+            get => Preferences.Get(nameof(AppUsage), 0);
+            set => Preferences.Set(nameof(AppUsage), value);
         }
 
         /// <summary>
-        /// Ask a review when this method is called for the 20th time (alltime) (so after 20 interactions) 
+        /// Ask a review after the user has done some actions in the app (defined in ActionsBeforeReviewRequest constant)
         /// </summary>
         public static async void AskReviewAfterUsage()
         {
-            Usage++;
-
-            Console.WriteLine("App usage is now: {0}", Usage);
+            // Increase usage counter
+            AppUsage++;
+            Console.WriteLine("App usage is now: {0}", AppUsage);
 
             // Check if app review should be asked
-            if (Usage == 20)
+            if (AppUsage == ActionsBeforeReviewRequest)
             {
-                // Ask if user wants to review
-                bool answer = await Application.Current.MainPage.DisplayAlert(AppResources.review, AppResources.reviewBody, AppResources.yes, AppResources.no);
+                // Create a (custom) alert
+                IAlert alert = DependencyService.Get<IAlert>();
+                string answer = await alert.Display(AppResources.review, AppResources.reviewBody, AppResources.yes, AppResources.later, AppResources.no);
 
-                if (answer)
+                if (answer == AppResources.yes)
                 {
                     // Ask for review
                     AskDirectReview();
+                } else if (answer == AppResources.later)
+                {
+                    // Reset usage counter
+                    AppUsage = 0;
                 }
             }
         }

@@ -244,6 +244,9 @@ Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-
   <data name="help" xml:space="preserve">
     <value>Hilfe</value>
   </data>
+  <data name="later" xml:space="preserve">
+    <value>Später</value>
+  </data>
   <data name="latitude" xml:space="preserve">
     <value>Breitengrad</value>
   </data>
