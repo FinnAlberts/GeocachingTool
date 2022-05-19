@@ -254,7 +254,7 @@ Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-
     <value>Längengrad</value>
   </data>
   <data name="mainPageDescription" xml:space="preserve">
-    <value>Dieser Backpack enthält die Werkzeuge, die du als echter Geocacher unterwegs brauchst. Finden Sie schnell den Wortwert, berechnen Sie die nächste Koordinate und speichern Sie wichtige Daten, um den Cache zu finden.</value>
+    <value>Dieser Backpack enthält die Werkzeuge, die du als echter Geocacher unterwegs brauchst. Finden Sie schnell den Wortwert, berechnen Sie die nächsten Koordinaten und speichern Sie wichtige Daten, um den Cache zu finden.</value>
   </data>
   <data name="mainPageHeader" xml:space="preserve">
     <value>Geh raus und finde ein paar Caches!</value>

@@ -254,7 +254,7 @@ Example: you added the letter 'a' with a value of 4. By entering 10-a you will h
     <value>Longitude</value>
   </data>
   <data name="mainPageDescription" xml:space="preserve">
-    <value>This backpack contains all the tools you'll need while searching for Geocaches. Quickly find the word value, calculate the next coordinate and save all important information for finding the cache.</value>
+    <value>This backpack contains all the tools you'll need while searching for Geocaches. Quickly find the word value, calculate the next coordinates and save all important information for finding the cache.</value>
   </data>
   <data name="mainPageHeader" xml:space="preserve">
     <value>Explore and search for some caches!</value>

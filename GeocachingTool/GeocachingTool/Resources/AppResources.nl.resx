@@ -254,7 +254,7 @@ Voorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te vo
     <value>Lengtegraad</value>
   </data>
   <data name="mainPageDescription" xml:space="preserve">
-    <value>Deze backpack bevat dé tools die je als echte Geocacher onderweg nodig hebt. Vind snel de woordwaarde, bereken de volgende coördinaat en sla gegevens op die van belang zijn bij het vinden van de cache.</value>
+    <value>Deze backpack bevat dé tools die je als echte Geocacher onderweg nodig hebt. Vind snel de woordwaarde, bereken de volgende coördinaten en sla gegevens op die van belang zijn bij het vinden van de cache.</value>
   </data>
   <data name="mainPageHeader" xml:space="preserve">
     <value>Ga op pad en zoek wat caches!</value>

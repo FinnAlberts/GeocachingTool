@@ -461,7 +461,7 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This backpack contains all the tools you&apos;ll need while searching for Geocaches. Quickly find the word value, calculate the next coordinate and save all important information for finding the cache..
+        ///   Looks up a localized string similar to This backpack contains all the tools you&apos;ll need while searching for Geocaches. Quickly find the word value, calculate the next coordinates and save all important information for finding the cache..
         /// </summary>
         internal static string mainPageDescription {
             get {
