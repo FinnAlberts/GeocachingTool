@@ -223,7 +223,7 @@
     <value>Verwijder alle letters</value>
   </data>
   <data name="formulaPageHelp" xml:space="preserve">
-    <value>Voeg letters toe door op 'Nieuw' te tikken. Geef voor iedere letter aan wat de waarde van deze letter is. De letter zal nu in het overzicht verschijnen. Vanaf hier kun je letter ook verwijderen of aanpassen.
+    <value>Voeg letters toe door op 'Nieuw' te tikken. Geef voor iedere letter aan wat de waarde van deze letter is. De letter zal nu in het overzicht verschijnen. Vanaf hier kun je de letter ook verwijderen of aanpassen.
 
 Bovenin kun je een formule invoeren om een waarde uit te rekenen. Deze kunnen simpel zijn zoals 5+5, maar deze mogen ook letters bevatten die je hebt toegevoegd. Je kunt gebruik maken van +, -, * en /.
 
@@ -244,6 +244,9 @@ Voorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te vo
   <data name="help" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="later" xml:space="preserve">
+    <value>Later</value>
+  </data>
   <data name="latitude" xml:space="preserve">
     <value>Breedtegraad</value>
   </data>
@@ -254,7 +257,7 @@ Voorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te vo
     <value>Lengtegraad</value>
   </data>
   <data name="mainPageDescription" xml:space="preserve">
-    <value>Deze backpack bevat dé tools die je als echte Geocacher onderweg nodig hebt. Vind snel de woordwaarde, bereken de volgende coördinaat en sla gegevens op die van belang zijn bij het vinden van de cache.</value>
+    <value>Deze backpack bevat dé tools die je als echte Geocacher onderweg nodig hebt. Vind snel de woordwaarde, bereken de volgende coördinaten en sla gegevens op die van belang zijn bij het vinden van de cache.</value>
   </data>
   <data name="mainPageHeader" xml:space="preserve">
     <value>Ga op pad en zoek wat caches!</value>
@@ -298,20 +301,35 @@ Voorbeeld: je hebt de letter 'a' toegevoegd met als waarde 4. Door 10-a in te vo
   <data name="restart" xml:space="preserve">
     <value>Start de app opnieuw om de wijzigingen te verwerken.</value>
   </data>
+  <data name="review" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="reviewBody" xml:space="preserve">
+    <value>Vind je Geocaching Backpack leuk? Laat dan een review achter.</value>
+  </data>
   <data name="save" xml:space="preserve">
     <value>Opslaan</value>
   </data>
   <data name="set" xml:space="preserve">
     <value>Stel in</value>
   </data>
+  <data name="setAsCompassTarget" xml:space="preserve">
+    <value>Als kompasdoel instellen</value>
+  </data>
   <data name="settingsPageTitle" xml:space="preserve">
     <value>Instellingen</value>
+  </data>
+  <data name="showOnMap" xml:space="preserve">
+    <value>Geef op kaart weer</value>
   </data>
   <data name="stackCountingPageTitle" xml:space="preserve">
     <value>Stapeltellen</value>
   </data>
   <data name="succes" xml:space="preserve">
     <value>Succes</value>
+  </data>
+  <data name="succesfullySetCompassTarget" xml:space="preserve">
+    <value>Het doel is succesvol ingesteld</value>
   </data>
   <data name="succesLetterAdded" xml:space="preserve">
     <value>De letter is succesvol toegevoegd</value>

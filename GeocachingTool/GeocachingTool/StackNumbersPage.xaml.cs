@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using GeocachingTool.Handler;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,11 +8,19 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StackNumbersPage : ContentPage
     {
+        /// <summary>
+        /// Page constructor
+        /// </summary>
         public StackNumbersPage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Runs when input is changed
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void InputEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
             // Get input
@@ -26,7 +30,7 @@ namespace GeocachingTool
             int answer = 0;
 
             // Check if filled in
-            if (!String.IsNullOrEmpty(numberInput))
+            if (!string.IsNullOrEmpty(numberInput))
             {
                 // While number contains more than 1 digit, done will be false
                 bool done = false;
@@ -57,6 +61,17 @@ namespace GeocachingTool
 
             // Return result
             answerLabel.Text = answer.ToString();
+        }
+
+        /// <summary>
+        /// Runs on page dissappearance
+        /// </summary>
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            // Review handling
+            ReviewHandler.AskReviewAfterUsage();
         }
     }
 }

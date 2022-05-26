@@ -1,10 +1,6 @@
-﻿using GeocachingTool.Resources;
+﻿using GeocachingTool.Handler;
+using GeocachingTool.Resources;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,11 +9,19 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WordValuePage : ContentPage
     {
+        /// <summary>
+        /// Page constructor
+        /// </summary>
         public WordValuePage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Runs when input is changed
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void InputEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
             // Get input
@@ -74,6 +78,17 @@ namespace GeocachingTool
             answerString.Spans.Add(new Span { Text = "." });
 
             answerLabel.FormattedText = answerString; 
+        }
+
+        /// <summary>
+        /// Runs on page dissappearance
+        /// </summary>
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            // Review handling
+            ReviewHandler.AskReviewAfterUsage();
         }
     }
 }

@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GeocachingTool
+﻿namespace GeocachingTool
 {
     public interface IChangeTheme
     {
-        void EnableDarkTheme(bool _);
+        /// <summary>
+        /// Enable dark/light theme
+        /// </summary>
+        /// <param name="_">True for dark theme, false for light theme</param>
+        void EnableDarkTheme(bool isDarkTheme);
     }
 }

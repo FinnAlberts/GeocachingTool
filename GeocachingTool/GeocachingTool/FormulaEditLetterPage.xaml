@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="letterLabel" Style="{x:DynamicResource h1}"/>
-            <Entry x:Name="ValueEntry" Placeholder="{Static resource:AppResources.value}" Keyboard="Numeric"/>
+            <Entry x:Name="valueEntry" Placeholder="{Static resource:AppResources.value}" Keyboard="Numeric"/>
             <Button x:Name="saveButton" Text="{Static resource:AppResources.save}" Clicked="SaveButton_Clicked"/>
             <Button x:Name="deleteButton" Text="{Static resource:AppResources.delete}" Clicked="DeleteButton_Clicked"/>
         </StackLayout>

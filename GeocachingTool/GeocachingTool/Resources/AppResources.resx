@@ -244,6 +244,9 @@ Example: you added the letter 'a' with a value of 4. By entering 10-a you will h
   <data name="help" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="later" xml:space="preserve">
+    <value>Later</value>
+  </data>
   <data name="latitude" xml:space="preserve">
     <value>Latitude</value>
   </data>
@@ -254,7 +257,7 @@ Example: you added the letter 'a' with a value of 4. By entering 10-a you will h
     <value>Longitude</value>
   </data>
   <data name="mainPageDescription" xml:space="preserve">
-    <value>This backpack contains all the tools you'll need while searching for Geocaches. Quickly find the word value, calculate the next coordinate and save all important information for finding the cache.</value>
+    <value>This backpack contains all the tools you'll need while searching for Geocaches. Quickly find the word value, calculate the next coordinates and save all important information for finding the cache.</value>
   </data>
   <data name="mainPageHeader" xml:space="preserve">
     <value>Explore and search for some caches!</value>
@@ -298,20 +301,35 @@ Example: you added the letter 'a' with a value of 4. By entering 10-a you will h
   <data name="restart" xml:space="preserve">
     <value>Please restart the app for the changes to apply.</value>
   </data>
+  <data name="review" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="reviewBody" xml:space="preserve">
+    <value>Do you enjoy using Geocaching Backpack? Please leave a review.</value>
+  </data>
   <data name="save" xml:space="preserve">
     <value>Save</value>
   </data>
   <data name="set" xml:space="preserve">
     <value>Set</value>
   </data>
+  <data name="setAsCompassTarget" xml:space="preserve">
+    <value>Set as compass target</value>
+  </data>
   <data name="settingsPageTitle" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="showOnMap" xml:space="preserve">
+    <value>Show location on map</value>
   </data>
   <data name="stackCountingPageTitle" xml:space="preserve">
     <value>Digital root</value>
   </data>
   <data name="succes" xml:space="preserve">
     <value>Success</value>
+  </data>
+  <data name="succesfullySetCompassTarget" xml:space="preserve">
+    <value>The target for the compass has been set succesfully</value>
   </data>
   <data name="succesLetterAdded" xml:space="preserve">
     <value>The letter was succesfully added.</value>

@@ -19,7 +19,7 @@ namespace GeocachingTool.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppResources {
@@ -434,6 +434,15 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Later.
+        /// </summary>
+        internal static string later {
+            get {
+                return ResourceManager.GetString("later", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Latitude.
         /// </summary>
         internal static string latitude {
@@ -461,7 +470,7 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This backpack contains all the tools you&apos;ll need while searching for Geocaches. Quickly find the word value, calculate the next coordinate and save all important information for finding the cache..
+        ///   Looks up a localized string similar to This backpack contains all the tools you&apos;ll need while searching for Geocaches. Quickly find the word value, calculate the next coordinates and save all important information for finding the cache..
         /// </summary>
         internal static string mainPageDescription {
             get {
@@ -596,6 +605,24 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Review.
+        /// </summary>
+        internal static string review {
+            get {
+                return ResourceManager.GetString("review", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you enjoy using Geocaching Backpack? Please leave a review..
+        /// </summary>
+        internal static string reviewBody {
+            get {
+                return ResourceManager.GetString("reviewBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
         internal static string save {
@@ -614,11 +641,29 @@ namespace GeocachingTool.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set as compass target.
+        /// </summary>
+        internal static string setAsCompassTarget {
+            get {
+                return ResourceManager.GetString("setAsCompassTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         internal static string settingsPageTitle {
             get {
                 return ResourceManager.GetString("settingsPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show location on map.
+        /// </summary>
+        internal static string showOnMap {
+            get {
+                return ResourceManager.GetString("showOnMap", resourceCulture);
             }
         }
         
@@ -637,6 +682,15 @@ namespace GeocachingTool.Resources {
         internal static string succes {
             get {
                 return ResourceManager.GetString("succes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The target for the compass has been set succesfully.
+        /// </summary>
+        internal static string succesfullySetCompassTarget {
+            get {
+                return ResourceManager.GetString("succesfullySetCompassTarget", resourceCulture);
             }
         }
         

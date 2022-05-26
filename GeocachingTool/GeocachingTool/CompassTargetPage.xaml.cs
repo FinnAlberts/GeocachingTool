@@ -1,9 +1,6 @@
-﻿using GeocachingTool.Resources;
+﻿using GeocachingTool.Model;
+using GeocachingTool.Resources;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,89 +10,81 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CompassTargetPage : ContentPage
     {
+        /// <summary>
+        /// Page constructor
+        /// </summary>
         public CompassTargetPage()
         {
             InitializeComponent();
 
             // Set default values for pickers
-            northPicker.SelectedIndex = 0;
-            eastPicker.SelectedIndex = 0;
+            latitudePicker.SelectedIndex = 0;
+            longitudePicker.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Runs on page appearance
+        /// </summary>
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
-            // Get set coordiantes if already set
-            float north = Preferences.Get("targetLatitude", 0f);
-            float east = Preferences.Get("targetLongitude", 0f);
-
-            if (north < 0)
+            // Get coordinates if already set
+            DecimalDegreesCoordinates currentTarget = new DecimalDegreesCoordinates()
             {
-                north *= -1;
-                northPicker.SelectedIndex = 1;
-            }
-
-            if (east < 0)
-            {
-                east *= -1;
-                eastPicker.SelectedIndex = 1;
-            }
+                Latitude = Preferences.Get("targetLatitude", 0f),
+                Longitude = Preferences.Get("targetLongitude", 0f)
+            };
 
             // Convert DD to DDM
-            int northDegrees = (int)Math.Floor(north);
-            float northMinutes = (north - (float)Math.Floor(north)) * 60;
+            DegreesDecimalMinutesCoordinates currentTargetInDegreesDecimalMinutes = currentTarget.ToDegreesDecimalMinutesCoordinates();
 
-            int eastDegrees = (int)Math.Floor(east);
-            float eastMinutes = (east - (float)Math.Floor(east)) * 60;
+            // Set values
+            latitudeCoordinateEntry.Text = string.Format("{0}", currentTargetInDegreesDecimalMinutes.LatitudeDegrees);
+            latitudeMinuteEntry.Text = string.Format("{0:f3}", currentTargetInDegreesDecimalMinutes.LatitudeMinutes);
+            latitudePicker.SelectedIndex = currentTargetInDegreesDecimalMinutes.IsNorth ? 0 : 1;
 
-            // Put set coordinates into entries
-            northCoordinateEntry.Text = northDegrees.ToString();
-            northMinuteEntry.Text = northMinutes.ToString();
-
-            eastCoordinateEntry.Text = eastDegrees.ToString();
-            eastMinuteEntry.Text = eastMinutes.ToString();
+            longitudeCoordinateEntry.Text = string.Format("{0}", currentTargetInDegreesDecimalMinutes.LongitudeDegrees);
+            longitudeMinuteEntry.Text = string.Format("{0:f3}", currentTargetInDegreesDecimalMinutes.LongitudeMinutes);
+            longitudePicker.SelectedIndex = currentTargetInDegreesDecimalMinutes.IsEast ? 0 : 1;
         }
 
+        /// <summary>
+        /// Runs when send button is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void SetButton_Clicked(object sender, EventArgs e)
         {
             // Get input
-            string northDegreesEntry = northCoordinateEntry.Text;
-            string northMinutesEntry = northMinuteEntry.Text;
-            string eastDegreesEntry = eastCoordinateEntry.Text;
-            string eastMinutesEntry = eastMinuteEntry.Text;
+            string latitudeDegreesEntry = latitudeCoordinateEntry.Text;
+            string latitudeMinutesEntry = latitudeMinuteEntry.Text;
+            string longitudeDegreesEntry = longitudeCoordinateEntry.Text;
+            string longitudeMinutesEntry = longitudeMinuteEntry.Text;
 
             // Check if filled in
-            if (String.IsNullOrEmpty(northDegreesEntry) || String.IsNullOrEmpty(northMinutesEntry) || String.IsNullOrEmpty(eastDegreesEntry) || String.IsNullOrEmpty(eastMinutesEntry))
+            if (string.IsNullOrEmpty(latitudeDegreesEntry) || string.IsNullOrEmpty(latitudeMinutesEntry) || string.IsNullOrEmpty(longitudeDegreesEntry) || string.IsNullOrEmpty(longitudeMinutesEntry))
             {
                 DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             }
             else
             {
-                // Convert to floats
-                float northDegrees = float.Parse(northDegreesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
-                float northMinutes = float.Parse(northMinutesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
-                float eastDegrees = float.Parse(eastDegreesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
-                float eastMinutes = float.Parse(eastMinutesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture);
-
-                // Convert DDM to DD
-                float north = northDegrees + northMinutes / 60;
-                float east = eastDegrees + eastMinutes / 60;
-
-                // Check for south and west
-                if (northPicker.SelectedIndex == 1)
+                // Create DegreesDecimalMinutesCoordinates object for storing the coordinates
+                DegreesDecimalMinutesCoordinates degreesDecimalMinutesCoordinates = new DegreesDecimalMinutesCoordinates
                 {
-                    north *= -1;
-                }
+                    LatitudeDegrees = float.Parse(latitudeDegreesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture),
+                    LatitudeMinutes = float.Parse(latitudeMinutesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture),
+                    IsNorth = !Convert.ToBoolean(latitudePicker.SelectedIndex),
+                    LongitudeDegrees = float.Parse(longitudeDegreesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture),
+                    LongitudeMinutes = float.Parse(longitudeMinutesEntry.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture),
+                    IsEast = !Convert.ToBoolean(longitudePicker.SelectedIndex)
+                };
 
-                if (eastPicker.SelectedIndex == 1)
-                {
-                    east *= -1;
-                }
+                // Convert to decimal degrees
+                DecimalDegreesCoordinates decimalDegreesCoordinates = degreesDecimalMinutesCoordinates.ToDecimalDegreesCoordinates();
 
-                // Save coordinates
-                Preferences.Set("targetLatitude", north);
-                Preferences.Set("targetLongitude", east);
+                // Set as target
+                decimalDegreesCoordinates.SetAsCompassTarget();
 
                 Navigation.PopModalAsync();
             }

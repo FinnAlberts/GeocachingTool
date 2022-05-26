@@ -1,11 +1,7 @@
 ﻿using GeocachingTool.Resources;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,8 +11,14 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SettingsPage : ContentPage
     {
+        /// <summary>
+        /// Dictionary containing language label and code 
+        /// </summary>
         public Dictionary<string, string> languages;
 
+        /// <summary>
+        /// Page constructor
+        /// </summary>
         public SettingsPage()
         {
             InitializeComponent();
@@ -45,6 +47,11 @@ namespace GeocachingTool
             themePicker.SelectedIndex = int.Parse(Preferences.Get("preferedTheme", "0"));
         }
 
+        /// <summary>
+        /// Runs when a language is selected
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void LanguagePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Get selected language
@@ -60,6 +67,11 @@ namespace GeocachingTool
             }
         }
 
+        /// <summary>
+        /// Runs when a theme is selected
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void ThemePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Get selected theme

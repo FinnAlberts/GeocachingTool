@@ -244,6 +244,9 @@ Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-
   <data name="help" xml:space="preserve">
     <value>Hilfe</value>
   </data>
+  <data name="later" xml:space="preserve">
+    <value>Später</value>
+  </data>
   <data name="latitude" xml:space="preserve">
     <value>Breitengrad</value>
   </data>
@@ -254,7 +257,7 @@ Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-
     <value>Längengrad</value>
   </data>
   <data name="mainPageDescription" xml:space="preserve">
-    <value>Dieser Backpack enthält die Werkzeuge, die du als echter Geocacher unterwegs brauchst. Finden Sie schnell den Wortwert, berechnen Sie die nächste Koordinate und speichern Sie wichtige Daten, um den Cache zu finden.</value>
+    <value>Dieser Backpack enthält die Werkzeuge, die du als echter Geocacher unterwegs brauchst. Finden Sie schnell den Wortwert, berechnen Sie die nächsten Koordinaten und speichern Sie wichtige Daten, um den Cache zu finden.</value>
   </data>
   <data name="mainPageHeader" xml:space="preserve">
     <value>Geh raus und finde ein paar Caches!</value>
@@ -298,20 +301,35 @@ Beispiel: Sie haben den Buchstaben 'a' mit dem Wert 4 hinzugefügt. Wenn Sie 10-
   <data name="restart" xml:space="preserve">
     <value>Starten Sie die App neu, um die Änderungen zu verarbeiten.</value>
   </data>
+  <data name="review" xml:space="preserve">
+    <value>Bewertung</value>
+  </data>
+  <data name="reviewBody" xml:space="preserve">
+    <value>Gefällt dir Geocaching Rucksack? Dann hinterlasse eine Bewertung.</value>
+  </data>
   <data name="save" xml:space="preserve">
     <value>Speichern</value>
   </data>
   <data name="set" xml:space="preserve">
     <value>Aufstellen</value>
   </data>
+  <data name="setAsCompassTarget" xml:space="preserve">
+    <value>Als Kompassziel festlegen</value>
+  </data>
   <data name="settingsPageTitle" xml:space="preserve">
     <value>Einstellungen</value>
+  </data>
+  <data name="showOnMap" xml:space="preserve">
+    <value>Auf der Karte anzeigen</value>
   </data>
   <data name="stackCountingPageTitle" xml:space="preserve">
     <value>Quersumme</value>
   </data>
   <data name="succes" xml:space="preserve">
     <value>Erfolg</value>
+  </data>
+  <data name="succesfullySetCompassTarget" xml:space="preserve">
+    <value>Das Ziel wurde erfolgreich erreicht</value>
   </data>
   <data name="succesLetterAdded" xml:space="preserve">
     <value>Der Buchstabe wurde erfolgreich hinzugefügt</value>

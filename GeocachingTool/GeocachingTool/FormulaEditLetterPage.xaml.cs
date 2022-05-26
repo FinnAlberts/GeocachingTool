@@ -2,11 +2,6 @@
 using GeocachingTool.Resources;
 using SQLite;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,35 +10,50 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FormulaEditLetterPage : ContentPage
     {
-        private FormulaLetter formulaLetter;
+        /// <summary>
+        /// The formula letter
+        /// </summary>
+        private readonly FormulaLetter _formulaLetter;
 
+        /// <summary>
+        /// Page constructor
+        /// </summary>
+        /// <param name="formulaLetter">The letter to be edited</param>
         public FormulaEditLetterPage(FormulaLetter formulaLetter)
         {
             InitializeComponent();
 
-            this.formulaLetter = formulaLetter;
+            _formulaLetter = formulaLetter;
         }
 
+        /// <summary>
+        /// Runs on page appearance
+        /// </summary>
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
             // Set the set data into label and entry
-            letterLabel.Text = formulaLetter.Letter;
-            ValueEntry.Text = formulaLetter.Value.ToString();
+            letterLabel.Text = _formulaLetter.Letter;
+            valueEntry.Text = _formulaLetter.Value.ToString();
         }
 
+        /// <summary>
+        /// Runs when save button is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event argumets</param>
         private void SaveButton_Clicked(object sender, EventArgs e)
         {
             // Check if filled in 
-            if (String.IsNullOrEmpty(ValueEntry.Text))
+            if (string.IsNullOrEmpty(valueEntry.Text))
             {
                 DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             }
             else
             {
                 // Get input
-                float value = float.Parse(ValueEntry.Text);
+                float value = float.Parse(valueEntry.Text);
 
                 // Connect to database
                 using (SQLiteConnection connection = new SQLiteConnection(App.DatabaseLocation))
@@ -51,9 +61,9 @@ namespace GeocachingTool
                     connection.CreateTable<FormulaLetter>();
 
                     // Update value of letter
-                    formulaLetter.Value = value;
+                    _formulaLetter.Value = value;
 
-                    int rows = connection.Update(formulaLetter);
+                    int rows = connection.Update(_formulaLetter);
 
                     // Check for errors
                     if (rows > 0)
@@ -68,6 +78,11 @@ namespace GeocachingTool
             }
         }
 
+        /// <summary>
+        /// Runs when the delete button is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private async void DeleteButton_Clicked(object sender, EventArgs e)
         {
             // Ask for confirmation
@@ -81,7 +96,7 @@ namespace GeocachingTool
                     connection.CreateTable<FormulaLetter>();
 
                     // Delete letter
-                    int rows = connection.Delete(formulaLetter);
+                    int rows = connection.Delete(_formulaLetter);
 
                     // Check for errors
                     if (rows > 0)

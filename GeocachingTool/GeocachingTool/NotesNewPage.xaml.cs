@@ -2,11 +2,6 @@
 using GeocachingTool.Resources;
 using SQLite;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,15 +10,23 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotesNewPage : ContentPage
     {
+        /// <summary>
+        /// Page constructor
+        /// </summary>
         public NotesNewPage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Runs when save button is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void SaveButton_Clicked(object sender, EventArgs e)
         {
             // Check if filled in
-            if (String.IsNullOrEmpty(nameEntry.Text) || String.IsNullOrEmpty(detailsEditor.Text)) {
+            if (string.IsNullOrEmpty(nameEntry.Text) || string.IsNullOrEmpty(detailsEditor.Text)) {
                 DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             } else
             {

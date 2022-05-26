@@ -15,6 +15,7 @@
             <Label x:Name="distanceLabel" Style="{x:DynamicResource h1}" HorizontalOptions="CenterAndExpand"/>
             <Image x:Name="compassImage" Source="{markupExtensions:EmbeddedImage ResourceId=GeocachingTool.Assets.Images.compass.png}" VerticalOptions="CenterAndExpand"/>
             <Label x:Name="errorLabel" Text="{Static resource:AppResources.compassPageNoLocation}" Style="{DynamicResource error}"/>
+            <Button x:Name="openInMapsButton" Text="{Static resource:AppResources.showOnMap}" Clicked="OpenInMapsButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

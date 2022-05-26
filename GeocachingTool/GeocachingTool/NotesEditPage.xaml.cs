@@ -2,11 +2,6 @@
 using GeocachingTool.Resources;
 using SQLite;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,28 +10,43 @@ namespace GeocachingTool
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotesEditPage : ContentPage
     {
-        private Note note;
+        /// <summary>
+        /// The note
+        /// </summary>
+        private readonly Note _note;
 
+        /// <summary>
+        /// Page constructor
+        /// </summary>
+        /// <param name="note">The note to be edited</param>
         public NotesEditPage(Note note)
         {
             InitializeComponent();
 
-            this.note = note;
+            _note = note;
         }
 
+        /// <summary>
+        /// Runs on page appearance
+        /// </summary>
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
             // Set existing values in entries
-            nameEntry.Text = note.Name;
-            detailsEditor.Text = note.Details;
+            nameEntry.Text = _note.Name;
+            detailsEditor.Text = _note.Details;
         }
 
+        /// <summary>
+        /// Runs when save button is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private void SaveButton_Clicked(object sender, EventArgs e)
         {
             // Check if filled in 
-            if (String.IsNullOrEmpty(nameEntry.Text) || String.IsNullOrEmpty(detailsEditor.Text))
+            if (string.IsNullOrEmpty(nameEntry.Text) || string.IsNullOrEmpty(detailsEditor.Text))
             {
                 DisplayAlert(AppResources.error, AppResources.notAllFieldFilledIn, AppResources.ok);
             }
@@ -52,10 +62,10 @@ namespace GeocachingTool
                     connection.CreateTable<Note>();
 
                     // Update note
-                    note.Name = name;
-                    note.Details = details;
+                    _note.Name = name;
+                    _note.Details = details;
 
-                    int rows = connection.Update(note);
+                    int rows = connection.Update(_note);
 
                     // Check for errors
                     if (rows > 0)
@@ -70,6 +80,11 @@ namespace GeocachingTool
             }
         }
 
+        /// <summary>
+        /// Runs when delete button is clicked
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">Event arguments</param>
         private async void DeleteButton_Clicked(object sender, EventArgs e)
         {
             // Ask for confirmation
@@ -83,7 +98,7 @@ namespace GeocachingTool
                     connection.CreateTable<Note>();
 
                     // Delete note
-                    int rows = connection.Delete(note);
+                    int rows = connection.Delete(_note);
 
                     // Check for errors
                     if (rows > 0)

@@ -8,30 +8,31 @@
         <StackLayout>
             <Label Text="{Static resource:AppResources.calculateProjectionPageTitle}" Style="{x:DynamicResource h1}"/>
             <Grid>
-                <Picker x:Name="northPicker" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10" Title="{Static resource:AppResources.northOrSouth}">
+                <Picker x:Name="latitudePicker" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10" Title="{Static resource:AppResources.northOrSouth}">
                     <Picker.Items>
                         <x:String>N</x:String>
                         <x:String>S</x:String>
                     </Picker.Items>
                 </Picker>
-                <Entry x:Name="northCoordinateEntry" Grid.Column="10" Grid.ColumnSpan="15" Grid.Row="0" Placeholder="{Static resource:AppResources.latitude}" Keyboard="Numeric"/>
+                <Entry x:Name="latitudeCoordinateEntry" Grid.Column="10" Grid.ColumnSpan="15" Grid.Row="0" Placeholder="{Static resource:AppResources.latitude}" Keyboard="Numeric"/>
                 <Label Grid.Column="25" Grid.ColumnSpan="5" Grid.Row="0" Text="°" FontSize="30"/>
-                <Entry x:Name="northMinuteEntry" Grid.Column="28" Grid.ColumnSpan="35" Grid.Row="0" Placeholder="{Static resource:AppResources.latitude}" Keyboard="Numeric"/>
+                <Entry x:Name="latitudeMinuteEntry" Grid.Column="28" Grid.ColumnSpan="35" Grid.Row="0" Placeholder="{Static resource:AppResources.latitude}" Keyboard="Numeric"/>
 
-                <Picker x:Name="eastPicker" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="10" Title="{Static resource:AppResources.eastOrWest}">
+                <Picker x:Name="longitudePicker" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="10" Title="{Static resource:AppResources.eastOrWest}">
                     <Picker.Items>
                         <x:String>E</x:String>
                         <x:String>W</x:String>
                     </Picker.Items>
                 </Picker>
-                <Entry x:Name="eastCoordinateEntry" Grid.Column="10" Grid.ColumnSpan="15" Grid.Row="1" Placeholder="{Static resource:AppResources.longitude}" Keyboard="Numeric"/>
+                <Entry x:Name="longitudeCoordinateEntry" Grid.Column="10" Grid.ColumnSpan="15" Grid.Row="1" Placeholder="{Static resource:AppResources.longitude}" Keyboard="Numeric"/>
                 <Label Grid.Column="25" Grid.ColumnSpan="5" Grid.Row="1" Text="°" FontSize="30"/>
-                <Entry x:Name="eastMinuteEntry" Grid.Column="28" Grid.ColumnSpan="35" Grid.Row="1" Placeholder="{Static resource:AppResources.longitude}" Keyboard="Numeric"/>
+                <Entry x:Name="longitudeMinuteEntry" Grid.Column="28" Grid.ColumnSpan="35" Grid.Row="1" Placeholder="{Static resource:AppResources.longitude}" Keyboard="Numeric"/>
             </Grid>
             <Entry x:Name="angleEntry" Placeholder="{Static resource:AppResources.calculateProjectionPageAngle}" Keyboard="Numeric"/>
             <Entry x:Name="distanceEntry" Placeholder="{Static resource:AppResources.calculateProjectionPageDistance}" Keyboard="Numeric"/>
             <Button x:Name="calculateButton" Text="{Static resource:AppResources.calculate}" Clicked="CalculateButton_Clicked"/>
-            <Label x:Name="answerLabel"  Style="{x:DynamicResource answer}"/>
+            <Label x:Name="answerLabel" Style="{x:DynamicResource answer}"/>
+            <Button x:Name="setAsCompassTargetButton" Text="{Static resource:AppResources.setAsCompassTarget}" IsVisible="False" Clicked="SetAsCompassTargetButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
