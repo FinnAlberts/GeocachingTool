@@ -55,5 +55,13 @@ namespace GeocachingTool.Handler
             await CrossStoreReview.Current.RequestReview(false);
             Console.WriteLine("Review requested");
         }
+
+        /// <summary>
+        /// Open the review page in the Google Play Store
+        /// </summary>
+        public static void OpenStoreReviewPage()
+        {
+            CrossStoreReview.Current.OpenStoreReviewPage("com.finnalberts.geocachingbackpack");
+        }
     }
 }

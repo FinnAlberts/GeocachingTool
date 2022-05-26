@@ -34,7 +34,7 @@ namespace GeocachingTool
         /// <param name="e">Event arguments</param>
         private void OpenReviewMenuItem_Clicked(object sender, EventArgs e)
         {
-            ReviewHandler.AskDirectReview();
+            ReviewHandler.OpenStoreReviewPage();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace GeocachingTool.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.2.4.160")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.3.0.26")]
 	public partial class Resource
 	{
 		
@@ -153,6 +153,7 @@ namespace GeocachingTool.Droid
 			global::Plugin.StoreReview.Resource.Id.text2 = global::GeocachingTool.Droid.Resource.Id.text2;
 			global::Plugin.StoreReview.Resource.Id.time = global::GeocachingTool.Droid.Resource.Id.time;
 			global::Plugin.StoreReview.Resource.Id.title = global::GeocachingTool.Droid.Resource.Id.title;
+			global::Plugin.StoreReview.Resource.Id.view_tree_lifecycle_owner = global::GeocachingTool.Droid.Resource.Id.view_tree_lifecycle_owner;
 			global::Plugin.StoreReview.Resource.Integer.status_bar_notification_info_maxnum = global::GeocachingTool.Droid.Resource.Integer.status_bar_notification_info_maxnum;
 			global::Plugin.StoreReview.Resource.Layout.browser_actions_context_menu_page = global::GeocachingTool.Droid.Resource.Layout.browser_actions_context_menu_page;
 			global::Plugin.StoreReview.Resource.Layout.browser_actions_context_menu_row = global::GeocachingTool.Droid.Resource.Layout.browser_actions_context_menu_row;
