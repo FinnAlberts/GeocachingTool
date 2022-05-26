@@ -6,5 +6,3 @@ Geocaching is a game where you search for 'caches', containers which are hidden 
 
 ## Installation
 You can download the app from the [Google Play Store](https://play.google.com/store/apps/details?id=com.finnalberts.geocachingbackpack). 
-
-An APK-file is also available here on GitHub under releases, but this is not the latest version.
