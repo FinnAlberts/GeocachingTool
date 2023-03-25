@@ -14,7 +14,7 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="{Static resource:AppResources.aboutPageVersion}" FontAttributes="Bold"  FontSize="16"/>
-                        <Span Text="1.6.2"/>
+                        <Span Text="1.6.3"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
